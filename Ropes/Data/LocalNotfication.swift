@@ -14,19 +14,24 @@ class LocalNotficationManager:NSObject, ObservableObject, UNUserNotificationCent
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
         return [.sound,.banner]
     }
-    func request(text : String, time : any Numeric, id : UUID = UUID()){
+    //TODO: Change to numerical
+    func request(text : String, time : Double, id : UUID = UUID()){
+        //test
+        print("requesting")
+        //test
         let content = UNMutableNotificationContent()
         content.title = text
         content.interruptionLevel = .timeSensitive
         content.sound = .default
         
         // show this notification five seconds from now
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval:  admin ? time as! Double : time as! Double * 60, repeats: (admin) ? false : true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval:  admin ? time : time * 60, repeats: (admin) ? false : true)
         
         // choose a random identifier
         let request = UNNotificationRequest(identifier: text, content: content, trigger: trigger)
         // add our notification request
         notficationCenter.add(request)
+        print("request ended")
     }
     func request(text : String, time : Date, id : UUID = UUID()) throws {
         
@@ -88,6 +93,7 @@ extension LocalNotficationManager {
             try? await notficationCenter.add(copyOfRequest)
         }
     }
+    //TODO: Change to numerical
     func PrintRequests() async {
         var requests = await UNUserNotificationCenter.current().pendingNotificationRequests()
         print(requests.count)
