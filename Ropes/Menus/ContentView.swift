@@ -39,7 +39,8 @@ struct ContentView: View {
                 })
                 if admin{
                     Button("Notify"){
-                        LocalNotficationManager.shared.request(text : "Test", time : 5)
+                        LocalNotficationManager.shared.request(text : "Test", time : 10)
+                        let _ = print("requested by test")
                     }
                     Button("requests") {
                         Task {
@@ -80,7 +81,7 @@ struct ContentView: View {
             if (defaults.bool(forKey: "popup") == true) {
                 showingSheet.toggle()
             }
-        }.onChange(of: scenePhase, perform: {_ in print("guk")})
+        }.onChange(of: scenePhase, perform: {_ in print("MAIN scene changed")})
     }
     private func UserSetUp() {
         dateFormater.dateStyle = .short
