@@ -14,14 +14,14 @@ class LocalNotficationManager:NSObject, ObservableObject, UNUserNotificationCent
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
         return [.sound,.banner]
     }
-    func request(text : String, time : Double, id : UUID = UUID()){
+    func request(text : String, time : any Numeric, id : UUID = UUID()){
         let content = UNMutableNotificationContent()
         content.title = text
         content.interruptionLevel = .timeSensitive
         content.sound = .default
         
         // show this notification five seconds from now
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval:  admin ? time : time * 60, repeats: (admin) ? false : true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval:  admin ? time as! Double : time as! Double * 60, repeats: (admin) ? false : true)
         
         // choose a random identifier
         let request = UNNotificationRequest(identifier: text, content: content, trigger: trigger)

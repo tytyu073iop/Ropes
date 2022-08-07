@@ -9,19 +9,19 @@ public class ToDo: NSManagedObject {
 }
 
 extension ToDo : Identifiable {
-    func remove() {
+    @MainActor func remove() {
         let viewcontext = PersistenceController.shared.container.viewContext
         viewcontext.delete(self)
         LocalNotficationManager.remove(id : name)
         PersistenceController.save()
     }
-    private func PushNotfication(time : Double) {
+    @MainActor private func PushNotfication(time : Double) {
         LocalNotficationManager.shared.request(text : name, time : time, id : id)
     }
-    private func PushNotfication(time : Date) throws {
+    @MainActor private func PushNotfication(time : Date) throws {
         try LocalNotficationManager.shared.request(text: name, time: time)
     }
-    convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true) {
+    @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true) {
         self.init(context : context)
         self.name = name
         self.date = Date.now
@@ -31,7 +31,7 @@ extension ToDo : Identifiable {
             PushNotfication(time: defaults.double(forKey: "time"))
         }
     }
-    convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), time : Date) throws {
+    @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), time : Date) throws {
         self.init(context : context)
         self.name = name
         self.date = time
