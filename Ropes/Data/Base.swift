@@ -34,3 +34,7 @@ enum NotificationErrors: Error {
 enum AddingErrors : Error {
     case ThisNameIsExciting
 }
+
+enum ProgramErrors : Error {
+    case Nil
+}

@@ -3,7 +3,7 @@ import UserNotifications
 import NotificationCenter
 
 @MainActor
-class LocalNotficationManager:NSObject, ObservableObject, UNUserNotificationCenterDelegate {
+class LocalNotficationManager:NSObject, ObservableObject {
     @Published var isGranted = false
     static let shared = LocalNotficationManager()
     private let notficationCenter = UNUserNotificationCenter.current()
@@ -11,18 +11,20 @@ class LocalNotficationManager:NSObject, ObservableObject, UNUserNotificationCent
         super.init()
         notficationCenter.delegate = self
     }
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        return [.sound,.banner]
-    }
     //TODO: Change to numerical
-    func request(text : String, time : Double, id : UUID = UUID()){
+    func request(text : String, time : Double, id : UUID = UUID(), userInfo : [AnyHashable : Any]? = nil){
         //test
         print("requesting")
         //test
+        registerCategory()
         let content = UNMutableNotificationContent()
         content.title = text
         content.interruptionLevel = .timeSensitive
         content.sound = .default
+        content.categoryIdentifier = "doneCategory"
+        if userInfo != nil{
+            content.userInfo = userInfo!
+        }
         
         // show this notification five seconds from now
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval:  admin ? time : time * 60, repeats: (admin) ? false : true)
@@ -95,10 +97,38 @@ extension LocalNotficationManager {
     }
     //TODO: Change to numerical
     func PrintRequests() async {
-        var requests = await UNUserNotificationCenter.current().pendingNotificationRequests()
+        let requests = await UNUserNotificationCenter.current().pendingNotificationRequests()
         print(requests.count)
         for request in requests {
             print(request.trigger as? UNTimeIntervalNotificationTrigger)
         }
+    }
+    func registerCategory() {
+        //actions
+        let done = UNNotificationAction(identifier: "done", title: "Done")
+        //category
+        let category = UNNotificationCategory(identifier: "doneCategory", actions: [done], intentIdentifiers: [])
+        notficationCenter.setNotificationCategories([category])
+    }
+}
+
+extension LocalNotficationManager : UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        return [.sound,.banner]
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        print("did recive!")
+        if response.actionIdentifier == "done" {
+            if let id = response.notification.request.content.userInfo["id"] as? String {
+                do {
+                    let todo = try ToDo.findByID(id: id)
+                    print("remowing")
+                    todo.remove()
+                } catch {
+                    print("Блять")
+                }
+            }
+        }
+        print("досвидания")
     }
 }
