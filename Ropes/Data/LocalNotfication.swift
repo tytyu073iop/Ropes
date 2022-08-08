@@ -120,12 +120,23 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
         print("did recive!")
         if response.actionIdentifier == "done" {
             if let id = response.notification.request.content.userInfo["id"] as? String {
-                do {
-                    let todo = try ToDo.findByID(id: id)
-                    print("remowing")
-                    todo.remove()
-                } catch {
-                    print("Блять")
+                // Create a new background managed object context
+                let context = PersistenceController.shared.container.newBackgroundContext()
+                
+                // If needed, ensure the background context stays
+                // up to date with changes from the parent
+                context.automaticallyMergesChangesFromParent = true
+                
+                // Perform operations on the background context
+                // asynchronously
+                await context.perform {
+                    do {
+                        let todo = try ToDo.findByID(id: id)
+                        print("remowing")
+                        todo.remove()
+                    } catch {
+                        print("Блять")
+                    }
                 }
             }
         }
