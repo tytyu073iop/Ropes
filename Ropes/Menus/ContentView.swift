@@ -11,16 +11,19 @@ struct ContentView: View {
         animation: .default
     )
     private var Ropes : FetchedResults<ToDo>
+    @FetchRequest(
+        entity: FastAnswers.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \FastAnswers.name, ascending: false)],
+        animation: .default) private var FA : FetchedResults<FastAnswers>
     //db
     @State private var showingSheet = false
     @State private var settings = false
-    @FetchRequest(
-        entity: FastAnswers.entity(), 
-        sortDescriptors: [NSSortDescriptor(keyPath: \FastAnswers.name, ascending: false)],
-        animation: .default) private var FA : FetchedResults<FastAnswers>
     var body: some View {
         NavigationView{
             List{
+                #if os(watchOS)
+                    NavigationLink(destination: Adding(Ropes: Ropes, fastAnswers: FA), label: { Image(systemName: "plus") })
+                #endif
                 ForEach(Ropes) {rope in
                     VStack{
                         HStack{
@@ -56,6 +59,7 @@ struct ContentView: View {
                     EditButton()
 #endif
                 }
+                #if os(iOS)
                 ToolbarItem(placement: .bottomBar){
                     Button("ADD"){
                         showingSheet.toggle()
@@ -63,11 +67,11 @@ struct ContentView: View {
                     .sheet(isPresented: $showingSheet) {Adding(Ropes : Ropes, fastAnswers: FA)}
                 }
                 ToolbarItem(placement: .navigationBarLeading){
-                    Button(action: {
-                        settings.toggle()}, 
+                    Button(action: { settings.toggle() },
                            label: {Image(systemName: "gear")})
-                        .sheet(isPresented: $settings){settin()}
+                        .sheet(isPresented: $settings){ settin() }
                 }
+                #endif
             }
         }
         .navigationViewStyle(.stack)
