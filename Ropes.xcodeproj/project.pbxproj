@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E735FE0028A2538E00FCE2E6 /* RopesForWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E735FDFF28A2538E00FCE2E6 /* RopesForWatchApp.swift */; };
-		E735FE0228A2538E00FCE2E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E735FE0128A2538E00FCE2E6 /* ContentView.swift */; };
 		E735FE0428A2538F00FCE2E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0328A2538F00FCE2E6 /* Assets.xcassets */; };
 		E735FE0728A2538F00FCE2E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */; };
+		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
+		E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
+		E735FE1628A2589200FCE2E6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
+		E735FE1728A2589200FCE2E6 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
+		E735FE1828A258A500FCE2E6 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
+		E735FE1928A258A500FCE2E6 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
+		E735FE1A28A258A500FCE2E6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
+		E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; };
+		E735FE1D28A259F600FCE2E6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
+		E735FE1E28A259F900FCE2E6 /* Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA2289F8F5B00C28906 /* Adding.swift */; };
+		E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
 		E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 		E7EAFF8F289F8DE900C28906 /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
@@ -30,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		E735FDFD28A2538E00FCE2E6 /* RopesForWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RopesForWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E735FDFF28A2538E00FCE2E6 /* RopesForWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopesForWatchApp.swift; sourceTree = "<group>"; };
 		E735FE0128A2538E00FCE2E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E735FE0328A2538F00FCE2E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -74,7 +82,6 @@
 		E735FDFE28A2538E00FCE2E6 /* RopesForWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				E735FDFF28A2538E00FCE2E6 /* RopesForWatchApp.swift */,
 				E735FE0128A2538E00FCE2E6 /* ContentView.swift */,
 				E735FE0328A2538F00FCE2E6 /* Assets.xcassets */,
 				E735FE0528A2538F00FCE2E6 /* Preview Content */,
@@ -264,8 +271,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E735FE0228A2538E00FCE2E6 /* ContentView.swift in Sources */,
-				E735FE0028A2538E00FCE2E6 /* RopesForWatchApp.swift in Sources */,
+				E735FE1628A2589200FCE2E6 /* Persistence.swift in Sources */,
+				E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */,
+				E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */,
+				E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */,
+				E735FE1828A258A500FCE2E6 /* LocalNotfication.swift in Sources */,
+				E735FE1928A258A500FCE2E6 /* Base.swift in Sources */,
+				E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */,
+				E735FE1E28A259F900FCE2E6 /* Adding.swift in Sources */,
+				E735FE1D28A259F600FCE2E6 /* Settings.swift in Sources */,
+				E735FE1728A2589200FCE2E6 /* Task core data.swift in Sources */,
+				E735FE1A28A258A500FCE2E6 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

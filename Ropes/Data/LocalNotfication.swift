@@ -1,6 +1,5 @@
 import SwiftUI
 import UserNotifications
-import NotificationCenter
 
 @MainActor
 class LocalNotficationManager:NSObject, ObservableObject {
@@ -64,6 +63,7 @@ class LocalNotficationManager:NSObject, ObservableObject {
     func updatePermition() async {
         isGranted = await isGrantedAsFunc()
     }
+    #if os(iOS)
     func openSettings() {
         if let url = URL(string: UIApplication.openSettingsURLString) {
             if UIApplication.shared.canOpenURL(url) {
@@ -73,6 +73,7 @@ class LocalNotficationManager:NSObject, ObservableObject {
             }
         }
     }
+    #endif
     static func remove(id : String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
     }

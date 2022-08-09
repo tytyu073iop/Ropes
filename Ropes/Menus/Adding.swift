@@ -16,11 +16,13 @@ struct Adding: View {
     var body: some View {
         GeometryReader { geometry in
         Form{
+            #if os(iOS)
             if(!lnManager.isGranted) {
                 Button("Attention! You haven't allowed notifications. Click here to go to the settings") {
                     lnManager.openSettings()
                 }
             }
+            #endif
             List{
             ForEach(fastAnswers){ answer in
                 Button(action: {
@@ -80,7 +82,7 @@ struct Adding: View {
                     Text("Set a remind time")
                 }
                 if (time){
-                    DatePicker("remind in", selection: Binding<Date>(get: {self.remindDate ?? Date.now}, set: {self.remindDate = $0}), displayedComponents: [.hourAndMinute])
+                    //DatePicker("remind in", selection: Binding<Date>(get: {self.remindDate ?? Date.now}, set: {self.remindDate = $0}), displayedComponents: [.hourAndMinute])
                 }
                 }
             }
