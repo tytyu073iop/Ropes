@@ -117,6 +117,7 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
         return [.sound,.banner]
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        //FIX ME: actions doesn't working when app closed
         print("did recive!")
         if response.actionIdentifier == "done" {
             if let id = response.notification.request.content.userInfo["id"] as? String {
@@ -131,9 +132,9 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
                 // asynchronously
                 await context.perform {
                     do {
-                        let todo = try ToDo.findByID(id: id)
+                        let todo = try ToDo.findByID(id: id, context: context)
                         print("remowing")
-                        todo.remove()
+                        todo.remove(context: context)
                     } catch {
                         print("Блять")
                     }

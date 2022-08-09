@@ -10,12 +10,17 @@ public class ToDo: NSManagedObject {
 
 extension ToDo : Identifiable {
     
-    @MainActor func remove() {
+    @MainActor func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
         print("start removing")
-        let viewcontext = PersistenceController.shared.container.viewContext
+        let viewcontext = context
         viewcontext.delete(self)
         LocalNotficationManager.remove(id : name)
-        PersistenceController.save()
+        do {
+            try context.save()
+        }
+        catch {
+            print(error.localizedDescription)
+        }
         print("removing complete")
     }
     @MainActor private func PushNotfication(time : Double) {
@@ -48,17 +53,17 @@ extension ToDo : Identifiable {
         }
         print("aboba")
     }
-    static func findByID (id : String) throws -> ToDo {
+    static func findByID (id : String, context : NSManagedObjectContext = PersistenceController.shared.container.viewContext) throws -> ToDo {
         let request = ToDo.fetchRequest()
-        guard let Ropes = try PersistenceController.shared.container.viewContext.fetch(request) as? [ToDo] else {
+        guard let ropes = try context.fetch(request) as? [ToDo] else {
             throw ProgramErrors.Nil
         }
-        print("wantable id \(id)  \(Ropes)")
+        print("wantable id \(id)  \(ropes)")
         print("ids")
-        if let value = Ropes.first { todo in
+        if let value = (ropes.first { todo in
             print(todo.id.uuidString)
             return todo.id.uuidString == id
-        }{
+        }) {
             print("found")
             return value
         }else {
