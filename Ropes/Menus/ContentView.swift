@@ -31,11 +31,13 @@ struct ContentView: View {
                             Text(rope.name)
                             Spacer()
                         }
+                        #if !os(watchOS)
                         HStack {
                             Spacer()
                             Text(dateFormater.string(from: rope.date))
                             Spacer()
                         }
+                        #endif
                     }
                 }.onDelete(perform: {
                     RemoveRope(index: $0)
@@ -52,7 +54,9 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("Ropes")
+            #if !os(watchOS)
+                .navigationTitle("Ropes")
+            #endif
             .toolbar {
                 ToolbarItem(placement: .automatic){
 #if os(iOS)
