@@ -22,7 +22,7 @@ struct ContentView: View {
         NavigationView{
             List{
                 #if os(watchOS)
-                    NavigationLink(destination: Adding(Ropes: Ropes, fastAnswers: FA), label: { Image(systemName: "plus") })
+                    NavigationLink(destination: Adding(Ropes: Ropes, fastAnswers: FA/*[FastAnswers(context: PersistenceController.shared.container.viewContext, name: "Test")]*/), label: { Image(systemName: "plus") })
                 #endif
                 ForEach(Ropes) {rope in
                     VStack{
@@ -96,7 +96,7 @@ struct ContentView: View {
     }
     private func RemoveRope(index : IndexSet) {
         let RopeToRemove = Ropes[index.first!]
-        RopeToRemove.remove()
+        RopeToRemove.remove(context: viewContext)
     }
 }
 

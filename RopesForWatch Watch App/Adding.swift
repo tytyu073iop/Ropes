@@ -12,6 +12,9 @@ struct Adding: View {
     @Environment(\.managedObjectContext) private var viewContext
     var Ropes : FetchedResults<ToDo>
     var fastAnswers : FetchedResults<FastAnswers>
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    //var Ropes : [ToDo]
+    //var fastAnswers : [FastAnswers]
     @State var alert = false
     @State var past = false
     @State var addToFA = false
@@ -25,6 +28,7 @@ struct Adding: View {
                 Button(action: {
                     do {
                         try AddRope(name: answer.name, date : remindDate)
+                        self.presentationMode.wrappedValue.dismiss()
                     } catch NotificationErrors.missingTime {
                         past.toggle()
                     } catch AddingErrors.ThisNameIsExciting {
@@ -52,10 +56,7 @@ struct Adding: View {
                 TextField("Your rope", text: $CustomRope).onSubmit {
                     do {
                         try AddRope(name: CustomRope, date : remindDate)
-                        if (addToFA) {
-                            print("ya")
-                            FastAnswers(context : viewContext, name : CustomRope)
-                        }
+                        self.presentationMode.wrappedValue.dismiss()
                     } catch NotificationErrors.missingTime {
                         past.toggle()
                     } catch AddingErrors.ThisNameIsExciting {
@@ -80,18 +81,8 @@ struct Adding: View {
 }
 
 /*struct Adding_Previews: PreviewProvider {
-    @FetchRequest(
-        entity:ToDo.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \ToDo.date, ascending: false)],
-        animation: .default
-    )
-    private var Ropes : FetchedResults<ToDo>
-    @FetchRequest(
-        entity: FastAnswers.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \FastAnswers.name, ascending: false)],
-        animation: .default) private var FA : FetchedResults<FastAnswers>
     static var previews: some View {
-        Adding(Ropes: Ropes, fastAnswers: FA)
+        Adding(Ropes: [], fastAnswers: [FastAnswers(context: PersistenceController.shared.container.viewContext, name: "Test")])
             .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
     }
 }*/
