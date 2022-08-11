@@ -52,7 +52,7 @@ class LocalNotficationManager:NSObject, ObservableObject {
         // add our notification request
         notficationCenter.add(request)
     }
-    func requestAuthorization(Options : UNAuthorizationOptions) async throws{
+    func requestAuthorization(Options : UNAuthorizationOptions = [.sound,.alert,.badge]) async throws{
         try await notficationCenter.requestAuthorization(options: Options)
         isGranted = await isGrantedAsFunc()
     }

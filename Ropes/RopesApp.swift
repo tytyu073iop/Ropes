@@ -16,5 +16,13 @@ struct RopesApp: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+        #if os(macOS)
+        WindowGroup("Adding") {
+            Adding()
+        }.handlesExternalEvents(matching:Set (arrayLiteral: "*"))
+        Settings{
+            settin()
+        }
+        #endif
     }
 }

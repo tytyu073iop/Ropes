@@ -1,12 +1,20 @@
+//
+//  ContentViewForMAC.swift
+//  Ropes
+//
+//  Created by Илья Бирюк on 11.08.22.
+//
+
 import SwiftUI
 import UserNotifications
 
 struct ContentView: View {
+    @Environment(\.openURL) var openURL
     //db
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
-        entity:ToDo.entity(), 
+        entity:ToDo.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \ToDo.date, ascending: false)],
         animation: .default
     )
@@ -19,25 +27,24 @@ struct ContentView: View {
     @State private var showingSheet = false
     @State private var settings = false
     var body: some View {
-        NavigationView{
             List{
-                #if os(watchOS)
-                    NavigationLink(destination: Adding(Ropes: Ropes, fastAnswers: FA/*[FastAnswers(context: PersistenceController.shared.container.viewContext, name: "Test")]*/), label: { Image(systemName: "plus") })
-                #endif
                 ForEach(Ropes) {rope in
-                    VStack{
-                        HStack{
-                            Spacer()
-                            Text(rope.name)
-                            Spacer()
+                    HStack {
+                        VStack{
+                            HStack{
+                                Spacer()
+                                Text(rope.name)
+                                Spacer()
+                            }
+                            HStack {
+                                Spacer()
+                                Text(dateFormater.string(from: rope.date))
+                                Spacer()
+                            }
                         }
-                        #if !os(watchOS)
                         HStack {
-                            Spacer()
-                            Text(dateFormater.string(from: rope.date))
-                            Spacer()
+                            Button(action: {rope.remove()}, label: {Image(systemName: "trash")})
                         }
-                        #endif
                     }
                 }.onDelete(perform: {
                     RemoveRope(index: $0)
@@ -54,34 +61,26 @@ struct ContentView: View {
                     }
                 }
             }
-            #if !os(watchOS)
-                .navigationTitle("Ropes")
-            #endif
             .toolbar {
-                ToolbarItem{
-#if os(iOS)
-                    EditButton()
-#endif
+                ToolbarItem {
+                    Button(action: {
+                        if let url = URL(string: "Ropes://Adding") {
+                            openURL(url)
+                        }
+                    }, label: {Image(systemName: "plus")})
                 }
-                #if os(iOS)
-                ToolbarItem(placement: .bottomBar){
-                    Button("ADD"){
-                        showingSheet.toggle()
-                    }
-                    .sheet(isPresented: $showingSheet) {Adding(Ropes : Ropes, fastAnswers: FA)}
-                }
-                ToolbarItem(placement: .navigationBarLeading){
-                    Button(action: { settings.toggle() },
-                           label: {Image(systemName: "gear")})
-                        .sheet(isPresented: $settings){ settin() }
-                }
-                #endif
             }
-        }
-        #if os(iOS)
-        .navigationViewStyle(.stack)
-        #endif
         .onAppear(){
+            #if DEBUG
+            Task {
+                do {
+                    try await LocalNotficationManager.shared.requestAuthorization()
+                } catch {
+                    print("blat")
+                }
+                
+            }
+            #endif
             self.UserSetUp()
             if (defaults.bool(forKey: "OFB") == false) {
                 defaults.set(false, forKey: "popup")

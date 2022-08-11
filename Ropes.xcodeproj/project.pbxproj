@@ -20,6 +20,8 @@
 		E735FE1D28A259F600FCE2E6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
 		E748235628A2619C008E5087 /* Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E748235528A2619C008E5087 /* Adding.swift */; };
 		E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D528A4DBE60073FFEF /* StackNavigationView.swift */; platformFilters = (macos, ); };
+		E77814DA28A4E62A0073FFEF /* ContentViewForMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */; platformFilters = (macos, ); };
+		E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */; platformFilters = (macos, ); };
 		E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
 		E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
@@ -30,8 +32,8 @@
 		E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E7EAFFAE289F8F5B00C28906 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
 		E7EAFFAF289F8F5B00C28906 /* Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA2289F8F5B00C28906 /* Adding.swift */; };
-		E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
-		E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; };
+		E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; platformFilter = ios; };
+		E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; platformFilter = ios; };
 		E7EAFFB2289F8F5B00C28906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */; };
 		E7EAFFB3289F8F5B00C28906 /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA6289F8F5B00C28906 /* ReadMe.swift */; };
 		E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
@@ -44,6 +46,9 @@
 		E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E748235528A2619C008E5087 /* Adding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding.swift; sourceTree = "<group>"; };
 		E77814D528A4DBE60073FFEF /* StackNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNavigationView.swift; sourceTree = "<group>"; };
+		E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewForMAC.swift; sourceTree = "<group>"; };
+		E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsForMac.swift; sourceTree = "<group>"; };
+		E77814DD28A4F4040073FFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EAFF86289F8DE900C28906 /* Ropes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ropes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EAFF89289F8DE900C28906 /* RopesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopesApp.swift; sourceTree = "<group>"; };
 		E7EAFF8B289F8DE900C28906 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 		E7EAFF88289F8DE900C28906 /* Ropes */ = {
 			isa = PBXGroup;
 			children = (
+				E77814DD28A4F4040073FFEF /* Info.plist */,
 				E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */,
 				E7EAFFA7289F8F5B00C28906 /* Core data */,
 				E7EAFF9D289F8F5B00C28906 /* Data */,
@@ -159,6 +165,8 @@
 				E7EAFFA2289F8F5B00C28906 /* Adding.swift */,
 				E7EAFFA3289F8F5B00C28906 /* Settings.swift */,
 				E7EAFFA4289F8F5B00C28906 /* ContentView.swift */,
+				E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */,
+				E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -294,12 +302,14 @@
 			files = (
 				E7EAFFAF289F8F5B00C28906 /* Adding.swift in Sources */,
 				E7EAFFAE289F8F5B00C28906 /* Base.swift in Sources */,
+				E77814DA28A4E62A0073FFEF /* ContentViewForMAC.swift in Sources */,
 				E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */,
 				E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */,
 				E7EAFFB3289F8F5B00C28906 /* ReadMe.swift in Sources */,
 				E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */,
 				E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */,
 				E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */,
+				E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */,
 				E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */,
 				E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */,
 				E7EAFFB6289F8F5B00C28906 /* Task core data.swift in Sources */,
@@ -496,6 +506,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ropes/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -537,6 +548,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ropes/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

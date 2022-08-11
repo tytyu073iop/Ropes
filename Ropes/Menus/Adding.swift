@@ -1,8 +1,20 @@
 import SwiftUI
 
 struct Adding: View {
+    //db
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        entity:ToDo.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \ToDo.date, ascending: false)],
+        animation: .default
+    )
+    private var Ropes : FetchedResults<ToDo>
+    @FetchRequest(
+        entity: FastAnswers.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \FastAnswers.name, ascending: false)],
+        animation: .default) private var fastAnswers : FetchedResults<FastAnswers>
+    //db
     @ObservedObject var lnManager = LocalNotficationManager.shared
     @State var alert = false
     @State var past = false
@@ -11,8 +23,6 @@ struct Adding: View {
     @State var CustomRope : String = ""
     @State var remindDate : Date? = nil
     @Environment(\.dismiss) var dismiss
-    var Ropes : FetchedResults<ToDo>
-    var fastAnswers : FetchedResults<FastAnswers>
     var body: some View {
         GeometryReader { geometry in
         Form{
