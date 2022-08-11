@@ -54,33 +54,33 @@ struct ContentView: View {
                     }
                 }
             }
-            #if !os(watchOS)
-                .navigationTitle("Ropes")
-            #endif
-            .toolbar {
-                ToolbarItem{
+#if !os(watchOS)
+            .navigationTitle("Ropes")
+#endif
+            .toolbar(content: {
+                ToolbarItem(placement: .automatic){
 #if os(iOS)
                     EditButton()
 #endif
                 }
-                #if os(iOS)
+#if os(iOS)
                 ToolbarItem(placement: .bottomBar){
                     Button("ADD"){
                         showingSheet.toggle()
                     }
-                    .sheet(isPresented: $showingSheet) {Adding(Ropes : Ropes, fastAnswers: FA)}
+                    .sheet(isPresented: $showingSheet) {Adding()}
                 }
                 ToolbarItem(placement: .navigationBarLeading){
                     Button(action: { settings.toggle() },
                            label: {Image(systemName: "gear")})
-                        .sheet(isPresented: $settings){ settin() }
+                    .sheet(isPresented: $settings){ settin() }
                 }
-                #endif
-            }
+#endif
+            })
         }
-        #if os(iOS)
+#if os(iOS)
         .navigationViewStyle(.stack)
-        #endif
+#endif
         .onAppear(){
             self.UserSetUp()
             if (defaults.bool(forKey: "OFB") == false) {

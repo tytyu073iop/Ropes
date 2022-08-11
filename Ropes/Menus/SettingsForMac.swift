@@ -58,11 +58,6 @@ struct settin: View {
                     }
                 }
             .pickerStyle(.automatic)
-            Section("Other") {
-                Toggle(isOn: $popup.PopUp) {
-                    Text("Showup an adding view on start")
-                }
-            }
         }
         .navigationTitle("settings")
     }

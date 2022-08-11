@@ -24,7 +24,6 @@ struct Adding: View {
     @State var remindDate : Date? = nil
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        GeometryReader { geometry in
         Form{
             #if os(iOS)
             if(!lnManager.isGranted) {
@@ -33,7 +32,6 @@ struct Adding: View {
                 }
             }
             #endif
-            List{
             ForEach(fastAnswers){ answer in
                 Button(action: {
                     do {
@@ -61,7 +59,6 @@ struct Adding: View {
                     Text("You cannot set reminder at the past")
                 })
             }
-        }
             Section("Add your own"){
                 TextField("Your rope", text: $CustomRope).onSubmit {
                     do {
@@ -97,7 +94,7 @@ struct Adding: View {
                 }
             }
             }
-    }.onAppear() {
+        .onAppear() {
         print(scenePhase)
     }
     .task {

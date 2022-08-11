@@ -86,7 +86,7 @@ extension LocalNotficationManager {
         print(requests.count)
         for request in requests {
             if var timeInterval = request.trigger as? UNTimeIntervalNotificationTrigger {
-                timeInterval = UNTimeIntervalNotificationTrigger(timeInterval: time*60, repeats: admin ? false : true)
+                timeInterval = UNTimeIntervalNotificationTrigger(timeInterval: admin ? time : time*60, repeats: admin ? false : true)
                 copyOfRequests.append(UNNotificationRequest(identifier: request.identifier, content: request.content, trigger: timeInterval))
                 print("afther change")
             }

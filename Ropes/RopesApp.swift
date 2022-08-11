@@ -19,9 +19,11 @@ struct RopesApp: App {
         #if os(macOS)
         WindowGroup("Adding") {
             Adding()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }.handlesExternalEvents(matching:Set (arrayLiteral: "*"))
         Settings{
             settin()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         #endif
     }
