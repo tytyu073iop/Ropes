@@ -78,7 +78,9 @@ struct ContentView: View {
                 #endif
             }
         }
+        #if os(iOS)
         .navigationViewStyle(.stack)
+        #endif
         .onAppear(){
             self.UserSetUp()
             if (defaults.bool(forKey: "OFB") == false) {

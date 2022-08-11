@@ -52,7 +52,12 @@ struct settin: View {
                             Text("\(Int($0)) minutes").tag($0)
                         }
                     }
-                }.pickerStyle(.wheel)
+                }
+            #if os(iOS)
+                .pickerStyle(.wheel)
+            #else
+                .pickerStyle(.automatic)
+            #endif
             Section("Other") {
                 Toggle(isOn: $popup.PopUp) {
                     Text("Showup an adding view on start")
@@ -60,7 +65,9 @@ struct settin: View {
             }
         }
         .navigationTitle("settings")
-        .navigationBarTitleDisplayMode(.inline)
+            #if os(iOS)
+                .navigationBarTitleDisplayMode(.inline)
+            #endif
         .toolbar{
             #if os(iOS)
             ToolbarItem(placement: .navigationBarLeading){
