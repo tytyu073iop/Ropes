@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E701DA7D28A6799B0043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
+		E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
 		E735FE0428A2538F00FCE2E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0328A2538F00FCE2E6 /* Assets.xcassets */; };
 		E735FE0728A2538F00FCE2E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */; };
 		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
@@ -41,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivity.swift; sourceTree = "<group>"; };
 		E735FDFD28A2538E00FCE2E6 /* RopesForWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RopesForWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E735FE0328A2538F00FCE2E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -86,12 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E701DA7B28A679740043BA2A /* Mac menus */ = {
+			isa = PBXGroup;
+			children = (
+				E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */,
+				E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */,
+			);
+			path = "Mac menus";
+			sourceTree = "<group>";
+		};
 		E735FDFE28A2538E00FCE2E6 /* RopesForWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
 				E735FE0328A2538F00FCE2E6 /* Assets.xcassets */,
 				E735FE0528A2538F00FCE2E6 /* Preview Content */,
 				E748235528A2619C008E5087 /* Adding.swift */,
+				E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */,
 			);
 			path = "RopesForWatch Watch App";
 			sourceTree = "<group>";
@@ -162,11 +175,10 @@
 		E7EAFFA1289F8F5B00C28906 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				E701DA7B28A679740043BA2A /* Mac menus */,
 				E7EAFFA2289F8F5B00C28906 /* Adding.swift */,
 				E7EAFFA3289F8F5B00C28906 /* Settings.swift */,
 				E7EAFFA4289F8F5B00C28906 /* ContentView.swift */,
-				E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */,
-				E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -282,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E701DA7D28A6799B0043BA2A /* WatchConnectivity.swift in Sources */,
 				E735FE1628A2589200FCE2E6 /* Persistence.swift in Sources */,
 				E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */,
 				E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */,
@@ -308,6 +321,7 @@
 				E7EAFFB3289F8F5B00C28906 /* ReadMe.swift in Sources */,
 				E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */,
 				E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */,
+				E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */,
 				E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */,
 				E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */,
 				E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */,

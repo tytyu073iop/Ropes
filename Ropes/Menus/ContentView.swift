@@ -1,5 +1,6 @@
 import SwiftUI
 import UserNotifications
+import WatchConnectivity
 
 struct ContentView: View {
     //db
@@ -82,6 +83,7 @@ struct ContentView: View {
         .navigationViewStyle(.stack)
 #endif
         .onAppear(){
+            
             self.UserSetUp()
             if (defaults.bool(forKey: "OFB") == false) {
                 defaults.set(false, forKey: "popup")
