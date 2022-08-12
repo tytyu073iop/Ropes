@@ -24,7 +24,7 @@ struct Adding: View {
     @State var remindDate : Date? = nil
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        Form{
+        List{
             #if os(iOS)
             if(!lnManager.isGranted) {
                 Button("Attention! You haven't allowed notifications. Click here to go to the settings") {
