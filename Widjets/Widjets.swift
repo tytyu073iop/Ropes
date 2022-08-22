@@ -52,9 +52,6 @@ struct WidjetsEntryView : View {
                     Spacer()
                 }
             }
-            HStack{
-                Image(systemName: "plus")
-            }
         }
     }
 }

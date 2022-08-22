@@ -161,6 +161,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E7764A3D28B35FA60022E8C3 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				E7EAFFA7289F8F5B00C28906 /* Core data */,
+				E7EAFF9D289F8F5B00C28906 /* Data */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
 		E7B740D928A6AEE9008048CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +215,7 @@
 			children = (
 				E77814DD28A4F4040073FFEF /* Info.plist */,
 				E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */,
-				E7EAFFA7289F8F5B00C28906 /* Core data */,
-				E7EAFF9D289F8F5B00C28906 /* Data */,
+				E7764A3D28B35FA60022E8C3 /* shared */,
 				E7EAFFA1289F8F5B00C28906 /* Menus */,
 				E7EAFFA6289F8F5B00C28906 /* ReadMe.swift */,
 				E7EAFF89289F8DE900C28906 /* RopesApp.swift */,
