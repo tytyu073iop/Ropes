@@ -63,17 +63,6 @@ class LocalNotficationManager:NSObject, ObservableObject {
     func updatePermition() async {
         isGranted = await isGrantedAsFunc()
     }
-    #if os(iOS)
-    func openSettings() {
-        if let url = URL(string: UIApplication.openSettingsURLString) {
-            if UIApplication.shared.canOpenURL(url) {
-                Task {
-                    await UIApplication.shared.open(url)
-                }
-            }
-        }
-    }
-    #endif
     static func remove(id : String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
     }

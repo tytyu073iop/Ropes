@@ -21,6 +21,15 @@
 		E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; };
 		E735FE1D28A259F600FCE2E6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
 		E748235628A2619C008E5087 /* Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E748235528A2619C008E5087 /* Adding.swift */; };
+		E7764A3E28B360210022E8C3 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
+		E7764A3F28B360210022E8C3 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
+		E7764A4028B360210022E8C3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
+		E7764A4128B360250022E8C3 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
+		E7764A4228B360250022E8C3 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
+		E7764A4328B360250022E8C3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
+		E7764A4428B360FB0022E8C3 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
+		E7764A4728B36AAF0022E8C3 /* AddIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7764A4628B36AAF0022E8C3 /* AddIntent.swift */; };
+		E7764A4828B36AAF0022E8C3 /* AddIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7764A4628B36AAF0022E8C3 /* AddIntent.swift */; };
 		E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D528A4DBE60073FFEF /* StackNavigationView.swift */; platformFilters = (macos, ); };
 		E77814DA28A4E62A0073FFEF /* ContentViewForMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */; platformFilters = (macos, ); };
 		E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */; platformFilters = (macos, ); };
@@ -77,6 +86,7 @@
 		E735FE0328A2538F00FCE2E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E748235528A2619C008E5087 /* Adding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding.swift; sourceTree = "<group>"; };
+		E7764A4628B36AAF0022E8C3 /* AddIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIntent.swift; sourceTree = "<group>"; };
 		E77814D528A4DBE60073FFEF /* StackNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNavigationView.swift; sourceTree = "<group>"; };
 		E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewForMAC.swift; sourceTree = "<group>"; };
 		E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsForMac.swift; sourceTree = "<group>"; };
@@ -164,10 +174,19 @@
 		E7764A3D28B35FA60022E8C3 /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				E7764A4528B36A7F0022E8C3 /* App intents */,
 				E7EAFFA7289F8F5B00C28906 /* Core data */,
 				E7EAFF9D289F8F5B00C28906 /* Data */,
 			);
 			path = shared;
+			sourceTree = "<group>";
+		};
+		E7764A4528B36A7F0022E8C3 /* App intents */ = {
+			isa = PBXGroup;
+			children = (
+				E7764A4628B36AAF0022E8C3 /* AddIntent.swift */,
+			);
+			path = "App intents";
 			sourceTree = "<group>";
 		};
 		E7B740D928A6AEE9008048CF /* Frameworks */ = {
@@ -409,6 +428,7 @@
 				E735FE1928A258A500FCE2E6 /* Base.swift in Sources */,
 				E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */,
 				E735FE1D28A259F600FCE2E6 /* Settings.swift in Sources */,
+				E7764A4828B36AAF0022E8C3 /* AddIntent.swift in Sources */,
 				E735FE1728A2589200FCE2E6 /* Task core data.swift in Sources */,
 				E735FE1A28A258A500FCE2E6 /* Data.swift in Sources */,
 			);
@@ -418,6 +438,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7764A4428B360FB0022E8C3 /* WatchConnectivity.swift in Sources */,
+				E7764A4328B360250022E8C3 /* Data.swift in Sources */,
+				E7764A4228B360250022E8C3 /* Base.swift in Sources */,
+				E7764A3F28B360210022E8C3 /* Task core data.swift in Sources */,
+				E7764A4028B360210022E8C3 /* Persistence.swift in Sources */,
+				E7764A4128B360250022E8C3 /* LocalNotfication.swift in Sources */,
+				E7764A3E28B360210022E8C3 /* Persistence extension.swift in Sources */,
 				E7B740E028A6AEE9008048CF /* Widjets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +467,7 @@
 				E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */,
 				E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */,
 				E7EAFFB6289F8F5B00C28906 /* Task core data.swift in Sources */,
+				E7764A4728B36AAF0022E8C3 /* AddIntent.swift in Sources */,
 				E7EAFF8F289F8DE900C28906 /* Ropes.xcdatamodeld in Sources */,
 				E7EAFFAC289F8F5B00C28906 /* Data.swift in Sources */,
 			);

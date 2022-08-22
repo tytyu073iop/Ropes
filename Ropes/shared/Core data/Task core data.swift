@@ -35,7 +35,9 @@ extension ToDo : Identifiable {
         self.date = Date.now
         self.id = id
         PersistenceController.save()
-        WC.shared.send("Tasks", [self])
+        #if os(iOS) || os(watchOS)
+            WC.shared.send("Tasks", [self])
+        #endif
         if auto {
             PushNotfication(time: defaults.double(forKey: "time"))
         }

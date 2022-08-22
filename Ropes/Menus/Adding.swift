@@ -28,7 +28,7 @@ struct Adding: View {
             #if os(iOS)
             if(!lnManager.isGranted) {
                 Button("Attention! You haven't allowed notifications. Click here to go to the settings") {
-                    lnManager.openSettings()
+                    openSettings()
                 }
             }
             #endif
@@ -128,7 +128,17 @@ struct Adding: View {
             dismiss()
         }
     }
-    
+#if os(iOS)
+func openSettings() {
+    if let url = URL(string: UIApplication.openSettingsURLString) {
+        if UIApplication.shared.canOpenURL(url) {
+            Task {
+                await UIApplication.shared.open(url)
+            }
+        }
+    }
+}
+#endif
 }
 
 
