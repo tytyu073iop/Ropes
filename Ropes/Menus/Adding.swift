@@ -71,6 +71,9 @@ struct Adding: View {
                         past.toggle()
                     } catch AddingErrors.ThisNameIsExciting {
                         alert.toggle()
+                    } catch NotificationErrors.noPermition {
+                        //FIXME: add an alert
+                        print("no notfication")
                     } catch {
                         print("what the heck \(error)")
                     }
@@ -121,7 +124,7 @@ struct Adding: View {
         if Ropes.contains(where: {$0.name == name}) {throw AddingErrors.ThisNameIsExciting}
         else {
             if (date == nil) {
-                ToDo(context: viewContext, name: name)
+                try ToDo(context: viewContext, name: name)
             } else {
                 try ToDo(context: viewContext, name: name, time: date!)
             }

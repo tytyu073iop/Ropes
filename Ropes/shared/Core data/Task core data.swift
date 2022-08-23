@@ -23,13 +23,16 @@ extension ToDo : Identifiable {
         }
         print("removing complete")
     }
-    @MainActor private func PushNotfication(time : Double) {
-        LocalNotficationManager.shared.request(text : name, time : time, id : id, userInfo: ["id" : id.uuidString])
+    @MainActor private func PushNotfication(time : Double) throws {
+        try LocalNotficationManager.shared.request(text : name, time : time, id : id, userInfo: ["id" : id.uuidString])
     }
     @MainActor private func PushNotfication(time : Date) throws {
         try LocalNotficationManager.shared.request(text: name, time: time)
     }
-    @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true) {
+    @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time")) throws {
+        if auto {
+            try LocalNotficationManager.shared.request(text: name, time: time)
+        }
         self.init(context : context)
         self.name = name
         self.date = Date.now
@@ -38,9 +41,6 @@ extension ToDo : Identifiable {
         #if os(iOS) || os(watchOS)
             WC.shared.send("Tasks", [self])
         #endif
-        if auto {
-            PushNotfication(time: defaults.double(forKey: "time"))
-        }
     }
     @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), time : Date) throws {
         self.init(context : context)

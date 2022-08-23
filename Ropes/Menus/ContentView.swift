@@ -45,7 +45,11 @@ struct ContentView: View {
                 })
                 if admin{
                     Button("Notify"){
-                        LocalNotficationManager.shared.request(text : "Test", time : 10)
+                        do {
+                            try LocalNotficationManager.shared.request(text : "Test", time : 10)
+                        } catch {
+                            print(error.localizedDescription)
+                        }
                         let _ = print("requested by test")
                     }
                     Button("requests") {
