@@ -29,6 +29,7 @@ class PopUp : ObservableObject {
 
 enum NotificationErrors: Error {
     case missingTime
+    case noPermition
 }
 
 enum AddingErrors : Error {

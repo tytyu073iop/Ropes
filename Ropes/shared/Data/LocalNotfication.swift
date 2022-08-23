@@ -35,6 +35,9 @@ class LocalNotficationManager:NSObject, ObservableObject {
         print("request ended")
     }
     func request(text : String, time : Date, id : UUID = UUID()) throws {
+        if (isGranted) {
+            throw NotificationErrors.noPermition
+        }
         
         let content = UNMutableNotificationContent()
         content.title = text
