@@ -15,17 +15,23 @@ import AppIntents
     static var title: LocalizedStringResource = "Add Rope"
     static var description = IntentDescription("Add task to the ropes app")
     @Parameter(title: "Task") var Task: String?
-    func perform() async throws -> some IntentResult {
+    func perform() async throws -> some IntentResult & ProvidesDialog {
+        if Task == nil {
+            Task = "Rope"
+        }
         let context = PersistenceController.shared.container.viewContext
         do {
-            try await ToDo(context: context, name: Task ?? "Rope")
+            //FIXME: when closed do not response
+            try await ToDo(context: context, name: Task!)
         } catch NotificationErrors.noPermition {
-            return .result(content: {
-                //FIXME: add an error
-                Text("You aren't allowed notfications. Add first task right from the app")
+            return .result(
+                dialog : "You aren't allowed notfications. Add first task right from the app"
+                ,content: {
+                    //FIXME: add an error
+                    Text("You aren't allowed notfications. Add first task right from the app")
             })
         }
-        return .result(content: {
+        return .result(dialog : "Task \(Task ?? "Rope")", content: {
             VStack{
                 HStack{
                     Spacer()
@@ -35,11 +41,26 @@ import AppIntents
                 HStack{
                     let _ = print("Sucsess!")
                     Spacer()
-                    Text(Task ?? "Rope")
+                    Text(Task!)
                     Spacer()
                 }
             }
         })
+    }
+}
+
+// An AppShortcut turns an Intent into a full fledged shortcut
+// AppShortcuts are returned from a struct that implements the AppShortcuts
+// protocol
+
+import AppIntents
+
+@available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct RopesShortCuts: AppShortcutsProvider {
+    static var appShortcuts: [AppShortcut] {
+        AppShortcut(
+            intent: AddTask(),
+            phrases: ["Create a \(.applicationName)"]
+        )
     }
 }
 
