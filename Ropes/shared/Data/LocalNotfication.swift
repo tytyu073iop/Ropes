@@ -11,7 +11,10 @@ class LocalNotficationManager:NSObject, ObservableObject {
         notficationCenter.delegate = self
     }
     //TODO: Change to numerical
-    func request(text : String, time : Double, id : UUID = UUID(), userInfo : [AnyHashable : Any]? = nil){
+    func request(text : String, time : Double, id : UUID = UUID(), userInfo : [AnyHashable : Any]? = nil) throws {
+        if (!isGranted) {
+            throw NotificationErrors.noPermition
+        }
         //test
         print("requesting")
         //test
@@ -35,7 +38,7 @@ class LocalNotficationManager:NSObject, ObservableObject {
         print("request ended")
     }
     func request(text : String, time : Date, id : UUID = UUID()) throws {
-        if (isGranted) {
+        if (!isGranted) {
             throw NotificationErrors.noPermition
         }
         
@@ -61,7 +64,8 @@ class LocalNotficationManager:NSObject, ObservableObject {
     }
     private func isGrantedAsFunc() async -> Bool {
         let currentSettings = await notficationCenter.notificationSettings()
-        return (currentSettings.authorizationStatus == .authorized)
+        isGranted = (currentSettings.authorizationStatus == .authorized)
+        return isGranted
     }
     func updatePermition() async {
         isGranted = await isGrantedAsFunc()

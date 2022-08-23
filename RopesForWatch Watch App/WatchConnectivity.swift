@@ -46,7 +46,7 @@ extension WC: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
             if let notificationText = message["Tasks"] as? ToDo {
                 DispatchQueue.main.async { [weak self] in
-                    ToDo(context: PersistenceController.shared.container.viewContext , name: notificationText.name)
+                    try! ToDo(context: PersistenceController.shared.container.viewContext , name: notificationText.name)
                 }
             }
         }
