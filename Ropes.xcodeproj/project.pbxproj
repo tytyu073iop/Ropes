@@ -33,6 +33,7 @@
 		E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D528A4DBE60073FFEF /* StackNavigationView.swift */; platformFilters = (macos, ); };
 		E77814DA28A4E62A0073FFEF /* ContentViewForMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */; platformFilters = (macos, ); };
 		E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */; platformFilters = (macos, ); };
+		E77DBC4328B619DF0076C393 /* CatchTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DBC4228B619DF0076C393 /* CatchTasks.swift */; };
 		E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E7B740DB28A6AEE9008048CF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
 		E7B740DD28A6AEE9008048CF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
@@ -95,6 +96,7 @@
 		E77DBC3828B613EF0076C393 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E77DBC3A28B613F00076C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E77DBC3D28B613F00076C393 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E77DBC4228B619DF0076C393 /* CatchTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTasks.swift; sourceTree = "<group>"; };
 		E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidjetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B740DA28A6AEE9008048CF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		E7B740DC28A6AEE9008048CF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				E7764A4628B36AAF0022E8C3 /* AddIntent.swift */,
+				E77DBC4228B619DF0076C393 /* CatchTasks.swift */,
 			);
 			path = "App intents";
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			files = (
 				E7EAFFAF289F8F5B00C28906 /* Adding.swift in Sources */,
 				E7EAFFAE289F8F5B00C28906 /* Base.swift in Sources */,
+				E77DBC4328B619DF0076C393 /* CatchTasks.swift in Sources */,
 				E77814DA28A4E62A0073FFEF /* ContentViewForMAC.swift in Sources */,
 				E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */,
 				E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */,

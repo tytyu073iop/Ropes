@@ -15,7 +15,7 @@ import AppIntents
     static var title: LocalizedStringResource = "Add Rope"
     static var description = IntentDescription("Add task to the ropes app")
     @Parameter(title: "Task") var Task: String?
-    func perform() async throws -> some IntentResult & ProvidesDialog {
+    func perform() async throws -> some ProvidesDialog {
         if Task == nil {
             Task = "Rope"
         }
@@ -24,29 +24,19 @@ import AppIntents
             //FIXME: when closed do not response
             try await ToDo(context: context, name: Task!)
         } catch NotificationErrors.noPermition {
-            return .result(
-                dialog : "You aren't allowed notfications. Add first task right from the app"
-                ,content: {
-                    //FIXME: add an error
-                    Text("You aren't allowed notfications. Add first task right from the app")
-            })
+            return .result( dialog : "You aren't allowed notfications. Add first task right from the app" )
         }
-        return .result(dialog : "Task \(Task ?? "Rope")", content: {
-            VStack{
-                HStack{
-                    Spacer()
-                    Text("Task Created!")
-                    Spacer()
-                }
-                HStack{
-                    let _ = print("Sucsess!")
-                    Spacer()
-                    Text(Task!)
-                    Spacer()
-                }
-            }
-        })
+        return .result(dialog : "Task \(Task ?? "Rope") was created")
     }
+    static var parameterSummary: some ParameterSummary {
+            Summary("Create a rope \(\.$Task)")
+        }
+      
+        init() {}
+
+        init(Task: String?) {
+            self.Task = Task
+        }
 }
 
 // An AppShortcut turns an Intent into a full fledged shortcut
