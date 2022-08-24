@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E701DA7D28A6799B0043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
-		E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
+		E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; platformFilter = ios; };
 		E71A024228B65B8A000176CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E71A024428B65B8A000176CA /* Localizable.strings */; };
+		E71A024628B663DE000176CA /* CatchTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DBC4228B619DF0076C393 /* CatchTasks.swift */; };
 		E735FE0428A2538F00FCE2E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0328A2538F00FCE2E6 /* Assets.xcassets */; };
 		E735FE0728A2538F00FCE2E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */; };
 		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
@@ -455,6 +456,7 @@
 				E735FE1628A2589200FCE2E6 /* Persistence.swift in Sources */,
 				E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */,
 				E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */,
+				E71A024628B663DE000176CA /* CatchTasks.swift in Sources */,
 				E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */,
 				E735FE1828A258A500FCE2E6 /* LocalNotfication.swift in Sources */,
 				E748235628A2619C008E5087 /* Adding.swift in Sources */,

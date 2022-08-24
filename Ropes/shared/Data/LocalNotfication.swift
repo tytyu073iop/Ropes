@@ -117,7 +117,9 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
         //FIXME: actions doesn't working when app closed
         print("did recive!")
         if response.actionIdentifier == "done" {
+            print("Stage1")
             if let id = response.notification.request.content.userInfo["id"] as? String {
+                print("Stage2")
                 // Create a new background managed object context
                 let context = PersistenceController.shared.container.newBackgroundContext()
                 

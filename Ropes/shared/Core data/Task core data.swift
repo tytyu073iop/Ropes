@@ -31,7 +31,7 @@ extension ToDo : Identifiable {
     }
     @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time")) throws {
         if auto {
-            try LocalNotficationManager.shared.request(text: name, time: time)
+            try LocalNotficationManager.shared.request(text : name, time : time, id : id, userInfo: ["id" : id.uuidString])
         }
         self.init(context : context)
         self.name = name
