@@ -41,7 +41,7 @@
 		E7B740DD28A6AEE9008048CF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
 		E7B740E028A6AEE9008048CF /* Widjets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* Widjets.swift */; };
 		E7B740E228A6AEEA008048CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B740E128A6AEEA008048CF /* Assets.xcassets */; };
-		E7B740E628A6AEEA008048CF /* WidjetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7B740E628A6AEEA008048CF /* WidjetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
 		E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 		E7EAFF8F289F8DE900C28906 /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
@@ -514,6 +514,7 @@
 /* Begin PBXTargetDependency section */
 		E7B740E528A6AEEA008048CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = E7B740D728A6AEE9008048CF /* WidjetsExtension */;
 			targetProxy = E7B740E428A6AEEA008048CF /* PBXContainerItemProxy */;
 		};
