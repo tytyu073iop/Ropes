@@ -73,7 +73,9 @@ struct ContentView: View {
                     Button("ADD"){
                         showingSheet.toggle()
                     }
+                    .keyboardShortcut("a")
                     .sheet(isPresented: $showingSheet) {Adding()}
+                    
                 }
                 ToolbarItem(placement: .navigationBarLeading){
                     Button(action: { settings.toggle() },

@@ -43,9 +43,8 @@ import AppIntents
 // AppShortcuts are returned from a struct that implements the AppShortcuts
 // protocol
 
-import AppIntents
-
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct RopesShortCuts: AppShortcutsProvider {
+    //FIXME: add multiple shortcuts
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
             intent: AddTask(),

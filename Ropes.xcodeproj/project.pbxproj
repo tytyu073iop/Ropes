@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E701DA7D28A6799B0043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
 		E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
+		E71A024228B65B8A000176CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E71A024428B65B8A000176CA /* Localizable.strings */; };
 		E735FE0428A2538F00FCE2E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0328A2538F00FCE2E6 /* Assets.xcassets */; };
 		E735FE0728A2538F00FCE2E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */; };
 		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
@@ -83,6 +84,8 @@
 
 /* Begin PBXFileReference section */
 		E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivity.swift; sourceTree = "<group>"; };
+		E71A024328B65B8A000176CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E71A024528B65B99000176CA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E735FDFD28A2538E00FCE2E6 /* RopesForWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RopesForWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E735FE0328A2538F00FCE2E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E735FE0628A2538F00FCE2E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 		E7EAFF7D289F8DE900C28906 = {
 			isa = PBXGroup;
 			children = (
+				E71A024428B65B8A000176CA /* Localizable.strings */,
 				E7EAFF88289F8DE900C28906 /* Ropes */,
 				E735FDFE28A2538E00FCE2E6 /* RopesForWatch Watch App */,
 				E7B740DE28A6AEE9008048CF /* Widjets */,
@@ -397,6 +401,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = E7EAFF7D289F8DE900C28906;
 			productRefGroup = E7EAFF87289F8DE900C28906 /* Products */;
@@ -433,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EAFF97289F8DEA00C28906 /* Preview Assets.xcassets in Resources */,
+				E71A024228B65B8A000176CA /* Localizable.strings in Resources */,
 				E7EAFFB2289F8F5B00C28906 /* Assets.xcassets in Resources */,
 				E7EAFF93289F8DEA00C28906 /* Assets.xcassets in Resources */,
 			);
@@ -510,6 +516,18 @@
 			targetProxy = E7B740E428A6AEEA008048CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E71A024428B65B8A000176CA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E71A024328B65B8A000176CA /* en */,
+				E71A024528B65B99000176CA /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E735FE0828A2538F00FCE2E6 /* Debug */ = {

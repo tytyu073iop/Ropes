@@ -29,7 +29,20 @@ import CoreData
                 names.append(toDo.name)
             }
         }
-        return .result(value: names)
+        var phrase : String = "Your Ropes:"
+        //FIXME: if names doesnt contain anything
+        if true {
+            phrase += " \(names.first!)"
+            for name in names {
+                if name == names.first! {
+                    continue
+                }
+                phrase += ", \(name)"
+            }
+            return .result(value: names, dialog: IntentDialog(stringLiteral: phrase))
+        } else {
+            return .result(value: names, dialog: "You have no ropes")
+        }
     }
     
 }
