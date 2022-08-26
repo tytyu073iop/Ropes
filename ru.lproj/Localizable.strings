@@ -1,5 +1,5 @@
 /* No comment provided by engineer. */
-"%lld minutes" = "%lld Минут";
+"%lld minutes" = "%llb Минут";
 
 /* No comment provided by engineer. */
 "add to fast Answers" = "Добавить в Быстрые напоминания";
@@ -87,3 +87,4 @@
 
 /* No comment provided by engineer. */
 "Your Ropes:" = "Ваши узелки:";
+
