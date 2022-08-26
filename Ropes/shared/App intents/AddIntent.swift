@@ -21,11 +21,21 @@ import AppIntents
             Task = "Rope"
         }
         let context = PersistenceController.shared.container.viewContext
-        do {
-            //FIXME: when closed do not response
-            try await ToDo(context: context, name: Task!)
-        } catch NotificationErrors.noPermition {
-            return .result( dialog : "You aren't allowed notfications. Add first task right from the app" )
+        var i = 1
+        let rawTask = Task
+        while true {
+            do {
+                //FIXME: when closed do not response
+                try await ToDo(context: context, name: Task!)
+                break
+            } catch NotificationErrors.noPermition {
+                return .result( dialog : "You aren't allowed notfications. Add first task right from the app" )
+            } catch AddingErrors.ThisNameIsExciting {
+                Task = rawTask
+                Task! += String(i)
+                i += 1
+                print("trying")
+            }
         }
         return .result(dialog : "Task \(Task ?? "Rope") was created")
     }

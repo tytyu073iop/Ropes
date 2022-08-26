@@ -30,6 +30,24 @@ extension ToDo : Identifiable {
         try LocalNotficationManager.shared.request(text: name, time: time)
     }
     @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time")) throws {
+        print("begin saving")
+        // Create a fetch request for a specific Entity type
+        let fetchRequest = ToDo.fetchRequest()
+
+        // Get a reference to a NSManagedObjectContext
+        let context = PersistenceController.shared.container.viewContext
+
+        // Fetch all objects of one Entity type
+        let objects = try context.fetch(fetchRequest)
+        if objects.contains(where: {
+            if let toDo = $0 as? ToDo {
+                return toDo.name == name
+            } else {
+                return false
+            }
+        }) {
+            throw AddingErrors.ThisNameIsExciting
+        }
         if auto {
             try LocalNotficationManager.shared.request(text : name, time : time, id : id, userInfo: ["id" : id.uuidString])
         }
@@ -37,7 +55,9 @@ extension ToDo : Identifiable {
         self.name = name
         self.date = Date.now
         self.id = id
+        print("ready")
         PersistenceController.save()
+        print("saved")
         #if os(iOS) || os(watchOS)
             WC.shared.send("Tasks", [self])
         #endif

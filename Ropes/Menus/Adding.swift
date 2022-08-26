@@ -124,18 +124,15 @@ struct Adding: View {
     }
     }
     private func AddRope(name : String, time : Double = defaults.double(forKey: "time"), date : Date? = nil) throws {
-        if Ropes.contains(where: {$0.name == name}) {throw AddingErrors.ThisNameIsExciting}
-        else {
-            if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
-                IntentDonationManager.shared.donate(intent: AddTask())
-            }
-            if (date == nil) {
-                try ToDo(context: viewContext, name: name)
-            } else {
-                try ToDo(context: viewContext, name: name, time: date!)
-            }
-            dismiss()
+        if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
+            IntentDonationManager.shared.donate(intent: AddTask())
         }
+        if (date == nil) {
+            try ToDo(context: viewContext, name: name)
+        } else {
+            try ToDo(context: viewContext, name: name, time: date!)
+        }
+        dismiss()
     }
 #if os(iOS)
 func openSettings() {
