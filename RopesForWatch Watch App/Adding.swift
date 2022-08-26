@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import WatchKit
 
 struct Adding: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -28,6 +29,7 @@ struct Adding: View {
                 Button(action: {
                     do {
                         try AddRope(name: answer.name, date : remindDate)
+                        WKInterfaceDevice.current().play(.success)
                         self.presentationMode.wrappedValue.dismiss()
                     } catch NotificationErrors.missingTime {
                         past.toggle()
@@ -56,6 +58,7 @@ struct Adding: View {
                 TextField("Your rope", text: $CustomRope).onSubmit {
                     do {
                         try AddRope(name: CustomRope, date : remindDate)
+                        WKInterfaceDevice.current().play(.success)
                         self.presentationMode.wrappedValue.dismiss()
                     } catch NotificationErrors.missingTime {
                         past.toggle()
