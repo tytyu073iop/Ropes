@@ -16,6 +16,7 @@ import AppIntents
     static var description = IntentDescription("Add task to the ropes app")
     @Parameter(title: "Task") var Task: String?
     func perform() async throws -> some ProvidesDialog {
+        print(AddTask.title.table)
         if Task == nil {
             Task = "Rope"
         }

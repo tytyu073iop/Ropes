@@ -3,6 +3,7 @@ import UserNotifications
 import WatchConnectivity
 
 struct ContentView: View {
+    let buttonName : LocalizedStringKey = "ADD"
     //db
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
@@ -70,7 +71,7 @@ struct ContentView: View {
                 }
 #if os(iOS)
                 ToolbarItem(placement: .bottomBar){
-                    Button("ADD"){
+                    Button(buttonName){
                         showingSheet.toggle()
                     }
                     .keyboardShortcut("a")
