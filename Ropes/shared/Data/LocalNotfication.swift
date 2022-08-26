@@ -31,7 +31,6 @@ extension LocalizedStringKey {
 @MainActor
 class LocalNotficationManager:NSObject, ObservableObject {
     let done : LocalizedStringKey = "Done"
-    @Published var isGranted = false
     static let shared = LocalNotficationManager()
     private let notficationCenter = UNUserNotificationCenter.current()
     override init() {
@@ -40,9 +39,6 @@ class LocalNotficationManager:NSObject, ObservableObject {
     }
     //TODO: Change to numerical
     func request(text : String, time : Double, id : UUID = UUID(), userInfo : [AnyHashable : Any]? = nil) throws {
-        if (!isGranted) {
-            throw NotificationErrors.noPermition
-        }
         //test
         print("requesting")
         //test
@@ -66,9 +62,6 @@ class LocalNotficationManager:NSObject, ObservableObject {
         print("request ended")
     }
     func request(text : String, time : Date, id : UUID = UUID()) throws {
-        if (!isGranted) {
-            throw NotificationErrors.noPermition
-        }
         
         let content = UNMutableNotificationContent()
         content.title = text
@@ -88,15 +81,10 @@ class LocalNotficationManager:NSObject, ObservableObject {
     }
     func requestAuthorization(Options : UNAuthorizationOptions = [.sound,.alert,.badge]) async throws{
         try await notficationCenter.requestAuthorization(options: Options)
-        isGranted = await isGrantedAsFunc()
     }
     private func isGrantedAsFunc() async -> Bool {
         let currentSettings = await notficationCenter.notificationSettings()
-        isGranted = (currentSettings.authorizationStatus == .authorized)
-        return isGranted
-    }
-    func updatePermition() async {
-        isGranted = await isGrantedAsFunc()
+        return (currentSettings.authorizationStatus == .authorized)
     }
     static func remove(id : String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])

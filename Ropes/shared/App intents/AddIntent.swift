@@ -25,7 +25,6 @@ import AppIntents
         let rawTask = Task
         while true {
             do {
-                //FIXME: when closed do not response
                 try await ToDo(context: context, name: Task!)
                 break
             } catch NotificationErrors.noPermition {

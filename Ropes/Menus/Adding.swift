@@ -28,13 +28,6 @@ struct Adding: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
         List{
-            #if os(iOS)
-            if(!lnManager.isGranted) {
-                Button("Attention! You haven't allowed notifications. Click here to go to the settings") {
-                    openSettings()
-                }
-            }
-            #endif
             ForEach(fastAnswers){ answer in
                 Button(action: {
                     do {
@@ -111,7 +104,7 @@ struct Adding: View {
         if $0 == .active {
             print("a")
             Task {
-                await lnManager.updatePermition()
+                try await lnManager.requestAuthorization()
                 try? await Task.sleep(seconds : 10)
                 print("haha")
             }

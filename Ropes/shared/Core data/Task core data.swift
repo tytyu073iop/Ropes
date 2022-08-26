@@ -13,10 +13,12 @@ extension ToDo : Identifiable {
     @MainActor func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
         print("start removing")
         let viewcontext = context
-        viewcontext.delete(self)
         LocalNotficationManager.remove(id : name)
+        viewcontext.delete(self)
         do {
-            try context.save()
+            try viewcontext.save()
+            print(context)
+            print(viewcontext)
         }
         catch {
             print(error.localizedDescription)
