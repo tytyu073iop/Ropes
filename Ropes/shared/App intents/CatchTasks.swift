@@ -10,8 +10,8 @@ import AppIntents
 import CoreData
 
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct ShowTasks : AppIntent {
-    static var title: LocalizedStringResource = "Show Ropes"
-    static var description = IntentDescription("Add task to the ropes app")
+    static var title: LocalizedStringResource = LocalizedStringResource("Show Ropes", table: "Localizable.strings.")
+    static var description = IntentDescription(LocalizedStringResource("Show all tasks from the ropes app", table: "Localizable.strings."))
     func perform() async throws -> some IntentResult {
         // Create a fetch request for a specific Entity type
         let fetchRequest = ToDo.fetchRequest()
@@ -29,7 +29,7 @@ import CoreData
                 names.append(toDo.name)
             }
         }
-        var phrase : String = "Your Ropes:"
+        var phrase : String = LocalizedStringKey("Your Ropes:").stringValue()
         //FIXME: if names doesnt contain anything
         if true {
             phrase += " \(names.first!)"

@@ -12,8 +12,8 @@ import AppIntents
 
 //FIXME: if closed no notfication
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct AddTask : AppIntent {
-    static var title: LocalizedStringResource = LocalizedStringResource("Add rope")
-    static var description = IntentDescription("Add task to the ropes app")
+    static var title: LocalizedStringResource = LocalizedStringResource("Add rope", table: "Localizable.strings.")
+    static var description = IntentDescription(LocalizedStringResource("Add task to the ropes app", table: "Localizable.strings."))
     @Parameter(title: "Task") var Task: String?
     func perform() async throws -> some ProvidesDialog {
         print(AddTask.title.table)

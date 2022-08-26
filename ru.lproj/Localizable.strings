@@ -5,6 +5,12 @@
 "ADD" = "Добавить";
 
 /* No comment provided by engineer. */
+"Add rope" = "Добавить узелок";
+
+/* No comment provided by engineer. */
+"Add task to the ropes app" = "Добавить узелок в приложение узелки";
+
+/* No comment provided by engineer. */
 "add to fast Answers" = "Добавить в Быстрые напоминания";
 
 /* No comment provided by engineer. */
@@ -23,7 +29,7 @@
 "chose the time" = "Выберите время";
 
 /* No comment provided by engineer. */
-"Create a rope ${Task}" = "Завязать узелок ${Task}";
+"Create a rope ${Task}" = "Завязать ${Task}";
 
 /* No comment provided by engineer. */
 "Disable all notifications" = "Отменить все уведомления";
@@ -65,10 +71,16 @@
 "settings" = "Настройки";
 
 /* No comment provided by engineer. */
+"Show all tasks from the ropes app" = "Показать все узелки из приложения узелки";
+
+/* No comment provided by engineer. */
+"Show Ropes" = "Показать узелки";
+
+/* No comment provided by engineer. */
 "Showup an adding view on start" = "Показывать меню добавления сразу";
 
 /* No comment provided by engineer. */
-"Task" = "Задания";
+"Task" = "Узелок";
 
 /* No comment provided by engineer. */
 "Task %@ was created" = "Узелок %@ завязан";
