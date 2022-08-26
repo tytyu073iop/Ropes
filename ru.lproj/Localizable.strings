@@ -1,5 +1,8 @@
 /* No comment provided by engineer. */
-"%lld minutes" = "%llb Минут";
+"%lld minutes" = "%lld Минут";
+
+/* No comment provided by engineer. */
+"ADD" = "Добавить";
 
 /* No comment provided by engineer. */
 "add to fast Answers" = "Добавить в Быстрые напоминания";
@@ -24,6 +27,9 @@
 
 /* No comment provided by engineer. */
 "Disable all notifications" = "Отменить все уведомления";
+
+/* No comment provided by engineer. */
+"Done" = "Готово";
 
 /* No comment provided by engineer. */
 "Enter something" = "Введите что-нибудь ";
