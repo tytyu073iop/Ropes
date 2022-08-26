@@ -43,12 +43,11 @@ struct ContentView: View {
                             }
                         }
                         HStack {
+                            //FIXME: termination on delete
                             Button(action: {rope.remove()}, label: {Image(systemName: "trash")})
                         }
                     }
-                }.onDelete(perform: {
-                    RemoveRope(index: $0)
-                })
+                }
                 if admin{
                     Button("Notify"){
                         try! LocalNotficationManager.shared.request(text : "Test", time : 10)
@@ -68,6 +67,7 @@ struct ContentView: View {
                             openURL(url)
                         }
                     }, label: {Image(systemName: "plus")})
+                    .keyboardShortcut("a")
                 }
             }
         .onAppear(){
