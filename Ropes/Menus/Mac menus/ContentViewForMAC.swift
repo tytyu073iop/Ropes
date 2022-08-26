@@ -44,7 +44,7 @@ struct ContentView: View {
                         }
                         HStack {
                             //FIXME: termination on delete
-                            Button(action: {rope.remove()}, label: {Image(systemName: "trash")})
+                            Button(action: {rope.remove(context: viewContext)}, label: {Image(systemName: "trash")})
                         }
                     }
                 }
