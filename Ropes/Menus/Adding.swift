@@ -20,6 +20,7 @@ struct Adding: View {
     //db
     @ObservedObject var lnManager = LocalNotficationManager.shared
     @State var alert = false
+    @State var noNotfication = false
     @State var past = false
     @State var addToFA = false
     @State var time : Bool = false
@@ -54,6 +55,14 @@ struct Adding: View {
                 }, message : {
                     Text("You cannot set reminder at the past")
                 })
+                .alert("Notfications aren't allowed", isPresented: $noNotfication, actions: {
+                    Button("Settings") {
+                        openSettings()
+                    }
+                    Button("ok", role: .cancel) {}
+                }, message: {
+                    Text("You aren't allowed nofications")
+                })
             }
             Section("Add your own"){
                 TextField("Your rope", text: $CustomRope).onSubmit {
@@ -68,7 +77,7 @@ struct Adding: View {
                     } catch AddingErrors.ThisNameIsExciting {
                         alert.toggle()
                     } catch NotificationErrors.noPermition {
-                        //FIXME: add an alert
+                        noNotfication.toggle()
                         print("no notfication")
                     } catch {
                         print("what the heck \(error)")
