@@ -33,17 +33,16 @@ struct ContentView: View {
                         VStack{
                             HStack{
                                 Spacer()
-                                Text(rope.name)
+                                Text(rope.name ?? "error")
                                 Spacer()
                             }
                             HStack {
                                 Spacer()
-                                Text(dateFormater.string(from: rope.date))
+                                Text(dateFormater.string(from: rope.date ?? Date()))
                                 Spacer()
                             }
                         }
                         HStack {
-                            //FIXME: termination on delete
                             Button(action: {rope.remove(context: viewContext)}, label: {Image(systemName: "trash")})
                         }
                     }

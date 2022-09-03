@@ -26,7 +26,7 @@ import CoreData
         for object in objects {
             if let toDo = object as? ToDo {
                 print("catched")
-                names.append(toDo.name)
+                names.append(toDo.name ?? "error")
             }
         }
         var phrase : String = LocalizedStringKey("Your Ropes:").stringValue()
