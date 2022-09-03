@@ -107,10 +107,6 @@
 		E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewForMAC.swift; sourceTree = "<group>"; };
 		E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsForMac.swift; sourceTree = "<group>"; };
 		E77814DD28A4F4040073FFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E77DBC3628B613EF0076C393 /* qqqqApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qqqqApp.swift; sourceTree = "<group>"; };
-		E77DBC3828B613EF0076C393 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E77DBC3A28B613F00076C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E77DBC3D28B613F00076C393 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E77DBC4228B619DF0076C393 /* CatchTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTasks.swift; sourceTree = "<group>"; };
 		E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidjetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B740DA28A6AEE9008048CF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -211,25 +207,6 @@
 			path = "App intents";
 			sourceTree = "<group>";
 		};
-		E77DBC3528B613EF0076C393 /* qqqq Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				E77DBC3628B613EF0076C393 /* qqqqApp.swift */,
-				E77DBC3828B613EF0076C393 /* ContentView.swift */,
-				E77DBC3A28B613F00076C393 /* Assets.xcassets */,
-				E77DBC3C28B613F00076C393 /* Preview Content */,
-			);
-			path = "qqqq Watch App";
-			sourceTree = "<group>";
-		};
-		E77DBC3C28B613F00076C393 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E77DBC3D28B613F00076C393 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		E7B740D928A6AEE9008048CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +235,6 @@
 				E7EAFF88289F8DE900C28906 /* Ropes */,
 				E735FDFE28A2538E00FCE2E6 /* RopesForWatch Watch App */,
 				E7B740DE28A6AEE9008048CF /* Widjets */,
-				E77DBC3528B613EF0076C393 /* qqqq Watch App */,
 				E7B740D928A6AEE9008048CF /* Frameworks */,
 				E7EAFF87289F8DE900C28906 /* Products */,
 			);
