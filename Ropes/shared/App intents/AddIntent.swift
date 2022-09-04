@@ -10,8 +10,9 @@ import SwiftUI
 import AppIntents
 #endif
 
-//FIXME: if closed no notfication
+
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct AddTask : AppIntent {
+    //FIXME: no translation
     static var title: LocalizedStringResource = LocalizedStringResource("Add rope", table: "Localizable.strings.")
     static var description = IntentDescription(LocalizedStringResource("Add task to the ropes app", table: "Localizable.strings."))
     @Parameter(title: "Task") var Task: String?
@@ -54,12 +55,11 @@ import AppIntents
 // protocol
 
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct RopesShortCuts: AppShortcutsProvider {
-    //FIXME: add multiple shortcuts
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
             intent: AddTask(),
             phrases: ["Create a \(.applicationName)"]
-        )
+        ) ; AppShortcut(intent: ShowTasks(), phrases: ["Show \(.applicationName)"])
     }
 }
 
