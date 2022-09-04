@@ -3,20 +3,28 @@ import CoreData
 
 @objc(ToDo)
 public class ToDo: NSManagedObject {
-    @NSManaged public var id : UUID
-    @NSManaged public var name : String
-    @NSManaged public var date : Date
+    @NSManaged public var id : UUID?
+    @NSManaged public var name : String?
+    @NSManaged public var date : Date?
 }
 
 extension ToDo : Identifiable {
     
-    @MainActor func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
+    @MainActor func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, auto : Bool = true) {
         print("start removing")
+        NSLog("Start removing")
         let viewcontext = context
-        LocalNotficationManager.remove(id : name)
-        viewcontext.delete(self)
+        if auto {
+            LocalNotficationManager.remove(id : name ?? "error")
+            NSLog("Removed notfication")
+        }
         do {
+            NSLog("Removing rope")
+            viewcontext.delete(self)
             try viewcontext.save()
+            viewcontext.delete(self)
+            try viewcontext.save()
+            NSLog("Rope deleted")
             print(context)
             print(viewcontext)
         }
@@ -26,10 +34,10 @@ extension ToDo : Identifiable {
         print("removing complete")
     }
     @MainActor private func PushNotfication(time : Double) throws {
-        try LocalNotficationManager.shared.request(text : name, time : time, id : id, userInfo: ["id" : id.uuidString])
+        try LocalNotficationManager.shared.request(text : name ?? "error", time : time, id : id ?? UUID(), userInfo: ["id" : id ?? UUID() .uuidString])
     }
     @MainActor private func PushNotfication(time : Date) throws {
-        try LocalNotficationManager.shared.request(text: name, time: time)
+        try LocalNotficationManager.shared.request(text: name ?? "error", time: time)
     }
     @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time")) throws {
         print("begin saving")
@@ -85,11 +93,15 @@ extension ToDo : Identifiable {
         }
         print("wantable id \(id)  \(ropes)")
         print("ids")
-        if let value = (ropes.first { todo in
-            print(todo.id.uuidString)
-            return todo.id.uuidString == id
-        }) {
+        NSLog("ids")
+        if let value = (ropes.filter { todo in
+            print(todo.id!.uuidString)
+            NSLog(todo.id!.uuidString)
+            return todo.id!.uuidString == id
+        }.first) {
             print("found")
+            NSLog("found")
+            NSLog(value.name ?? "error")
             return value
         }else {
             print("ids")

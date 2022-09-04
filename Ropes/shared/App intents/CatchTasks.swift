@@ -10,6 +10,7 @@ import AppIntents
 import CoreData
 
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct ShowTasks : AppIntent {
+    //FIXME: no translation
     static var title: LocalizedStringResource = LocalizedStringResource("Show Ropes", table: "Localizable.strings.")
     static var description = IntentDescription(LocalizedStringResource("Show all tasks from the ropes app", table: "Localizable.strings."))
     func perform() async throws -> some IntentResult {
@@ -30,6 +31,7 @@ import CoreData
             }
         }
         var phrase : String = LocalizedStringKey("Your Ropes:").stringValue()
+        let q : Bool = !names.isEmpty
         //FIXME: if names doesnt contain anything
         if true {
             phrase += " \(names.first!)"

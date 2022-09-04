@@ -1,5 +1,6 @@
 import SwiftUI
 import UserNotifications
+import Foundation
 
 //
 extension LocalizedStringKey {
@@ -134,28 +135,31 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
         print("did recive!")
         if response.actionIdentifier == "done" {
             print("Stage1")
+            NSLog("Notfication responce for category done. Stage one", 12)
             if let id = response.notification.request.content.userInfo["id"] as? String {
                 print("Stage2")
+                NSLog("Notfication responce for category done. Stage two. ID: ", 12)
+                NSLog(id)
                 // Create a new background managed object context
                 let context = PersistenceController.shared.container.newBackgroundContext()
                 
                 // If needed, ensure the background context stays
                 // up to date with changes from the parent
                 context.automaticallyMergesChangesFromParent = true
-                
                 // Perform operations on the background context
                 // asynchronously
-                await context.perform {
-                    do {
-                        let todo = try ToDo.findByID(id: id, context: context)
-                        print("remowing")
-                        todo.remove(context: context)
-                    } catch {
-                        print("Блять")
-                    }
+                do {
+                    let todo = try ToDo.findByID(id: id, context: context)
+                    print("remowing")
+                    NSLog("removing")
+                    todo.remove(context: context, auto: false)
+                    try ToDo.findByID(id: "0", context: context)
+                } catch {
+                    print("Блять")
                 }
             }
         }
         print("досвидания")
+        NSLog("END")
     }
 }

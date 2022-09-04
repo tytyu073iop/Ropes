@@ -28,6 +28,15 @@ struct Adding: View {
     @State var remindDate : Date? = nil
     @Environment(\.dismiss) var dismiss
     var body: some View {
+        //MARK: normal design
+#if canImport(AppIntents) && os(iOS)
+        if #available(iOS 16.0, *) {
+            
+            SiriTipView(intent: AddTask())
+                .siriTipViewStyle(.dark)
+                .frame(height: 40, alignment: .center)
+        }
+        #endif
         List{
             ForEach(fastAnswers){ answer in
                 Button(action: {
@@ -57,7 +66,7 @@ struct Adding: View {
                 })
                 .alert("Notfications aren't allowed", isPresented: $noNotfication, actions: {
                     Button("Settings") {
-                        openSettings()
+                        //openSettings()
                     }
                     Button("ok", role: .cancel) {}
                 }, message: {
@@ -114,7 +123,6 @@ struct Adding: View {
             print("a")
             Task {
                 try await lnManager.requestAuthorization()
-                try? await Task.sleep(seconds : 10)
                 print("haha")
             }
         }
