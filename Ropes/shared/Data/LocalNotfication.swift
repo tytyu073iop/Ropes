@@ -152,7 +152,7 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
                     let todo = try ToDo.findByID(id: id, context: context)
                     print("remowing")
                     NSLog("removing")
-                    todo.remove(context: context, auto: false)
+                    todo.remove(context: context, auto: true)
                     try ToDo.findByID(id: "0", context: context)
                 } catch {
                     print("Блять")
