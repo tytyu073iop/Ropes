@@ -64,11 +64,6 @@ struct ContentView: View {
             .navigationTitle("Ropes")
 #endif
             .toolbar(content: {
-                ToolbarItem(placement: .automatic){
-#if os(iOS)
-                    EditButton()
-#endif
-                }
 #if os(iOS)
                 ToolbarItem(placement: .bottomBar){
                     Button(buttonName){
@@ -100,7 +95,12 @@ struct ContentView: View {
             if (defaults.bool(forKey: "popup") == true) {
                 showingSheet.toggle()
             }
-        }.onChange(of: scenePhase, perform: {_ in print("MAIN scene changed")})
+        }.onChange(of: scenePhase, perform: {
+            print("MAIN scene changed")
+            if $0 == .active {
+                showingSheet = true
+            }
+        })
     }
     private func UserSetUp() {
         dateFormater.dateStyle = .short
