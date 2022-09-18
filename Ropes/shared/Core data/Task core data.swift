@@ -47,7 +47,7 @@ extension ToDo : Identifiable {
     @MainActor private func PushNotfication(time : Date) throws {
         try LocalNotficationManager.shared.request(text: name ?? "error", time: time)
     }
-    @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time")) throws {
+    @MainActor convenience init(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time"), date_of_creation : Date = Date(), from_message : Bool = false) throws {
         print("begin saving")
         // Create a fetch request for a specific Entity type
         let fetchRequest = ToDo.fetchRequest()
@@ -71,7 +71,7 @@ extension ToDo : Identifiable {
         }
         self.init(context : context)
         self.name = name
-        self.date = Date.now
+        self.date = date_of_creation
         self.id = id
         print("ready")
         PersistenceController.save()
