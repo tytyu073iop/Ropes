@@ -18,7 +18,6 @@
 		E735FE1928A258A500FCE2E6 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
 		E735FE1A28A258A500FCE2E6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; };
-		E735FE1D28A259F600FCE2E6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
 		E745025528B8AE38005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025828B8AE38005FB11A /* Localizable.strings */; };
 		E745025628B8AE38005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025828B8AE38005FB11A /* Localizable.strings */; };
 		E745025F28B8AE59005FB11A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025D28B8AE59005FB11A /* InfoPlist.strings */; };
@@ -47,7 +46,7 @@
 		E7A0CF9D28D4F2DE00EE60E4 /* advice_menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9A28D4F2DE00EE60E4 /* advice_menu.swift */; platformFilter = ios; };
 		E7A0CF9E28D4F2DE00EE60E4 /* advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9B28D4F2DE00EE60E4 /* advices.swift */; platformFilter = ios; };
 		E7A0CF9F28D4F2DE00EE60E4 /* Shortcuts_advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */; platformFilter = ios; };
-		E7A0CFA028D4F3C000EE60E4 /* Ropes.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E735FDFD28A2538E00FCE2E6 /* Ropes.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7A0CFA028D4F3C000EE60E4 /* Ropes.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E735FDFD28A2538E00FCE2E6 /* Ropes.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7A0CFA428D4F3F800EE60E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */; };
 		E7A0CFAB28D4F5D800EE60E4 /* AllIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA728D4F5D800EE60E4 /* AllIntents.swift */; };
 		E7A0CFAD28D4F5D800EE60E4 /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
@@ -513,7 +512,6 @@
 				E735FE1928A258A500FCE2E6 /* Base.swift in Sources */,
 				E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */,
 				E7EB482128D4F873000FB1B2 /* AllIntents.swift in Sources */,
-				E735FE1D28A259F600FCE2E6 /* Settings.swift in Sources */,
 				E7764A4828B36AAF0022E8C3 /* AddIntent.swift in Sources */,
 				E735FE1728A2589200FCE2E6 /* Task core data.swift in Sources */,
 				E735FE1A28A258A500FCE2E6 /* Data.swift in Sources */,
@@ -573,6 +571,7 @@
 /* Begin PBXTargetDependency section */
 		E7A0CFA228D4F3C000EE60E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = E735FDFC28A2538E00FCE2E6 /* RopesForWatch Watch App */;
 			targetProxy = E7A0CFA128D4F3C000EE60E4 /* PBXContainerItemProxy */;
 		};
@@ -884,7 +883,7 @@
 				CODE_SIGN_ENTITLEMENTS = Ropes/Ropes.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Ropes/Preview Content\"";
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -928,7 +927,7 @@
 				CODE_SIGN_ENTITLEMENTS = Ropes/Ropes.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Ropes/Preview Content\"";
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				ENABLE_HARDENED_RUNTIME = YES;
