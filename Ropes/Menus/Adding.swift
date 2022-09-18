@@ -28,89 +28,84 @@ struct Adding: View {
     @State var remindDate : Date? = nil
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        //MARK: normal design
-#if canImport(AppIntents) && os(iOS)
-        if #available(iOS 16.0, *) {
+        VStack {
             
-            SiriTipView(intent: AddTask())
-                .siriTipViewStyle(.dark)
-                .frame(height: 40, alignment: .center)
+            //MARK: normal design
+            List{
+                ForEach(fastAnswers){ answer in
+                    Button(action: {
+                        do {
+                            try AddRope(name: answer.name ?? "error", date : remindDate)
+                        } catch NotificationErrors.missingTime {
+                            past.toggle()
+                        } catch AddingErrors.ThisNameIsExciting {
+                            alert.toggle()
+                        } catch {
+                            print("what the heck \(error)")
+                        }
+                    },
+                           label: {
+                        HStack{
+                            Spacer()
+                            Text(answer.name ?? "error")
+                            Spacer()
+                        }
+                    }).alert("OOPS", isPresented: $alert, actions: {
+                        Button("ok", role : .cancel){}
+                    }, message : {Text("Try another name or complete other rope with that name")})
+                    .alert("Missing time", isPresented: $past, actions : {
+                        Button("ok", role: .cancel){}
+                    }, message : {
+                        Text("You cannot set reminder at the past")
+                    })
+                    .alert("Notfications aren't allowed", isPresented: $noNotfication, actions: {
+                        Button("Settings") {
+                            //openSettings()
+                        }
+                        Button("ok", role: .cancel) {}
+                    }, message: {
+                        Text("You aren't allowed nofications")
+                    })
+                }
+                Section("Add your own"){
+                    TextField("Your rope", text: $CustomRope).onSubmit {
+                        do {
+                            try AddRope(name: CustomRope, date : remindDate)
+                            if (addToFA) {
+                                print("ya")
+                                try FastAnswers(context : viewContext, name : CustomRope)
+                            }
+                        } catch NotificationErrors.missingTime {
+                            past.toggle()
+                        } catch AddingErrors.ThisNameIsExciting {
+                            alert.toggle()
+                        } catch NotificationErrors.noPermition {
+                            noNotfication.toggle()
+                            print("no notfication")
+                        } catch {
+                            print("what the heck \(error)")
+                        }
+                    }
+                    if (CustomRope != "") {
+                        withAnimation {
+                            Toggle(isOn: $addToFA) {
+                                Text("add to fast Answers")
+                            }
+                        }
+                    }
+                }
+                if (beta) {
+                    Section() {
+                        Toggle(isOn: $time) {
+                            Text("Set a remind time")
+                        }
+                        if (time){
+                            //DatePicker("remind in", selection: Binding<Date>(get: {self.remindDate ?? Date.now}, set: {self.remindDate = $0}), displayedComponents: [.hourAndMinute])
+                        }
+                    }
+                }
+            }
         }
-        #endif
-        List{
-            ForEach(fastAnswers){ answer in
-                Button(action: {
-                    do {
-                        try AddRope(name: answer.name, date : remindDate)
-                    } catch NotificationErrors.missingTime {
-                        past.toggle()
-                    } catch AddingErrors.ThisNameIsExciting {
-                        alert.toggle()
-                    } catch {
-                        print("what the heck \(error)")
-                    }
-                },
-                       label: {
-                    HStack{
-                        Spacer()
-                        Text(answer.name)
-                        Spacer()
-                    }
-                }).alert("OOPS", isPresented: $alert, actions: {
-                    Button("ok", role : .cancel){}
-                }, message : {Text("Try another name or complete other rope with that name")})
-                .alert("Missing time", isPresented: $past, actions : {
-                    Button("ok", role: .cancel){}
-                }, message : {
-                    Text("You cannot set reminder at the past")
-                })
-                .alert("Notfications aren't allowed", isPresented: $noNotfication, actions: {
-                    Button("Settings") {
-                        //openSettings()
-                    }
-                    Button("ok", role: .cancel) {}
-                }, message: {
-                    Text("You aren't allowed nofications")
-                })
-            }
-            Section("Add your own"){
-                TextField("Your rope", text: $CustomRope).onSubmit {
-                    do {
-                        try AddRope(name: CustomRope, date : remindDate)
-                        if (addToFA) {
-                            print("ya")
-                            FastAnswers(context : viewContext, name : CustomRope)
-                        }
-                    } catch NotificationErrors.missingTime {
-                        past.toggle()
-                    } catch AddingErrors.ThisNameIsExciting {
-                        alert.toggle()
-                    } catch NotificationErrors.noPermition {
-                        noNotfication.toggle()
-                        print("no notfication")
-                    } catch {
-                        print("what the heck \(error)")
-                    }
-                }
-                if (CustomRope != "") {
-                    withAnimation {
-                        Toggle(isOn: $addToFA) {
-                            Text("add to fast Answers")
-                        }
-                    }
-                }
-            }
-            if (beta) {
-            Section() {
-                Toggle(isOn: $time) {
-                    Text("Set a remind time")
-                }
-                if (time){
-                    //DatePicker("remind in", selection: Binding<Date>(get: {self.remindDate ?? Date.now}, set: {self.remindDate = $0}), displayedComponents: [.hourAndMinute])
-                }
-                }
-            }
-            }
         .onAppear() {
         print(scenePhase)
     }
@@ -134,9 +129,13 @@ struct Adding: View {
     }
     }
     private func AddRope(name : String, time : Double = defaults.double(forKey: "time"), date : Date? = nil) throws {
+        #if canImport(AppIntents)
         if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
-            IntentDonationManager.shared.donate(intent: AddTask())
+            Task {
+                try await IntentDonationManager.shared.donate(intent: AddTask(), result: .result(value: name, dialog: "Task name was created"))
+            }
         }
+        #endif
         if (date == nil) {
             try ToDo(context: viewContext, name: name)
         } else {
@@ -157,7 +156,16 @@ func openSettings() {
 #endif
 }
 
-
+struct MyPreviewProvider_Previews: PreviewProvider {
+    @State static private var tu = true
+    static var previews: some View {
+        VStack {
+            
+        }.sheet(isPresented: $tu) {
+            Adding()
+        }
+    }
+}
 
 
 
