@@ -2,4 +2,11 @@
 "Create a ${applicationName}" = "Создать ${applicationName}";
 
 /* No comment provided by engineer. */
+"Create a custom ${applicationName}" = "Создать именные ${applicationName}";
+
+/* No comment provided by engineer. */
+"Remove ${applicationName}" = "Удалить ${applicationName}";
+
+/* No comment provided by engineer. */
 "Show ${applicationName}" = "Показать ${applicationName}";
+

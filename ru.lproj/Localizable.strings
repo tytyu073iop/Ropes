@@ -5,12 +5,6 @@
 "ADD" = "Добавить";
 
 /* No comment provided by engineer. */
-"Add rope" = "Добавить узелок";
-
-/* No comment provided by engineer. */
-"Add task to the ropes app" = "Добавить узелок в приложение узелки";
-
-/* No comment provided by engineer. */
 "add to fast Answers" = "Добавить в Быстрые напоминания";
 
 /* No comment provided by engineer. */
@@ -62,22 +56,37 @@
 "ready" = "Готово";
 
 /* No comment provided by engineer. */
+"Remove a rope ${rope}" = "Удалить узелок ${rope}";
+
+/* No comment provided by engineer. */
+"Remove rope" = "Удалить узелок";
+
+/* No comment provided by engineer. */
+"Removes rope" = "Удаляет узелок";
+
+/* No comment provided by engineer. */
 "requests" = "Запросы";
+
+/* No comment provided by engineer. */
+"Rope" = "Узелок";
+
+/* No comment provided by engineer. */
+"rope %@ was removed" = "Узелок %@ удалён";
 
 /* No comment provided by engineer. */
 "Set a remind time" = "Поставить время напоминания";
 
 /* No comment provided by engineer. */
-"settings" = "Настройки";
+"settings" = "настройки";
 
 /* No comment provided by engineer. */
-"Show all tasks from the ropes app" = "Показать все узелки из приложения узелки";
-
-/* No comment provided by engineer. */
-"Show Ropes" = "Показать узелки";
+"Settings" = "Настройки";
 
 /* No comment provided by engineer. */
 "Showup an adding view on start" = "Показывать меню добавления сразу";
+
+/* No comment provided by engineer. */
+"Sync with watch" = "Синхронизировать с Apple Watch";
 
 /* No comment provided by engineer. */
 "Task" = "Узелок";
@@ -86,13 +95,13 @@
 "Task %@ was created" = "Узелок %@ завязан";
 
 /* No comment provided by engineer. */
+"Task name was created" = "Узелок был завязан";
+
+/* No comment provided by engineer. */
 "Time" = "Время";
 
 /* No comment provided by engineer. */
 "Try another name or complete other rope with that name" = "Попробуйте другое имя или удалите предыдущий узелок";
-
-/* No comment provided by engineer. */
-"You aren't allowed notfications. Add first task right from the app" = "Вы не разрешили уведомления. Добавьте первый узелок из приложения";
 
 /* No comment provided by engineer. */
 "You cannot set reminder at the past" = "Вы не можете поставить напоминание в прошлом";
