@@ -100,7 +100,7 @@ struct ContentView: View {
         .navigationViewStyle(.stack)
 #endif
         .onAppear(){
-            
+            WC.shared
             self.UserSetUp()
             if (defaults.bool(forKey: "OFB") == false) {
                 defaults.set(false, forKey: "popup")
