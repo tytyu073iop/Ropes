@@ -7,6 +7,9 @@ class Time : ObservableObject {
             SetTime = time
             Task {
                 await LocalNotficationManager.shared.moveAll()
+                #if os(iOS)
+                await WC.shared.send(["DefautTime" : time])
+                #endif
             }
         }
     }
@@ -33,7 +36,7 @@ enum NotificationErrors: Error {
 }
 
 enum AddingErrors : Error {
-    case ThisNameIsExciting
+    case ThisNameIsExciting, EmptyName
 }
 
 enum ProgramErrors : Error {

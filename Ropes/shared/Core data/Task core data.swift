@@ -10,7 +10,7 @@ public class ToDo: NSManagedObject {
 
 extension ToDo : Identifiable {
     
-    @MainActor func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, auto : Bool = true) {
+    @MainActor func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, auto : Bool = true, fromConnectivity : Bool = false) {
         print("start removing")
         NSLog("Start removing")
         let viewcontext = context
@@ -19,11 +19,19 @@ extension ToDo : Identifiable {
             NSLog("Removed notfication")
         }
         do {
+            print(self.id)
+            Task {
+                print(self.id)
+                if !fromConnectivity {
+#if os(iOS) || os(watchOS)
+                    await WC.shared.send(["IDForDelete" : self.id!.uuidString])
+                    #endif
+                }
+                print("deleting")
+                viewcontext.delete(self)
+                try viewcontext.save()
+            }
             NSLog("Removing rope")
-            viewcontext.delete(self)
-            try viewcontext.save()
-            viewcontext.delete(self)
-            try viewcontext.save()
             NSLog("Rope deleted")
             print(context)
             print(viewcontext)
@@ -68,9 +76,17 @@ extension ToDo : Identifiable {
         print("ready")
         PersistenceController.save()
         print("saved")
+        print(from_message)
+        if !from_message {
         #if os(iOS) || os(watchOS)
-            WC.shared.send("Tasks", [self])
+            //WC.shared.send("Tasks", [self])
+            //WC.shared.send("String", self.name ?? "error")
+            Task {
+                
+                await WC.shared.send(["Name" : self.name, "Date" : self.date, "ID" : self.id?.uuidString])
+            }
         #endif
+        }
     }
     @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), time : Date) throws {
         self.init(context : context)
@@ -118,15 +134,56 @@ public class FastAnswers: NSManagedObject {
 }
 
 extension FastAnswers: Identifiable {
-    func remove() {
+    func remove(fromConnectivity : Bool = false) {
         let viewContext = PersistenceController.shared.container.viewContext
-        viewContext.delete(self)
-        PersistenceController.save()
+        Task {
+            if !fromConnectivity {
+#if os(iOS) || os(watchOS)
+                await WC.shared.send(["IDForRemoveFA" : self.id!.uuidString])
+                #endif
+            }
+            viewContext.delete(self)
+            PersistenceController.save()
+        }
     }
-    convenience init(context : NSManagedObjectContext, id : UUID = UUID(), name : String) {
+    static func findById(id : String, context : NSManagedObjectContext = PersistenceController.shared.container.viewContext) throws -> FastAnswers? {
+        let request = FastAnswers.fetchRequest()
+        guard let fastAnswers = try context.fetch(request) as? [FastAnswers] else {
+            throw ProgramErrors.Nil
+        }
+        return fastAnswers.first { fastAnswer in
+            fastAnswer.id == UUID(uuidString: id)
+        }
+    }
+    convenience init(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, id : UUID = UUID(), name : String, fromConnectivity : Bool = false) throws {
+        // Create a fetch request for a specific Entity type
+        let fetchRequest = FastAnswers.fetchRequest()
+
+        // Get a reference to a NSManagedObjectContext
+        let context = PersistenceController.shared.container.viewContext
+
+        // Fetch all objects of one Entity type
+        let objects = try context.fetch(fetchRequest)
+        if objects.contains(where: {
+            if let fa = $0 as? FastAnswers {
+                return fa.name == name
+            } else {
+                return false
+            }
+        }) {
+            throw AddingErrors.ThisNameIsExciting
+        }
         self.init(context : context)
         self.id = id
         self.name = name
         PersistenceController.save()
+        if !fromConnectivity {
+            Task {
+#if os(iOS) || os(watchOS)
+                await WC.shared.send(["FastAnswersID" : id.uuidString, "FastAnswersName" : name])
+                #endif
+                print("sended")
+            }
+        }
     }
 }
