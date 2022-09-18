@@ -49,6 +49,9 @@ extension ToDo : Identifiable {
     }
     @MainActor convenience init(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time"), date_of_creation : Date = Date(), from_message : Bool = false) throws {
         print("begin saving")
+        if name == "" {
+            throw AddingErrors.EmptyName
+        }
         // Create a fetch request for a specific Entity type
         let fetchRequest = ToDo.fetchRequest()
 
