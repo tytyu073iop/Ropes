@@ -12,7 +12,7 @@ struct settin: View {
     private var FA : FetchedResults<FastAnswers>
     @State var alert = false
     var times : [Double] = [5, 10, 15, 20, 30]
-    @ObservedObject var Time = time()
+    @ObservedObject var time = Time()
     @ObservedObject var popup = PopUp()
     @State var a : String = ""
     var body: some View {
@@ -42,12 +42,12 @@ struct settin: View {
                 Button("Disable all notifications"){
                     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                     print("disabled")
-                    print(Time.time)
+                    print(time.time)
             }
             }
             }
                 Section("Time"){
-                    Picker("chose the time", selection: $Time.time){
+                    Picker("chose the time", selection: $time.time){
                         ForEach(times, id: \.self){
                             Text("\(Int($0)) minutes").tag($0)
                         }
@@ -61,6 +61,46 @@ struct settin: View {
             Section("Other") {
                 Toggle(isOn: $popup.PopUp) {
                     Text("Showup an adding view on start")
+                }
+                Button("Sync with watch") {
+                    Task {
+                        // Create a fetch request for a specific Entity type
+                        let fetchRequest2 = FastAnswers.fetchRequest()
+                        
+                        // Get a reference to a NSManagedObjectContext
+                        let context2 = PersistenceController.shared.container.viewContext
+                        
+                        // Fetch all objects of one Entity type
+                        let objects2 = try! context2.fetch(fetchRequest2)
+                        print(objects2)
+                        var fastAnswers : [FastAnswers] = objects2.compactMap { object in
+                            object as? FastAnswers
+                        }
+                        // Create a fetch request for a specific Entity type
+                        let fetchRequest = ToDo.fetchRequest()
+                        
+                        // Get a reference to a NSManagedObjectContext
+                        let context = PersistenceController.shared.container.viewContext
+                        
+                        // Fetch all objects of one Entity type
+                        let objects = try! context.fetch(fetchRequest)
+                        print(objects)
+                        var toDos : [ToDo] = objects.compactMap { object in
+                            object as? ToDo
+                        }
+                        
+                        var syncObjects : [String : [[String : Any]]] = [:]
+                        syncObjects["FastAnswers"] = []
+                        for fastAnswer in fastAnswers {
+                            syncObjects["FastAnswers"]!.append(["Name" : fastAnswer.name, "ID" : fastAnswer.id?.uuidString])
+                        }
+                        syncObjects["Ropes"] = []
+                        for toDo in toDos {
+                            syncObjects["Ropes"]!.append(["Name" : toDo.name, "ID" : toDo.id?.uuidString, "Date" : toDo.date])
+                        }
+                        print(syncObjects)
+                        await WC.shared.send(syncObjects, RequiresReply: true)
+                    }
                 }
             }
         }
@@ -86,14 +126,17 @@ struct settin: View {
     private func AddFA(name : String){
         if FA.contains(where: {$0.name == name}) {alert.toggle()}
         else {
-            let NewFA = FastAnswers(context: viewContext)
-            NewFA.name = name
-            NewFA.id = UUID()
-            PersistenceController.save()
+            try! FastAnswers(name: name)
         }
     }
     private func RemoveFA(index : IndexSet) {
         let FAToRemove = FA[index.first!]
         FAToRemove.remove()
+    }
+}
+
+struct MyPreviewProvi: PreviewProvider {
+    static var previews: some View {
+        settin()
     }
 }

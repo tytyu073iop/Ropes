@@ -1,6 +1,6 @@
 import SwiftUI
 
-class time : ObservableObject {
+class Time : ObservableObject {
     @AppStorage("time", store : defaults) private var SetTime : Double = 10
     @Published var time : Double = 10 {
         didSet {
