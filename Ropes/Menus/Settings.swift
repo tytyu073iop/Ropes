@@ -1,5 +1,6 @@
 import SwiftUI
 import UserNotifications
+import WatchConnectivity
 
 struct settin: View {
     @Environment(\.scenePhase) private var scenePhase
@@ -62,44 +63,46 @@ struct settin: View {
                 Toggle(isOn: $popup.PopUp) {
                     Text("Showup an adding view on start")
                 }
-                Button("Sync with watch") {
-                    Task {
-                        // Create a fetch request for a specific Entity type
-                        let fetchRequest2 = FastAnswers.fetchRequest()
-                        
-                        // Get a reference to a NSManagedObjectContext
-                        let context2 = PersistenceController.shared.container.viewContext
-                        
-                        // Fetch all objects of one Entity type
-                        let objects2 = try! context2.fetch(fetchRequest2)
-                        print(objects2)
-                        var fastAnswers : [FastAnswers] = objects2.compactMap { object in
-                            object as? FastAnswers
+                if WCSession.default.isComplicationEnabled {
+                    Button("Sync with watch") {
+                        Task {
+                            // Create a fetch request for a specific Entity type
+                            let fetchRequest2 = FastAnswers.fetchRequest()
+                            
+                            // Get a reference to a NSManagedObjectContext
+                            let context2 = PersistenceController.shared.container.viewContext
+                            
+                            // Fetch all objects of one Entity type
+                            let objects2 = try! context2.fetch(fetchRequest2)
+                            print(objects2)
+                            var fastAnswers : [FastAnswers] = objects2.compactMap { object in
+                                object as? FastAnswers
+                            }
+                            // Create a fetch request for a specific Entity type
+                            let fetchRequest = ToDo.fetchRequest()
+                            
+                            // Get a reference to a NSManagedObjectContext
+                            let context = PersistenceController.shared.container.viewContext
+                            
+                            // Fetch all objects of one Entity type
+                            let objects = try! context.fetch(fetchRequest)
+                            print(objects)
+                            var toDos : [ToDo] = objects.compactMap { object in
+                                object as? ToDo
+                            }
+                            
+                            var syncObjects : [String : [[String : Any]]] = [:]
+                            syncObjects["FastAnswers"] = []
+                            for fastAnswer in fastAnswers {
+                                syncObjects["FastAnswers"]!.append(["Name" : fastAnswer.name, "ID" : fastAnswer.id?.uuidString])
+                            }
+                            syncObjects["Ropes"] = []
+                            for toDo in toDos {
+                                syncObjects["Ropes"]!.append(["Name" : toDo.name, "ID" : toDo.id?.uuidString, "Date" : toDo.date])
+                            }
+                            print(syncObjects)
+                            await WC.shared.send(syncObjects, RequiresReply: true)
                         }
-                        // Create a fetch request for a specific Entity type
-                        let fetchRequest = ToDo.fetchRequest()
-                        
-                        // Get a reference to a NSManagedObjectContext
-                        let context = PersistenceController.shared.container.viewContext
-                        
-                        // Fetch all objects of one Entity type
-                        let objects = try! context.fetch(fetchRequest)
-                        print(objects)
-                        var toDos : [ToDo] = objects.compactMap { object in
-                            object as? ToDo
-                        }
-                        
-                        var syncObjects : [String : [[String : Any]]] = [:]
-                        syncObjects["FastAnswers"] = []
-                        for fastAnswer in fastAnswers {
-                            syncObjects["FastAnswers"]!.append(["Name" : fastAnswer.name, "ID" : fastAnswer.id?.uuidString])
-                        }
-                        syncObjects["Ropes"] = []
-                        for toDo in toDos {
-                            syncObjects["Ropes"]!.append(["Name" : toDo.name, "ID" : toDo.id?.uuidString, "Date" : toDo.date])
-                        }
-                        print(syncObjects)
-                        await WC.shared.send(syncObjects, RequiresReply: true)
                     }
                 }
             }
