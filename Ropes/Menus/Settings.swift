@@ -22,7 +22,7 @@ struct settin: View {
                 List{
                     ForEach(FA){ answer in 
                         HStack{
-                            Text(answer.name)
+                            Text(answer.name ?? "error")
                         }.transition(.move(edge: .top))
                 }.onDelete(perform: {
                     RemoveFA(index: $0)

@@ -28,7 +28,7 @@ struct Adding: View {
             ForEach(fastAnswers){ answer in
                 Button(action: {
                     do {
-                        try AddRope(name: answer.name, date : remindDate)
+                        try AddRope(name: answer.name ?? "error", date : remindDate)
                         WKInterfaceDevice.current().play(.success)
                         self.presentationMode.wrappedValue.dismiss()
                     } catch NotificationErrors.missingTime {
@@ -42,7 +42,7 @@ struct Adding: View {
                        label: {
                     HStack{
                         Spacer()
-                        Text(answer.name)
+                        Text(answer.name ?? "error")
                         Spacer()
                     }
                 }).alert("OOPS", isPresented: $alert, actions: {

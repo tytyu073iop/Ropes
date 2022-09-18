@@ -113,8 +113,8 @@ extension ToDo : Identifiable {
 
 @objc(FastAnswers)
 public class FastAnswers: NSManagedObject {
-    @NSManaged public var id : UUID
-    @NSManaged public var name : String
+    @NSManaged public var id : UUID?
+    @NSManaged public var name : String?
 }
 
 extension FastAnswers: Identifiable {
