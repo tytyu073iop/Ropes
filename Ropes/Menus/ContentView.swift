@@ -113,7 +113,7 @@ struct ContentView: View {
         }.onChange(of: scenePhase, perform: {
             print("MAIN scene changed")
             if $0 == .active {
-                showingSheet = true
+                showingSheet = PopUp().PopUp
             }
         })
     }
