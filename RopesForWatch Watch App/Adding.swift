@@ -74,7 +74,7 @@ struct Adding: View {
             try? await LocalNotficationManager.shared.requestAuthorization(Options: [.sound,.alert,.badge,.carPlay])
         }
     }
-    private func AddRope(name : String, time : Double = defaults.double(forKey: "time"), date : Date? = nil) throws {
+    @MainActor private func AddRope(name : String, time : Double = defaults.double(forKey: "time"), date : Date? = nil) throws {
         if Ropes.contains(where: {$0.name == name}) {throw AddingErrors.ThisNameIsExciting}
         else {
             if (date == nil) {
