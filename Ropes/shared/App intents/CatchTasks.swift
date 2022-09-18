@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+#if canImport(AppIntents)
 import AppIntents
 import CoreData
 
@@ -32,8 +33,7 @@ import CoreData
         }
         var phrase : String = LocalizedStringKey("Your Ropes:").stringValue()
         let q : Bool = !names.isEmpty
-        //FIXME: if names doesnt contain anything
-        if true {
+        if !names.isEmpty {
             phrase += " \(names.first!)"
             for name in names {
                 if name == names.first! {
@@ -41,9 +41,9 @@ import CoreData
                 }
                 phrase += ", \(name)"
             }
-            return .result(value: names, dialog: IntentDialog(stringLiteral: phrase))
+            return .result(value: names, dialog: IntentDialog(stringLiteral: phrase), content: {VStack{}})
         } else {
-            return .result(value: names, dialog: "You have no ropes")
+            return .result(value: names, dialog: "You have no ropes", content: {VStack{}})
         }
     }
     
@@ -60,3 +60,5 @@ struct CatchTasks_Previews: PreviewProvider {
         CatchTasks()
     }
 }
+
+#endif
