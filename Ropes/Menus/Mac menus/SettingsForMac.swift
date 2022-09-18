@@ -19,7 +19,7 @@ struct settin: View {
     private var FA : FetchedResults<FastAnswers>
     @State var alert = false
     var times : [Double] = [5, 10, 15, 20, 30]
-    @ObservedObject var Time = time()
+    @ObservedObject var time = Time()
     @ObservedObject var popup = PopUp()
     @State var a : String = ""
     var body: some View {
@@ -46,12 +46,12 @@ struct settin: View {
                 Button("Disable all notifications"){
                     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                     print("disabled")
-                    print(Time.time)
+                    print(time.time)
             }
             }
             }
                 Section("Time"){
-                    Picker("chose the time", selection: $Time.time){
+                    Picker("chose the time", selection: $time.time){
                         ForEach(times, id: \.self){
                             Text("\(Int($0)) minutes").tag($0)
                         }
