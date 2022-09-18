@@ -20,6 +20,7 @@ struct ContentView: View {
     //db
     @State private var showingSheet = false
     @State private var settings = false
+    @State private var advice = false
     var body: some View {
         NavigationView{
             List{
@@ -27,23 +28,27 @@ struct ContentView: View {
                     NavigationLink(destination: Adding(Ropes: Ropes, fastAnswers: FA/*[FastAnswers(context: PersistenceController.shared.container.viewContext, name: "Test")]*/), label: { Image(systemName: "plus") })
                 #endif
                 ForEach(Ropes) {rope in
-                    VStack{
-                        HStack{
-                            Spacer()
-                            Text(rope.name ?? "error")
-                            Spacer()
+                    HStack{
+                        VStack{
+                            HStack{
+                                Spacer()
+                                Text(rope.name ?? "error")
+                                Spacer()
+                            }
+#if !os(watchOS)
+                            HStack {
+                                Spacer()
+                                Text(dateFormater.string(from: rope.date ?? Date()))
+                                Spacer()
+                            }
+#endif
                         }
-                        #if !os(watchOS)
-                        HStack {
-                            Spacer()
-                            Text(dateFormater.string(from: rope.date ?? Date()))
-                            Spacer()
-                        }
-                        #endif
+                        Button(action: {
+                            rope.remove()
+                        }, label: {Image(systemName: "trash")})
+                        .buttonStyle(PlainButtonStyle())
                     }
-                }.onDelete(perform: {
-                    RemoveRope(index: $0)
-                })
+                }
                 if admin{
                     Button("Notify"){
                         do {
@@ -65,6 +70,16 @@ struct ContentView: View {
 #endif
             .toolbar(content: {
 #if os(iOS)
+                ToolbarItem(placement: .automatic){
+                    Button(action: {
+                        advice.toggle()
+                    }, label: {
+                        Image(systemName: "lightbulb")
+                    })
+                    .sheet(isPresented: $advice) {
+                        advice_menu()
+                    }
+                }
                 ToolbarItem(placement: .bottomBar){
                     Button(buttonName){
                         showingSheet.toggle()
@@ -116,5 +131,9 @@ struct ContentView: View {
 }
 
 
-
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 
