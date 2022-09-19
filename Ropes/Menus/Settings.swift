@@ -63,7 +63,7 @@ struct settin: View {
                 Toggle(isOn: $popup.PopUp) {
                     Text("Showup an adding view on start")
                 }
-                if WCSession.default.isComplicationEnabled {
+                if WCSession.isSupported() {
                     Button("Sync with watch") {
                         Task {
                             // Create a fetch request for a specific Entity type
