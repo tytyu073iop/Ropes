@@ -115,3 +115,8 @@
 /* No comment provided by engineer. */
 "Your Ropes:" = "Ваши узелки:";
 
+"Oh. You have to update to iOS 16 or newer" = "Ой. Вам надо обновиться до iOS 16 или новее";
+
+"You can use shortcuts app to rope" = "Вы можете использовать приложение команды для того чтобы завязать узелки";
+
+"or to show ropes" = "или чтобы их посмотреть";
