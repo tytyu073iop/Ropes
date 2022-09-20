@@ -201,7 +201,9 @@ extension WC: WCSessionDelegate {
                 }
             }
             if let time = userInfo["DefautTime"] as? Double {
-                Time.init(DefaultTime: time)
+                var timeObj = Time()
+                timeObj.time = time
+                print("Time: \(time)")
             }
             NSLog("Session ended")
             }
