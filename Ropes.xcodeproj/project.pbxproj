@@ -883,7 +883,7 @@
 				CODE_SIGN_ENTITLEMENTS = Ropes/Ropes.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Ropes/Preview Content\"";
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -928,7 +928,7 @@
 				CODE_SIGN_ENTITLEMENTS = Ropes/Ropes.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Ropes/Preview Content\"";
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				ENABLE_HARDENED_RUNTIME = YES;
