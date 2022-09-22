@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreData
+import WidgetKit
 
 @objc(ToDo)
 public class ToDo: NSManagedObject {
@@ -39,6 +40,9 @@ extension ToDo : Identifiable {
         catch {
             print(error.localizedDescription)
         }
+        #if os(iOS)
+        WidgetCenter.shared.reloadAllTimelines()
+        #endif
         print("removing complete")
     }
     @MainActor private func PushNotfication(time : Double) throws {
@@ -90,6 +94,9 @@ extension ToDo : Identifiable {
             }
         #endif
         }
+        #if os(iOS)
+        WidgetCenter.shared.reloadAllTimelines()
+        #endif
     }
     @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), time : Date) throws {
         self.init(context : context)

@@ -1,6 +1,7 @@
 import SwiftUI
 import UserNotifications
 import WatchConnectivity
+import WidgetKit
 
 struct ContentView: View {
     let buttonName : LocalizedStringKey = "ADD"
@@ -101,6 +102,9 @@ struct ContentView: View {
 #endif
         .onAppear(){
             WC.shared
+            #if os(iOS)
+            WidgetCenter.shared.reloadAllTimelines()
+            #endif
             self.UserSetUp()
             if (defaults.bool(forKey: "OFB") == false) {
                 defaults.set(false, forKey: "popup")
