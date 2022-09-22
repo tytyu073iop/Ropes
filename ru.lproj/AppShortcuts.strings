@@ -10,3 +10,6 @@
 /* No comment provided by engineer. */
 "Show ${applicationName}" = "Показать ${applicationName}";
 
+"Say \"Create a ${applicationName}\"" = "Скажите \"Создать ${applicationName}\"";
+
+
