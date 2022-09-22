@@ -14,7 +14,9 @@ extension String {
                                 locale: Locale = .current) -> String {
         
         let language = locale.languageCode
-        let path = Bundle.main.path(forResource: language, ofType: "lproj")!
+        guard let path = Bundle.main.path(forResource: language, ofType: "lproj") else {
+            return "error"
+        }
         let bundle = Bundle(path: path)!
         let localizedString = NSLocalizedString(key, bundle: bundle, comment: "")
         
