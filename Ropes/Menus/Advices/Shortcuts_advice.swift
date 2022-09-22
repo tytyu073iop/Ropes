@@ -60,6 +60,8 @@ struct Shortcuts_advice: View {
             if #available(iOS 16.0, *) {
                 SiriTipView(intent: RemoveRope())
                     .frame(width: 100)
+                ShortcutsLink()
+                    .padding(10)
             } else {
                 iOS16Text()
             }
