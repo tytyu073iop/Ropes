@@ -32,11 +32,33 @@ struct Shortcuts_advice: View {
             #else
                 iOS16Text()
             #endif
-            Text("or to show ropes", comment: "ropes is an app")
+            Text("or")
+            #if canImport(AppIntents)
+            if #available(iOS 16.0, *) {
+                SiriTipView(intent: AddCustomTask())
+                    .frame(width: 100)
+            } else {
+                iOS16Text()
+            }
+            #else
+            iOS16Text()
+            #endif
+            Text("or to show ropes.", comment: "ropes is an app")
                 .padding(EdgeInsets(top: CGFloat(padding), leading: CGFloat(padding), bottom: CGFloat(padding), trailing: CGFloat(padding)))
             #if canImport(AppIntents)
             if #available(iOS 16.0, *) {
                 SiriTipView(intent: ShowTasks())
+                    .frame(width: 100)
+            } else {
+                iOS16Text()
+            }
+            #else
+                iOS16Text()
+            #endif
+            Text("You can even delete them")
+            #if canImport(AppIntents)
+            if #available(iOS 16.0, *) {
+                SiriTipView(intent: RemoveRope())
                     .frame(width: 100)
             } else {
                 iOS16Text()
@@ -55,17 +77,5 @@ struct Shortcuts_advice_Previews: PreviewProvider {
             Shortcuts_advice().environment(\.locale, .init(identifier: "ru"))
         }.previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
             .previewDisplayName("iPhone 14 pro max")
-        VStack {}.sheet(isPresented: $tru) {
-            Shortcuts_advice()
-        }.previewDevice(PreviewDevice(rawValue: "iPhone 8"))
-            .previewDisplayName("iPhone 8")
-        VStack {}.sheet(isPresented: $tru) {
-            Shortcuts_advice()
-        }.previewDevice(PreviewDevice(rawValue: "iPhone 13"))
-            .previewDisplayName("iPhone 13")
-        VStack {}.sheet(isPresented: $tru) {
-            Shortcuts_advice()
-        }.previewDevice(PreviewDevice(rawValue: "iPad (9th generation)"))
-            .previewDisplayName("iPad (9th generation)")
     }
 }
