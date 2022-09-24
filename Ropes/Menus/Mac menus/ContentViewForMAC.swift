@@ -44,6 +44,7 @@ struct ContentView: View {
                         }
                         HStack {
                             Button(action: {rope.remove(context: viewContext)}, label: {Image(systemName: "trash")})
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                         }
                     }
                 }
@@ -105,5 +106,9 @@ struct ContentView: View {
 }
 
 
-
+struct MyProvider_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 
