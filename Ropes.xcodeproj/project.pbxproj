@@ -287,19 +287,11 @@
 				E72CCCAD28DCC2860062231E /* RopesForWatch-Watch-App-Info.plist */,
 				E74210D028DCF4FA00AF9A70 /* Localizable.strings..strings */,
 				E700950128D7A5990024496C /* RopesForWatch Watch App.entitlements */,
-				E735FE0528A2538F00FCE2E6 /* Preview Content */,
 				E748235528A2619C008E5087 /* Adding.swift */,
 				E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */,
 				E7A650AE291452350055A24F /* WatchKitDelegate.swift */,
 			);
 			path = "RopesForWatch Watch App";
-			sourceTree = "<group>";
-		};
-		E735FE0528A2538F00FCE2E6 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		E7436E1D28DE330E00E96EF5 /* WidjetsForWatch */ = {
