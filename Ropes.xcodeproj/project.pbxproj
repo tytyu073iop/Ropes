@@ -71,6 +71,8 @@
 		E7A650AD29144D1A0055A24F /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650AB29144D180055A24F /* SetUp.swift */; };
 		E7A650AF291452350055A24F /* WatchKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650AE291452350055A24F /* WatchKitDelegate.swift */; };
 		E7A650B1291454FA0055A24F /* NSApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650B0291454FA0055A24F /* NSApplicationDelegate.swift */; platformFilters = (macos, ); };
+		E7A650B2291468790055A24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */; };
+		E7A650B32914687A0055A24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */; };
 		E7B740DB28A6AEE9008048CF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
 		E7B740DD28A6AEE9008048CF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
 		E7B740E028A6AEE9008048CF /* RopesWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */; };
@@ -579,6 +581,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A650B32914687A0055A24F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +589,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A650B2291468790055A24F /* Assets.xcassets in Resources */,
 				E745026828B8AE59005FB11A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
