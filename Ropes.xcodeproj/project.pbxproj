@@ -86,7 +86,6 @@
 		E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
 		E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 		E7EAFF8F289F8DE900C28906 /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
-		E7EAFF93289F8DEA00C28906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFF92289F8DEA00C28906 /* Assets.xcassets */; };
 		E7EAFF97289F8DEA00C28906 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFF96289F8DEA00C28906 /* Preview Assets.xcassets */; };
 		E7EAFFAC289F8F5B00C28906 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
@@ -211,7 +210,6 @@
 		E7EAFF89289F8DE900C28906 /* RopesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopesApp.swift; sourceTree = "<group>"; };
 		E7EAFF8B289F8DE900C28906 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E7EAFF8E289F8DE900C28906 /* Ropes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ropes.xcdatamodel; sourceTree = "<group>"; };
-		E7EAFF92289F8DEA00C28906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7EAFF94289F8DEA00C28906 /* Ropes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ropes.entitlements; sourceTree = "<group>"; };
 		E7EAFF96289F8DEA00C28906 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7EAFF9E289F8F5B00C28906 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -387,7 +385,6 @@
 				E7EAFFA1289F8F5B00C28906 /* Menus */,
 				E7EAFFA6289F8F5B00C28906 /* ReadMe.swift */,
 				E7EAFF89289F8DE900C28906 /* RopesApp.swift */,
-				E7EAFF92289F8DEA00C28906 /* Assets.xcassets */,
 				E7EAFF94289F8DEA00C28906 /* Ropes.entitlements */,
 				E7EAFF95289F8DEA00C28906 /* Preview Content */,
 				E77814D528A4DBE60073FFEF /* StackNavigationView.swift */,
@@ -611,7 +608,6 @@
 				E758525928D754F500CFF90C /* AppShortcuts.strings in Resources */,
 				E745025528B8AE38005FB11A /* Localizable.strings in Resources */,
 				E7EAFFB2289F8F5B00C28906 /* Assets.xcassets in Resources */,
-				E7EAFF93289F8DEA00C28906 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
