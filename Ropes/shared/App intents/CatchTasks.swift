@@ -15,24 +15,13 @@ import CoreData
     static var title: LocalizedStringResource = LocalizedStringResource("Show Ropes", table: "Localizable.strings.")
     static var description = IntentDescription(LocalizedStringResource("Show all tasks from the ropes app", table: "Localizable.strings."))
     func perform() async throws -> some IntentResult {
-        // Create a fetch request for a specific Entity type
-        let fetchRequest = ToDo.fetchRequest()
-
-        // Get a reference to a NSManagedObjectContext
-        let context = PersistenceController.shared.container.viewContext
-
-        // Fetch all objects of one Entity type
-        let objects = try context.fetch(fetchRequest)
-        
+        let objects = ToDo.fetch()
         var names = [String]()
         for object in objects {
-            if let toDo = object as? ToDo {
-                print("catched")
-                names.append(toDo.name ?? "error")
-            }
+            print("catched")
+            names.append(object.name ?? "error")
         }
         var phrase : String = LocalizedStringKey("Your Ropes:").stringValue()
-        let q : Bool = !names.isEmpty
         if !names.isEmpty {
             phrase += " \(names.first!)"
             for name in names {

@@ -25,7 +25,7 @@ extension ToDo : Identifiable {
                 print(self.id)
                 if !fromConnectivity {
 #if os(iOS) || os(watchOS)
-                    await WC.shared.send(["IDForDelete" : self.id!.uuidString])
+                    //await WC.shared.send(["IDForDelete" : self.id!.uuidString])
                     #endif
                 }
                 print("deleting")
@@ -46,7 +46,7 @@ extension ToDo : Identifiable {
         print("removing complete")
     }
     @MainActor private func PushNotfication(time : Double) throws {
-        try LocalNotficationManager.shared.request(text : name ?? "error", time : time, id : id ?? UUID(), userInfo: ["id" : id ?? UUID() .uuidString])
+        try LocalNotficationManager.shared.request(text : name ?? "error", time : time, userInfo: ["id" : id ?? UUID() .uuidString])
     }
     @MainActor private func PushNotfication(time : Date) throws {
         try LocalNotficationManager.shared.request(text: name ?? "error", time: time)
@@ -56,25 +56,14 @@ extension ToDo : Identifiable {
         if name == "" {
             throw AddingErrors.EmptyName
         }
-        // Create a fetch request for a specific Entity type
-        let fetchRequest = ToDo.fetchRequest()
-
-        // Get a reference to a NSManagedObjectContext
-        let context = PersistenceController.shared.container.viewContext
-
-        // Fetch all objects of one Entity type
-        let objects = try context.fetch(fetchRequest)
-        if objects.contains(where: {
-            if let toDo = $0 as? ToDo {
-                return toDo.name == name
-            } else {
-                return false
-            }
+        let objects = ToDo.fetch()
+        if objects.contains(where: { toDo in
+            return toDo.name == name
         }) {
             throw AddingErrors.ThisNameIsExciting
         }
         if auto {
-            try LocalNotficationManager.shared.request(text : name, time : time, id : id, userInfo: ["id" : id.uuidString])
+            try LocalNotficationManager.shared.request(text : name, time : time, userInfo: ["id" : id.uuidString])
         }
         self.init(context : context)
         self.name = name
@@ -90,7 +79,7 @@ extension ToDo : Identifiable {
             //WC.shared.send("String", self.name ?? "error")
             Task {
                 
-                await WC.shared.send(["Name" : self.name, "Date" : self.date, "ID" : self.id?.uuidString])
+                //await WC.shared.send(["Name" : self.name, "Date" : self.date, "ID" : self.id?.uuidString])
             }
         #endif
         }
@@ -149,7 +138,7 @@ extension FastAnswers: Identifiable {
         Task {
             if !fromConnectivity {
 #if os(iOS) || os(watchOS)
-                await WC.shared.send(["IDForRemoveFA" : self.id!.uuidString])
+                //await WC.shared.send(["IDForRemoveFA" : self.id!.uuidString])
                 #endif
             }
             viewContext.delete(self)
@@ -166,20 +155,9 @@ extension FastAnswers: Identifiable {
         }
     }
     convenience init(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, id : UUID = UUID(), name : String, fromConnectivity : Bool = false) throws {
-        // Create a fetch request for a specific Entity type
-        let fetchRequest = FastAnswers.fetchRequest()
-
-        // Get a reference to a NSManagedObjectContext
-        let context = PersistenceController.shared.container.viewContext
-
-        // Fetch all objects of one Entity type
-        let objects = try context.fetch(fetchRequest)
+        let objects = FastAnswers.fetch()
         if objects.contains(where: {
-            if let fa = $0 as? FastAnswers {
-                return fa.name == name
-            } else {
-                return false
-            }
+            return $0.name == name
         }) {
             throw AddingErrors.ThisNameIsExciting
         }
@@ -190,7 +168,7 @@ extension FastAnswers: Identifiable {
         if !fromConnectivity {
             Task {
 #if os(iOS) || os(watchOS)
-                await WC.shared.send(["FastAnswersID" : id.uuidString, "FastAnswersName" : name])
+                //await WC.shared.send(["FastAnswersID" : id.uuidString, "FastAnswersName" : name])
                 #endif
                 print("sended")
             }

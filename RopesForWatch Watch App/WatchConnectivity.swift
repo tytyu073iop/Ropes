@@ -95,29 +95,10 @@ extension WC: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         print("reply session started")
         print(message)
-        // Create a fetch request for a specific Entity type
-        let fetchRequest = ToDo.fetchRequest()
-
-        // Get a reference to a NSManagedObjectContext
-        let context = PersistenceController.shared.container.viewContext
-
-        // Fetch all objects of one Entity type
-        let objects = try! context.fetch(fetchRequest)
-        var toDos : [ToDo] = objects.compactMap { object in
-            object as? ToDo
-        }
+        let toDos = ToDo.fetch()
         
         // Create a fetch request for a specific Entity type
-        let fetchRequest2 = FastAnswers.fetchRequest()
-
-        // Get a reference to a NSManagedObjectContext
-        let context2 = PersistenceController.shared.container.viewContext
-
-        // Fetch all objects of one Entity type
-        let objects2 = try! context2.fetch(fetchRequest2)
-        var fastAnswers : [FastAnswers] = objects2.compactMap { object in
-            object as? FastAnswers
-        }
+        let fastAnswers = FastAnswers.fetch()
         
         var syncObjects : [String : [[String : Any]]] = [:]
         syncObjects["FastAnswers"] = []

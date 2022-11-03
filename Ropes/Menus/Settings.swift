@@ -12,7 +12,6 @@ struct settin: View {
         animation: .default) 
     private var FA : FetchedResults<FastAnswers>
     @State var alert = false
-    var times : [Double] = [5, 10, 15, 20, 30]
     @ObservedObject var time = Time()
     @ObservedObject var popup = PopUp()
     @State var a : String = ""
@@ -64,7 +63,7 @@ struct settin: View {
                     Text("Showup an adding view on start")
                 }
                 if WCSession.isSupported() {
-                    Button("Sync with watch") {
+                    /*Button("Sync with watch") {
                         Task {
                             // Create a fetch request for a specific Entity type
                             let fetchRequest2 = FastAnswers.fetchRequest()
@@ -101,9 +100,9 @@ struct settin: View {
                                 syncObjects["Ropes"]!.append(["Name" : toDo.name, "ID" : toDo.id?.uuidString, "Date" : toDo.date])
                             }
                             print(syncObjects)
-                            await WC.shared.send(syncObjects, RequiresReply: true)
+                            //await WC.shared.send(syncObjects, RequiresReply: true)
                         }
-                    }
+                    }*/
                 }
             }
         }

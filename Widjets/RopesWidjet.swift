@@ -24,24 +24,9 @@ struct Provider: TimelineProvider {
         
         let context = PersistenceController.shared.container.viewContext
         // Create a fetch request for a specific Entity type
-        let fetchRequest = ToDo.fetchRequest()
-        print("stage1")
-        print(fetchRequest)
-        // Get a reference to a NSManagedObjectContext
-        print("stage2")
-
-        // Fetch all objects of one Entity type
-        print("i")
-        var toDos = [ToDo]()
-        let objects = try! context.fetch(fetchRequest)
-        print(objects)
-        do {
-            try toDos = objects as! [ToDo]
-        } catch {
-            print("blyat \(error.localizedDescription)")
-        }
+        let toDos = ToDo.fetch()
         print(toDos)
-        var names : [String] = toDos.compactMap { toDo in
+        let names : [String] = toDos.compactMap { toDo in
             return toDo.name
         }
         #if DEBUG
@@ -98,6 +83,7 @@ struct RecLockWid : View {
     var body: some View {
         if entry.names.isEmpty {
             Text("There's no ropes")
+                .widgetAccentable()
         } else {
             VStack {
                 HStack {
@@ -111,6 +97,7 @@ struct RecLockWid : View {
                     }
                 }
             }
+            .widgetAccentable()
         }
     }
 }
@@ -124,6 +111,7 @@ struct CircleWidjetView : View {
                 .stroke(Color.gray,lineWidth: 10)
             Text("\(entry.names.count)").font(.system(size: 30))
         }
+        .widgetAccentable()
     }
 }
 
@@ -134,6 +122,7 @@ struct CornerWidjetView : View {
         ZStack {
             Text("\(entry.names.count)").font(.system(size: 30))
         }
+        .widgetAccentable()
     }
 }
 
@@ -143,6 +132,7 @@ struct InLineWidjetView : View {
     
     @ViewBuilder var body: some View {
         Text(entry.names.first ?? "You have no ropes")
+            .widgetAccentable()
     }
 }
 
@@ -235,8 +225,8 @@ struct RopesWidjet: Widget {
 struct Widjets_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
-            CornerWidjetView(entry: SimpleEntry(date: Date(), names: ["vasya","petya","fif","kik"]))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+            RecLockWid(entry: SimpleEntry(date: Date(), names: ["vasya","petya","fif","kik"]))
+                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
         }
     }
 }

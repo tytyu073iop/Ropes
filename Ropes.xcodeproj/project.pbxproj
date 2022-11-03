@@ -10,6 +10,10 @@
 		E701DA7D28A6799B0043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
 		E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; platformFilter = ios; };
 		E71A024628B663DE000176CA /* CatchTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DBC4228B619DF0076C393 /* CatchTasks.swift */; };
+		E720AC3D28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */; };
+		E720AC3E28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */; };
+		E720AC3F28DFB43800BBADB9 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
+		E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
 		E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E735FE1628A2589200FCE2E6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
@@ -30,7 +34,6 @@
 		E7436E2E28DE336B00E96EF5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 		E7436E2F28DE336F00E96EF5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7436E3028DE336F00E96EF5 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
-		E7436E3128DE336F00E96EF5 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E7436E3228DE339200E96EF5 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
 		E745025528B8AE38005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025828B8AE38005FB11A /* Localizable.strings */; };
 		E745025628B8AE38005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025828B8AE38005FB11A /* Localizable.strings */; };
@@ -46,7 +49,6 @@
 		E7764A3E28B360210022E8C3 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E7764A3F28B360210022E8C3 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
 		E7764A4028B360210022E8C3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
-		E7764A4128B360250022E8C3 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E7764A4228B360250022E8C3 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
 		E7764A4328B360250022E8C3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7764A4428B360FB0022E8C3 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
@@ -64,6 +66,12 @@
 		E7A0CFA428D4F3F800EE60E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */; };
 		E7A0CFAB28D4F5D800EE60E4 /* AllIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA728D4F5D800EE60E4 /* AllIntents.swift */; };
 		E7A0CFAD28D4F5D800EE60E4 /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
+		E7A650A72913EA640055A24F /* LoudNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650A62913EA640055A24F /* LoudNotfication.swift */; };
+		E7A650A929143D010055A24F /* UIKitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650A829143D010055A24F /* UIKitFunctions.swift */; platformFilter = ios; };
+		E7A650AC29144D180055A24F /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650AB29144D180055A24F /* SetUp.swift */; };
+		E7A650AD29144D1A0055A24F /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650AB29144D180055A24F /* SetUp.swift */; };
+		E7A650AF291452350055A24F /* WatchKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650AE291452350055A24F /* WatchKitDelegate.swift */; };
+		E7A650B1291454FA0055A24F /* NSApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A650B0291454FA0055A24F /* NSApplicationDelegate.swift */; platformFilters = (macos, ); };
 		E7B740DB28A6AEE9008048CF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
 		E7B740DD28A6AEE9008048CF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
 		E7B740E028A6AEE9008048CF /* RopesWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */; };
@@ -157,6 +165,7 @@
 /* Begin PBXFileReference section */
 		E700950128D7A5990024496C /* RopesForWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "RopesForWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivity.swift; sourceTree = "<group>"; };
+		E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilentNotfications.swift; sourceTree = "<group>"; };
 		E72CCCAD28DCC2860062231E /* RopesForWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RopesForWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E735FDFD28A2538E00FCE2E6 /* Ropes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ropes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74210D128DCF4FA00AF9A70 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings..strings; sourceTree = "<group>"; };
@@ -180,11 +189,17 @@
 		E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsForMac.swift; sourceTree = "<group>"; };
 		E77814DD28A4F4040073FFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E77DBC4228B619DF0076C393 /* CatchTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTasks.swift; sourceTree = "<group>"; };
+		E78DBEFC28DEFBAD00EFE7EF /* WidjetsForWatchExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidjetsForWatchExtension.entitlements; sourceTree = "<group>"; };
 		E7A0CF9A28D4F2DE00EE60E4 /* advice_menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advice_menu.swift; sourceTree = "<group>"; };
 		E7A0CF9B28D4F2DE00EE60E4 /* advices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advices.swift; sourceTree = "<group>"; };
 		E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortcuts_advice.swift; sourceTree = "<group>"; };
 		E7A0CFA728D4F5D800EE60E4 /* AllIntents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllIntents.swift; sourceTree = "<group>"; };
 		E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCustomIntent.swift; sourceTree = "<group>"; };
+		E7A650A62913EA640055A24F /* LoudNotfication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoudNotfication.swift; sourceTree = "<group>"; };
+		E7A650A829143D010055A24F /* UIKitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitFunctions.swift; sourceTree = "<group>"; };
+		E7A650AB29144D180055A24F /* SetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUp.swift; sourceTree = "<group>"; };
+		E7A650AE291452350055A24F /* WatchKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchKitDelegate.swift; sourceTree = "<group>"; };
+		E7A650B0291454FA0055A24F /* NSApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSApplicationDelegate.swift; sourceTree = "<group>"; };
 		E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidjetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B740DA28A6AEE9008048CF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		E7B740DC28A6AEE9008048CF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -257,6 +272,15 @@
 			path = "Mac menus";
 			sourceTree = "<group>";
 		};
+		E720AC3B28DF9B6D00BBADB9 /* ICloud */ = {
+			isa = PBXGroup;
+			children = (
+				E7A650A62913EA640055A24F /* LoudNotfication.swift */,
+				E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */,
+			);
+			path = ICloud;
+			sourceTree = "<group>";
+		};
 		E735FDFE28A2538E00FCE2E6 /* RopesForWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +290,7 @@
 				E735FE0528A2538F00FCE2E6 /* Preview Content */,
 				E748235528A2619C008E5087 /* Adding.swift */,
 				E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */,
+				E7A650AE291452350055A24F /* WatchKitDelegate.swift */,
 			);
 			path = "RopesForWatch Watch App";
 			sourceTree = "<group>";
@@ -333,6 +358,7 @@
 		E7EAFF7D289F8DE900C28906 = {
 			isa = PBXGroup;
 			children = (
+				E78DBEFC28DEFBAD00EFE7EF /* WidjetsForWatchExtension.entitlements */,
 				E7DDC1CD28DCCC9100D902AA /* WidjetsExtension.entitlements */,
 				E745026328B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings */,
 				E758525728D754F500CFF90C /* AppShortcuts.strings */,
@@ -363,6 +389,7 @@
 				E77814DD28A4F4040073FFEF /* Info.plist */,
 				E7EB481E28D4F82E000FB1B2 /* Localizable.strings..strings */,
 				E745025D28B8AE59005FB11A /* InfoPlist.strings */,
+				E7A650A829143D010055A24F /* UIKitFunctions.swift */,
 				E7EAFFA5289F8F5B00C28906 /* Assets.xcassets */,
 				E7764A3D28B35FA60022E8C3 /* shared */,
 				E7EAFFA1289F8F5B00C28906 /* Menus */,
@@ -372,6 +399,8 @@
 				E7EAFF94289F8DEA00C28906 /* Ropes.entitlements */,
 				E7EAFF95289F8DEA00C28906 /* Preview Content */,
 				E77814D528A4DBE60073FFEF /* StackNavigationView.swift */,
+				E7A650AB29144D180055A24F /* SetUp.swift */,
+				E7A650B0291454FA0055A24F /* NSApplicationDelegate.swift */,
 			);
 			path = Ropes;
 			sourceTree = "<group>";
@@ -409,6 +438,7 @@
 		E7EAFFA7289F8F5B00C28906 /* Core data */ = {
 			isa = PBXGroup;
 			children = (
+				E720AC3B28DF9B6D00BBADB9 /* ICloud */,
 				E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */,
 				E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */,
 				E7EAFF8B289F8DE900C28906 /* Persistence.swift */,
@@ -608,6 +638,8 @@
 				E71A024628B663DE000176CA /* CatchTasks.swift in Sources */,
 				E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */,
 				E7EB482228D4F877000FB1B2 /* AddCustomIntent.swift in Sources */,
+				E7A650AF291452350055A24F /* WatchKitDelegate.swift in Sources */,
+				E720AC3E28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */,
 				E735FE1828A258A500FCE2E6 /* LocalNotfication.swift in Sources */,
 				E748235628A2619C008E5087 /* Adding.swift in Sources */,
 				E735FE1928A258A500FCE2E6 /* Base.swift in Sources */,
@@ -616,6 +648,7 @@
 				E735FE1728A2589200FCE2E6 /* Task core data.swift in Sources */,
 				E735FE1A28A258A500FCE2E6 /* Data.swift in Sources */,
 				E776272528D5E80B004D5262 /* AppEntity.swift in Sources */,
+				E7A650AD29144D1A0055A24F /* SetUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,12 +658,12 @@
 			files = (
 				E7436E2A28DE333600E96EF5 /* RopesWidjet.swift in Sources */,
 				E7436E2F28DE336F00E96EF5 /* Data.swift in Sources */,
-				E7436E3128DE336F00E96EF5 /* LocalNotfication.swift in Sources */,
 				E7436E3228DE339200E96EF5 /* WatchConnectivity.swift in Sources */,
 				E7436E2D28DE336B00E96EF5 /* Task core data.swift in Sources */,
 				E7436E2C28DE336800E96EF5 /* Persistence extension.swift in Sources */,
 				E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */,
 				E7436E3028DE336F00E96EF5 /* Base.swift in Sources */,
+				E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */,
 				E7436E2E28DE336B00E96EF5 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,12 +676,12 @@
 				E7764A4328B360250022E8C3 /* Data.swift in Sources */,
 				E7DDC1D428DCD64000D902AA /* CatchTasks.swift in Sources */,
 				E7764A4228B360250022E8C3 /* Base.swift in Sources */,
+				E720AC3F28DFB43800BBADB9 /* LocalNotfication.swift in Sources */,
 				E7764A3F28B360210022E8C3 /* Task core data.swift in Sources */,
 				E7DDC1D128DCD64000D902AA /* AddIntent.swift in Sources */,
 				E7764A4028B360210022E8C3 /* Persistence.swift in Sources */,
 				E7DDC1CE28DCD58600D902AA /* Ropes.xcdatamodeld in Sources */,
 				E7DDC1D328DCD64000D902AA /* DeleteIntent.swift in Sources */,
-				E7764A4128B360250022E8C3 /* LocalNotfication.swift in Sources */,
 				E7764A3E28B360210022E8C3 /* Persistence extension.swift in Sources */,
 				E7DDC1CF28DCD64000D902AA /* AddCustomIntent.swift in Sources */,
 				E7B740E028A6AEE9008048CF /* RopesWidjet.swift in Sources */,
@@ -671,9 +704,12 @@
 				E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */,
 				E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */,
 				E7EAFFB3289F8F5B00C28906 /* ReadMe.swift in Sources */,
+				E720AC3D28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */,
+				E7A650B1291454FA0055A24F /* NSApplicationDelegate.swift in Sources */,
 				E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */,
 				E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */,
 				E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */,
+				E7A650A72913EA640055A24F /* LoudNotfication.swift in Sources */,
 				E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */,
 				E7A0CFAB28D4F5D800EE60E4 /* AllIntents.swift in Sources */,
 				E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */,
@@ -682,8 +718,10 @@
 				E7EAFFB6289F8F5B00C28906 /* Task core data.swift in Sources */,
 				E7A0CFAD28D4F5D800EE60E4 /* AddCustomIntent.swift in Sources */,
 				E7764A4728B36AAF0022E8C3 /* AddIntent.swift in Sources */,
+				E7A650AC29144D180055A24F /* SetUp.swift in Sources */,
 				E7EAFF8F289F8DE900C28906 /* Ropes.xcdatamodeld in Sources */,
 				E7EAFFAC289F8F5B00C28906 /* Data.swift in Sources */,
+				E7A650A929143D010055A24F /* UIKitFunctions.swift in Sources */,
 				E7A0CF9E28D4F2DE00EE60E4 /* advices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +886,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidjetsForWatchExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
@@ -878,6 +917,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidjetsForWatchExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;

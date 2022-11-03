@@ -14,7 +14,7 @@ public extension URL {
         guard let fileContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroup) else {
             fatalError("Shared file container could not be created.")
         }
-
+        print(fileContainer)
         return fileContainer.appendingPathComponent("\(databaseName).sqlite")
     }
 }
@@ -39,12 +39,23 @@ struct PersistenceController {
         return result
     }()
 
-    let container: NSPersistentContainer
+    let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Ropes")
+        container = NSPersistentCloudKitContainer(name: "Ropes")
+#if DEBUG
+do {
+    print("testcon")
+    // Use the container to initialize the development schema.
+    try container.initializeCloudKitSchema(options: [])
+} catch {
+    print(error.localizedDescription)
+}
+#endif
         let storeURL = URL.storeURL(for: "group.ilyaBiryuk.ropes", databaseName: "Ropes")
         let storeDescription = NSPersistentStoreDescription(url: storeURL)
+        storeDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.ilyabiryuk.bundle.Ropes")
+        print("store: \(container.persistentStoreDescriptions)")
         container.persistentStoreDescriptions = [storeDescription]
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")

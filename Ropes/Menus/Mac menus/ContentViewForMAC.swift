@@ -82,6 +82,8 @@ struct ContentView: View {
             }
             #endif
             self.UserSetUp()
+            IcloudKeyValue.PrepareICloudKeyValue()
+            predicateSetUp()
             if (defaults.bool(forKey: "OFB") == false) {
                 defaults.set(false, forKey: "popup")
                 defaults.set(true, forKey: "OFB")
