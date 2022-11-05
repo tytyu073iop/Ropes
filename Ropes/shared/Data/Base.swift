@@ -2,8 +2,8 @@ import SwiftUI
 import Foundation
 
 class Time : ObservableObject {
-    @AppStorage("time", store : defaults) private var SetTime : Double = 10
-    @Published var time : Double = 10 {
+    @AppStorage("time", store : defaults) private var SetTime : Double = 5
+    @Published var time : Double = 5 {
         didSet {
             SetTime = time
             Task {
@@ -18,7 +18,7 @@ class Time : ObservableObject {
             }
         }
     }
-    init (DefaultTime : Double = 10) {
+    init () {
         time = SetTime
     }
 }

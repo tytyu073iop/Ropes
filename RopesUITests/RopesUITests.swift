@@ -30,7 +30,7 @@ final class RopesUITests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        
+
     }
 
     func testFastAnswersAndAdding() throws {
@@ -61,7 +61,7 @@ final class RopesUITests: XCTestCase {
         navigationBar.buttons["Edit"].tap()
         
         let cell = collectionViewsQuery2.children(matching: .cell).element(boundBy: 2)
-        XCUIApplication().collectionViews.cells.otherElements.containing(.image, identifier:"remove").element.tap()
+        XCUIApplication().collectionViews.cells.otherElements.containing(.image, identifier:"remove").element.firstMatch.tap()
         button.tap()
         navigationBar.children(matching: .other).matching(identifier: "ready").element(boundBy: 0).buttons["ready"].tap()
         
@@ -78,10 +78,17 @@ final class RopesUITests: XCTestCase {
         textField2.tap()
         app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
 
         button2.tap()
         collectionViewsQuery2/*@START_MENU_TOKEN@*/.buttons["test"]/*[[".cells.buttons[\"test\"]",".buttons[\"test\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        
+        XCUIApplication().navigationBars["Ropes"].buttons["Settings"].tap()
+        
+        collectionViewsQuery2.staticTexts["test"].swipeLeft()
+        button.tap()
                 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -96,11 +103,12 @@ final class RopesUITests: XCTestCase {
         let collectionViewsQuery = app.collectionViews
         
         do {
-            try collectionViewsQuery.pickerWheels["10 minutes"].swipeUp()
+            try collectionViewsQuery.pickerWheels.firstMatch.swipeUp()
         } catch {
             collectionViewsQuery.pickerWheels["5 minutes"].swipeUp()
         }
-        collectionViewsQuery.pickerWheels["30 minutes"].swipeDown()
+        
+        collectionViewsQuery.pickerWheels.firstMatch.swipeDown()
     }
     
     func testShowUPAddingView() throws {
@@ -121,14 +129,18 @@ final class RopesUITests: XCTestCase {
         app.launch()
         XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.textFields["Your rope"]/*[[".cells.textFields[\"Your rope\"]",".textFields[\"Your rope\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-    }
+        let collectionViewsQuery3 = app.collectionViews
+        collectionViewsQuery3/*@START_MENU_TOKEN@*/.textFields["Your rope"]/*[[".cells.textFields[\"Your rope\"]",".textFields[\"Your rope\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        collectionViewsQuery3.textFields["Your rope"].typeText("oh")
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        collectionViewsQuery3/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Ropes"]/*@START_MENU_TOKEN@*/.buttons["Settings"]/*[[".otherElements[\"Settings\"].buttons[\"Settings\"]",".buttons[\"Settings\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        collectionViewsQuery3/*@START_MENU_TOKEN@*/.staticTexts["ADMIN SETTINGS"]/*[[".cells.staticTexts[\"ADMIN SETTINGS\"]",".staticTexts[\"ADMIN SETTINGS\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
+        
+        let showupAnAddingViewOnStartSwitch = collectionViewsQuery3/*@START_MENU_TOKEN@*/.switches["Showup an adding view on start"]/*[[".cells.switches[\"Showup an adding view on start\"]",".switches[\"Showup an adding view on start\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        showupAnAddingViewOnStartSwitch.tap()
+                
+        
     }
 }

@@ -47,6 +47,14 @@ func UserSetUp() {
     dateFormater.dateStyle = .short
     dateFormater.timeStyle = .short
     print("Begining set-up")
-    if defaults.double(forKey: "time") == 0.0 { defaults.set(Double(10), forKey: "time")}
+    if defaults.double(forKey: "time") == 0.0 {
+        #if DEBUG
+        print("DEBUG: NO")
+        defaults.set(Double(10), forKey: "time")
+        #else
+        print("DEBUG: YES")
+        defaults.set(Double(5), forKey: "time")
+        #endif
+    }
     print("set-up completed")
 }

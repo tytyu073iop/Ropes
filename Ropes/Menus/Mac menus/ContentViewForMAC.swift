@@ -98,7 +98,13 @@ struct ContentView: View {
         dateFormater.dateStyle = .short
         dateFormater.timeStyle = .short
         print("Begining set-up")
-        if defaults.double(forKey: "time") == 0.0 { defaults.set(Double(10), forKey: "time")}
+        if defaults.double(forKey: "time") == 0.0 {
+            #if DEBUG
+            defaults.set(Double(5), forKey: "time")
+            #else
+            defaults.set(Double(10), forKey: "time")
+            #endif
+        }
         print("set-up completed")
     }
     private func RemoveRope(index : IndexSet) {
