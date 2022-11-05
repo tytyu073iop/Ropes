@@ -134,7 +134,7 @@ final class RopesUITests: XCTestCase {
         collectionViewsQuery3.textFields["Your rope"].typeText("oh")
 
         app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        collectionViewsQuery3/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        collectionViewsQuery3/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         app.navigationBars["Ropes"]/*@START_MENU_TOKEN@*/.buttons["Settings"]/*[[".otherElements[\"Settings\"].buttons[\"Settings\"]",".buttons[\"Settings\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         collectionViewsQuery3/*@START_MENU_TOKEN@*/.staticTexts["ADMIN SETTINGS"]/*[[".cells.staticTexts[\"ADMIN SETTINGS\"]",".staticTexts[\"ADMIN SETTINGS\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
         
