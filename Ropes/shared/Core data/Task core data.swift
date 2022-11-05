@@ -11,7 +11,7 @@ public class ToDo: NSManagedObject {
 
 extension ToDo : Identifiable {
     
-    @MainActor func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, auto : Bool = true, fromConnectivity : Bool = false) {
+    func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, auto : Bool = true, fromConnectivity : Bool = false) {
         print("start removing")
         NSLog("Start removing")
         let viewcontext = context
@@ -51,7 +51,7 @@ extension ToDo : Identifiable {
     @MainActor private func PushNotfication(time : Date) throws {
         try LocalNotficationManager.shared.request(text: name ?? "error", time: time)
     }
-    @MainActor convenience init(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time"), date_of_creation : Date = Date(), from_message : Bool = false) throws {
+    convenience init(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, name : String, id : UUID = UUID(), auto : Bool = true, time : Double = defaults.double(forKey: "time"), date_of_creation : Date = Date(), from_message : Bool = false) throws {
         print("begin saving")
         if name == "" {
             throw AddingErrors.EmptyName
