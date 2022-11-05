@@ -188,18 +188,12 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
         return [.sound,.banner]
     }
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+    @MainActor func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
         //FIXME: actions doesn't working when app closed
-        print("did recive!")
         if response.actionIdentifier == "done" {
-            print("Stage1")
-            NSLog("Notfication responce for category done. Stage one", 12)
             if let id = response.notification.request.content.userInfo["id"] as? String {
-                print("Stage2")
-                NSLog("Notfication responce for category done. Stage two. ID: ", 12)
-                NSLog(id)
                 // Create a new background managed object context
-                let context = PersistenceController.shared.container.newBackgroundContext()
+                let context = PersistenceController.shared.container.viewContext
                 
                 // If needed, ensure the background context stays
                 // up to date with changes from the parent
@@ -208,17 +202,12 @@ extension LocalNotficationManager : UNUserNotificationCenterDelegate{
                 // asynchronously
                 do {
                     let todo = try ToDo.findByID(id: id, context: context)
-                    print("remowing")
-                    NSLog("removing")
                     await todo.remove(context: context, auto: true)
                     try ToDo.findByID(id: "0", context: context)
                 } catch {
-                    print("Блять")
                 }
             }
         }
-        print("досвидания")
-        NSLog("END")
     }
 }
 

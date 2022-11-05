@@ -131,11 +131,10 @@ struct ContentView: View {
                                             print("MatchResults failed")
                                         }
                                     }
-                                    defaults.set(true, forKey: "OFB")
                                 case .failure(_):
                                     print("OFB failed")
-                                    defaults.set(true, forKey: "OFB")
                                 }
+                                defaults.set(true, forKey: "OFB")
                             }
                         }
                     } else {
