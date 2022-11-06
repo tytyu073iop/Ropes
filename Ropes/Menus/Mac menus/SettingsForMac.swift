@@ -27,8 +27,9 @@ struct settin: View {
             Section("Fast answers"){
                     ForEach(FA){ answer in
                         HStack{
-                            Text(answer.name ?? "error")
-                        }.transition(.move(edge: .top))
+                            Text(answer.name ?? "error").transition(.move(edge: .top))
+                            Button(action: {answer.remove()}, label: {Image(systemName: "trash")})
+                        }
                 }.onDelete(perform: {
                     RemoveFA(index: $0)
                 })
