@@ -89,6 +89,17 @@
                ReferencedContainer = "container:Ropes.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E79465B229170FD700ACD034"
+               BuildableName = "MacUITests.xctest"
+               BlueprintName = "MacUITests"
+               ReferencedContainer = "container:Ropes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
