@@ -19,54 +19,26 @@ struct Shortcuts_advice: View {
     
     var body: some View {
         VStack {
+            #if os(macOS)
+            Text("You can use shortcuts app and siri to rope. Look at shortcuts app", comment: "ropes is an app")
+            #else
             Text("You can use shortcuts app to rope", comment: "ropes is an app")
                 .multilineTextAlignment(.center)
                 .padding(EdgeInsets(top: CGFloat(padding), leading: CGFloat(padding), bottom: CGFloat(padding), trailing: CGFloat(padding)))
-            #if canImport(AppIntents)
-            if #available(iOS 16.0, *) {
                 SiriTipView(intent: AddTask())
                     .frame(width: 100)
-            } else {
-                iOS16Text()
-            }
-            #else
-                iOS16Text()
-            #endif
             Text("or")
-            #if canImport(AppIntents)
-            if #available(iOS 16.0, *) {
                 SiriTipView(intent: AddCustomTask())
                     .frame(width: 100)
-            } else {
-                iOS16Text()
-            }
-            #else
-            iOS16Text()
-            #endif
             Text("or to show ropes.", comment: "ropes is an app")
                 .padding(EdgeInsets(top: CGFloat(padding), leading: CGFloat(padding), bottom: CGFloat(padding), trailing: CGFloat(padding)))
-            #if canImport(AppIntents)
-            if #available(iOS 16.0, *) {
                 SiriTipView(intent: ShowTasks())
                     .frame(width: 100)
-            } else {
-                iOS16Text()
-            }
-            #else
-                iOS16Text()
-            #endif
             Text("You can even delete them")
-            #if canImport(AppIntents)
-            if #available(iOS 16.0, *) {
                 SiriTipView(intent: RemoveRope())
                     .frame(width: 100)
                 ShortcutsLink()
                     .padding(10)
-            } else {
-                iOS16Text()
-            }
-            #else
-                iOS16Text()
             #endif
         }
     }
