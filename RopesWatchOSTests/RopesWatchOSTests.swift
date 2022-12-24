@@ -29,7 +29,12 @@ final class RopesWatchOSTests: XCTestCase {
                 
             }
         }
-        ToDo.fetch().last!.remove()
+        for object in ToDo.fetch() {
+            object.remove()
+        }
+        for object in FastAnswers.fetch() {
+            object.remove()
+        }
         print(PopUp().PopUp)
         PopUp().PopUp = false
     }

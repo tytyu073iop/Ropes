@@ -37,6 +37,7 @@ final class RopesUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["DELETE ALL DATA"]/*[[".cells.buttons[\"DELETE ALL DATA\"]",".buttons[\"DELETE ALL DATA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 
         XCUIApplication().navigationBars["Ropes"].buttons["Settings"].tap()
         
@@ -50,7 +51,7 @@ final class RopesUITests: XCTestCase {
         textField.tap()
         textField.typeText("Delete")
         app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-                
+                        
 
         collectionViewsQuery2.staticTexts["Delete2"].swipeLeft()
         
@@ -65,7 +66,7 @@ final class RopesUITests: XCTestCase {
         button.tap()
         navigationBar.children(matching: .other).matching(identifier: "ready").element(boundBy: 0).buttons["ready"].tap()
         
-        let button2 = app.toolbars["Toolbar"].buttons["ADD"]
+        let button2 = XCUIApplication().toolbars["Toolbar"]/*@START_MENU_TOKEN@*/.buttons["ADD"]/*[[".otherElements[\"ADD\"].buttons[\"ADD\"]",".buttons[\"ADD\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         button2.tap()
         let textField2 = collectionViewsQuery2.textFields["Your rope"]
         textField2.tap()
@@ -78,17 +79,10 @@ final class RopesUITests: XCTestCase {
         textField2.tap()
         app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
-
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Bin"]/*[[".cells.buttons[\"Bin\"]",".buttons[\"Bin\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+                
         button2.tap()
         collectionViewsQuery2/*@START_MENU_TOKEN@*/.buttons["test"]/*[[".cells.buttons[\"test\"]",".buttons[\"test\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
-        
-        XCUIApplication().navigationBars["Ropes"].buttons["Settings"].tap()
-        
-        collectionViewsQuery2.staticTexts["test"].swipeLeft()
-        button.tap()
                 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -96,7 +90,8 @@ final class RopesUITests: XCTestCase {
     func testTimeScroll() throws {
         let app = XCUIApplication()
         app.launch()
-
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["DELETE ALL DATA"]/*[[".cells.buttons[\"DELETE ALL DATA\"]",".buttons[\"DELETE ALL DATA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
         XCUIApplication().navigationBars["Ropes"].buttons["Settings"].tap()
         
         
@@ -114,6 +109,7 @@ final class RopesUITests: XCTestCase {
     func testShowUPAddingView() throws {
         let app = XCUIApplication()
         app.launch()
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["DELETE ALL DATA"]/*[[".cells.buttons[\"DELETE ALL DATA\"]",".buttons[\"DELETE ALL DATA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 
         XCUIApplication().navigationBars["Ropes"].buttons["Settings"].tap()
         let collectionViewsQuery = app.collectionViews
@@ -134,12 +130,7 @@ final class RopesUITests: XCTestCase {
         collectionViewsQuery3.textFields["Your rope"].typeText("oh")
 
         app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        collectionViewsQuery3/*@START_MENU_TOKEN@*/.buttons["Trash"]/*[[".cells.buttons[\"Trash\"]",".buttons[\"Trash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
-        app.navigationBars["Ropes"]/*@START_MENU_TOKEN@*/.buttons["Settings"]/*[[".otherElements[\"Settings\"].buttons[\"Settings\"]",".buttons[\"Settings\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        collectionViewsQuery3/*@START_MENU_TOKEN@*/.staticTexts["ADMIN SETTINGS"]/*[[".cells.staticTexts[\"ADMIN SETTINGS\"]",".staticTexts[\"ADMIN SETTINGS\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
-        
-        let showupAnAddingViewOnStartSwitch = collectionViewsQuery3/*@START_MENU_TOKEN@*/.switches["Showup an adding view on start"]/*[[".cells.switches[\"Showup an adding view on start\"]",".switches[\"Showup an adding view on start\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        showupAnAddingViewOnStartSwitch.tap()
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["DELETE ALL DATA"]/*[[".cells.buttons[\"DELETE ALL DATA\"]",".buttons[\"DELETE ALL DATA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
                 
         
     }

@@ -3,7 +3,7 @@ import SwiftUI
 import AppIntents
 #endif
 
-struct Adding: View {
+struct AddView: View {
     //db
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
@@ -162,7 +162,7 @@ struct MyPreviewProvider_Previews: PreviewProvider {
         VStack {
             
         }.sheet(isPresented: $tu) {
-            Adding()
+            AddView()
         }
     }
 }

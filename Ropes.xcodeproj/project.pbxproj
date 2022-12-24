@@ -14,6 +14,8 @@
 		E720AC3E28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */; };
 		E720AC3F28DFB43800BBADB9 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
+		E7290BBF2956E9CD00118224 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
+		E7290BC02956E9E600118224 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA2289F8F5B00C28906 /* AddView.swift */; };
 		E72BD6CF291714CE00619B3F /* AppShortcuts.strings in Resources */ = {isa = PBXBuildFile; fileRef = E758525728D754F500CFF90C /* AppShortcuts.strings */; platformFilters = (macos, ); };
 		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
 		E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
@@ -40,7 +42,7 @@
 		E745025F28B8AE59005FB11A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025D28B8AE59005FB11A /* InfoPlist.strings */; };
 		E745026528B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026328B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings */; };
 		E745026828B8AE59005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026628B8AE59005FB11A /* Localizable.strings */; };
-		E748235628A2619C008E5087 /* Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E748235528A2619C008E5087 /* Adding.swift */; };
+		E748235628A2619C008E5087 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = E748235528A2619C008E5087 /* Add.swift */; };
 		E776272428D5E80B004D5262 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
 		E776272528D5E80B004D5262 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
 		E776272728D5EEFB004D5262 /* DeleteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272628D5EEFB004D5262 /* DeleteIntent.swift */; };
@@ -53,16 +55,15 @@
 		E7764A4428B360FB0022E8C3 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
 		E7764A4728B36AAF0022E8C3 /* AddIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7764A4628B36AAF0022E8C3 /* AddIntent.swift */; };
 		E7764A4828B36AAF0022E8C3 /* AddIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7764A4628B36AAF0022E8C3 /* AddIntent.swift */; };
-		E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D528A4DBE60073FFEF /* StackNavigationView.swift */; platformFilters = (macos, ); };
-		E77814DA28A4E62A0073FFEF /* ContentViewForMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */; platformFilters = (macos, ); };
-		E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */; platformFilters = (macos, ); };
 		E77DBC4328B619DF0076C393 /* CatchTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DBC4228B619DF0076C393 /* CatchTasks.swift */; };
+		E780977729179F2000B397C6 /* WatchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E780977629179F2000B397C6 /* WatchUITest.swift */; };
+		E780977929179F2000B397C6 /* WatchUITestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E780977829179F2000B397C6 /* WatchUITestLaunchTests.swift */; };
 		E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E79465B629170FD700ACD034 /* MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79465B529170FD700ACD034 /* MacUITests.swift */; };
 		E79465B829170FD700ACD034 /* MacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79465B729170FD700ACD034 /* MacUITestsLaunchTests.swift */; };
-		E7A0CF9D28D4F2DE00EE60E4 /* advice_menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9A28D4F2DE00EE60E4 /* advice_menu.swift */; platformFilter = ios; };
+		E7A0CF9D28D4F2DE00EE60E4 /* adviceMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9A28D4F2DE00EE60E4 /* adviceMenu.swift */; };
 		E7A0CF9E28D4F2DE00EE60E4 /* advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9B28D4F2DE00EE60E4 /* advices.swift */; };
-		E7A0CF9F28D4F2DE00EE60E4 /* Shortcuts_advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */; platformFilter = ios; };
+		E7A0CF9F28D4F2DE00EE60E4 /* Shortcuts_advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */; };
 		E7A0CFA028D4F3C000EE60E4 /* Ropes.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E735FDFD28A2538E00FCE2E6 /* Ropes.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7A0CFAB28D4F5D800EE60E4 /* AllIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA728D4F5D800EE60E4 /* AllIntents.swift */; };
 		E7A0CFAD28D4F5D800EE60E4 /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
@@ -96,9 +97,9 @@
 		E7EAFFAC289F8F5B00C28906 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E7EAFFAE289F8F5B00C28906 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
-		E7EAFFAF289F8F5B00C28906 /* Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA2289F8F5B00C28906 /* Adding.swift */; };
-		E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; platformFilter = ios; };
-		E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; platformFilter = ios; };
+		E7EAFFAF289F8F5B00C28906 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA2289F8F5B00C28906 /* AddView.swift */; };
+		E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
+		E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; };
 		E7EAFFB3289F8F5B00C28906 /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA6289F8F5B00C28906 /* ReadMe.swift */; };
 		E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E7EAFFB6289F8F5B00C28906 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
@@ -113,6 +114,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E7436E1928DE330E00E96EF5;
 			remoteInfo = WidjetsForWatchExtension;
+		};
+		E780977A29179F2000B397C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7EAFF7E289F8DE900C28906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E735FDFC28A2538E00FCE2E6;
+			remoteInfo = "RopesForWatch Watch App";
 		};
 		E79465B929170FD700ACD034 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -211,21 +219,21 @@
 		E745025E28B8AE59005FB11A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E745026428B8AE59005FB11A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/RopesForWatch Watch App-InfoPlist.strings"; sourceTree = "<group>"; };
 		E745026728B8AE59005FB11A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E748235528A2619C008E5087 /* Adding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding.swift; sourceTree = "<group>"; };
+		E748235528A2619C008E5087 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		E758525828D754F500CFF90C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
 		E776272328D5E80B004D5262 /* AppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntity.swift; sourceTree = "<group>"; };
 		E776272628D5EEFB004D5262 /* DeleteIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteIntent.swift; sourceTree = "<group>"; };
 		E7764A4628B36AAF0022E8C3 /* AddIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIntent.swift; sourceTree = "<group>"; };
-		E77814D528A4DBE60073FFEF /* StackNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNavigationView.swift; sourceTree = "<group>"; };
-		E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewForMAC.swift; sourceTree = "<group>"; };
-		E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsForMac.swift; sourceTree = "<group>"; };
 		E77814DD28A4F4040073FFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E77DBC4228B619DF0076C393 /* CatchTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTasks.swift; sourceTree = "<group>"; };
+		E780977429179F2000B397C6 /* WatchUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E780977629179F2000B397C6 /* WatchUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUITest.swift; sourceTree = "<group>"; };
+		E780977829179F2000B397C6 /* WatchUITestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUITestLaunchTests.swift; sourceTree = "<group>"; };
 		E78DBEFC28DEFBAD00EFE7EF /* WidjetsForWatchExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidjetsForWatchExtension.entitlements; sourceTree = "<group>"; };
 		E79465B329170FD700ACD034 /* MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79465B529170FD700ACD034 /* MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacUITests.swift; sourceTree = "<group>"; };
 		E79465B729170FD700ACD034 /* MacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E7A0CF9A28D4F2DE00EE60E4 /* advice_menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advice_menu.swift; sourceTree = "<group>"; };
+		E7A0CF9A28D4F2DE00EE60E4 /* adviceMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adviceMenu.swift; sourceTree = "<group>"; };
 		E7A0CF9B28D4F2DE00EE60E4 /* advices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advices.swift; sourceTree = "<group>"; };
 		E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortcuts_advice.swift; sourceTree = "<group>"; };
 		E7A0CFA728D4F5D800EE60E4 /* AllIntents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllIntents.swift; sourceTree = "<group>"; };
@@ -257,7 +265,7 @@
 		E7EAFF9E289F8F5B00C28906 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotfication.swift; sourceTree = "<group>"; };
 		E7EAFFA0289F8F5B00C28906 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		E7EAFFA2289F8F5B00C28906 /* Adding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adding.swift; sourceTree = "<group>"; };
+		E7EAFFA2289F8F5B00C28906 /* AddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		E7EAFFA3289F8F5B00C28906 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E7EAFFA4289F8F5B00C28906 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7EAFFA6289F8F5B00C28906 /* ReadMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
@@ -280,6 +288,13 @@
 			files = (
 				E7436E1C28DE330E00E96EF5 /* SwiftUI.framework in Frameworks */,
 				E7436E1B28DE330E00E96EF5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E780977129179F2000B397C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,15 +345,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E701DA7B28A679740043BA2A /* Mac menus */ = {
-			isa = PBXGroup;
-			children = (
-				E77814D928A4E62A0073FFEF /* ContentViewForMAC.swift */,
-				E77814DB28A4E7D60073FFEF /* SettingsForMac.swift */,
-			);
-			path = "Mac menus";
-			sourceTree = "<group>";
-		};
 		E720AC3B28DF9B6D00BBADB9 /* ICloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,7 +359,7 @@
 				E72CCCAD28DCC2860062231E /* RopesForWatch-Watch-App-Info.plist */,
 				E74210D028DCF4FA00AF9A70 /* Localizable.strings..strings */,
 				E700950128D7A5990024496C /* RopesForWatch Watch App.entitlements */,
-				E748235528A2619C008E5087 /* Adding.swift */,
+				E748235528A2619C008E5087 /* Add.swift */,
 				E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */,
 				E7A650AE291452350055A24F /* WatchKitDelegate.swift */,
 			);
@@ -390,6 +396,15 @@
 				E776272628D5EEFB004D5262 /* DeleteIntent.swift */,
 			);
 			path = "App intents";
+			sourceTree = "<group>";
+		};
+		E780977529179F2000B397C6 /* WatchUITest */ = {
+			isa = PBXGroup;
+			children = (
+				E780977629179F2000B397C6 /* WatchUITest.swift */,
+				E780977829179F2000B397C6 /* WatchUITestLaunchTests.swift */,
+			);
+			path = WatchUITest;
 			sourceTree = "<group>";
 		};
 		E79465B429170FD700ACD034 /* MacUITests */ = {
@@ -461,6 +476,7 @@
 				E7ACC65229158367000E53CE /* RopesWatchOSTests */,
 				E7ACC66329158458000E53CE /* RopesUITests */,
 				E79465B429170FD700ACD034 /* MacUITests */,
+				E780977529179F2000B397C6 /* WatchUITest */,
 				E7B740D928A6AEE9008048CF /* Frameworks */,
 				E7EAFF87289F8DE900C28906 /* Products */,
 			);
@@ -477,6 +493,7 @@
 				E7ACC65129158367000E53CE /* RopesWatchOSTests.xctest */,
 				E7ACC66229158458000E53CE /* RopesUITests.xctest */,
 				E79465B329170FD700ACD034 /* MacUITests.xctest */,
+				E780977429179F2000B397C6 /* WatchUITest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -494,7 +511,6 @@
 				E7EAFF89289F8DE900C28906 /* RopesApp.swift */,
 				E7EAFF94289F8DEA00C28906 /* Ropes.entitlements */,
 				E7EAFF95289F8DEA00C28906 /* Preview Content */,
-				E77814D528A4DBE60073FFEF /* StackNavigationView.swift */,
 				E7A650AB29144D180055A24F /* SetUp.swift */,
 				E7A650B0291454FA0055A24F /* NSApplicationDelegate.swift */,
 				E7A650B429146B540055A24F /* Icons.xcassets */,
@@ -523,8 +539,7 @@
 		E7EAFFA1289F8F5B00C28906 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				E701DA7B28A679740043BA2A /* Mac menus */,
-				E7EAFFA2289F8F5B00C28906 /* Adding.swift */,
+				E7EAFFA2289F8F5B00C28906 /* AddView.swift */,
 				E7EAFFA3289F8F5B00C28906 /* Settings.swift */,
 				E7EAFFA4289F8F5B00C28906 /* ContentView.swift */,
 				E7EB482328D4F95E000FB1B2 /* Advices */,
@@ -549,7 +564,7 @@
 			children = (
 				E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */,
 				E7A0CF9B28D4F2DE00EE60E4 /* advices.swift */,
-				E7A0CF9A28D4F2DE00EE60E4 /* advice_menu.swift */,
+				E7A0CF9A28D4F2DE00EE60E4 /* adviceMenu.swift */,
 			);
 			path = Advices;
 			sourceTree = "<group>";
@@ -592,6 +607,24 @@
 			productName = WidjetsForWatchExtension;
 			productReference = E7436E1A28DE330E00E96EF5 /* WidjetsForWatchExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		E780977329179F2000B397C6 /* WatchUITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E780977E29179F2000B397C6 /* Build configuration list for PBXNativeTarget "WatchUITest" */;
+			buildPhases = (
+				E780977029179F2000B397C6 /* Sources */,
+				E780977129179F2000B397C6 /* Frameworks */,
+				E780977229179F2000B397C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E780977B29179F2000B397C6 /* PBXTargetDependency */,
+			);
+			name = WatchUITest;
+			productName = WatchUITest;
+			productReference = E780977429179F2000B397C6 /* WatchUITest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		E79465B229170FD700ACD034 /* MacUITests */ = {
 			isa = PBXNativeTarget;
@@ -719,6 +752,10 @@
 					E7436E1928DE330E00E96EF5 = {
 						CreatedOnToolsVersion = 14.1;
 					};
+					E780977329179F2000B397C6 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = E735FDFC28A2538E00FCE2E6;
+					};
 					E79465B229170FD700ACD034 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = E7EAFF85289F8DE900C28906;
@@ -765,6 +802,7 @@
 				E7ACC65029158367000E53CE /* RopesWatchOSTests */,
 				E7ACC66129158458000E53CE /* RopesUITests */,
 				E79465B229170FD700ACD034 /* MacUITests */,
+				E780977329179F2000B397C6 /* WatchUITest */,
 			);
 		};
 /* End PBXProject section */
@@ -782,6 +820,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E7436E1828DE330E00E96EF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E780977229179F2000B397C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -851,16 +896,18 @@
 				E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */,
 				E71A024628B663DE000176CA /* CatchTasks.swift in Sources */,
 				E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */,
+				E7290BC02956E9E600118224 /* AddView.swift in Sources */,
 				E7EB482228D4F877000FB1B2 /* AddCustomIntent.swift in Sources */,
 				E7A650AF291452350055A24F /* WatchKitDelegate.swift in Sources */,
 				E720AC3E28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */,
 				E735FE1828A258A500FCE2E6 /* LocalNotfication.swift in Sources */,
-				E748235628A2619C008E5087 /* Adding.swift in Sources */,
+				E748235628A2619C008E5087 /* Add.swift in Sources */,
 				E735FE1928A258A500FCE2E6 /* Base.swift in Sources */,
 				E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */,
 				E7764A4828B36AAF0022E8C3 /* AddIntent.swift in Sources */,
 				E735FE1728A2589200FCE2E6 /* Task core data.swift in Sources */,
 				E735FE1A28A258A500FCE2E6 /* Data.swift in Sources */,
+				E7290BBF2956E9CD00118224 /* Settings.swift in Sources */,
 				E776272528D5E80B004D5262 /* AppEntity.swift in Sources */,
 				E7A650AD29144D1A0055A24F /* SetUp.swift in Sources */,
 			);
@@ -879,6 +926,15 @@
 				E7436E3028DE336F00E96EF5 /* Base.swift in Sources */,
 				E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */,
 				E7436E2E28DE336B00E96EF5 /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E780977029179F2000B397C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E780977929179F2000B397C6 /* WatchUITestLaunchTests.swift in Sources */,
+				E780977729179F2000B397C6 /* WatchUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,14 +1001,12 @@
 			files = (
 				E776272728D5EEFB004D5262 /* DeleteIntent.swift in Sources */,
 				E776272428D5E80B004D5262 /* AppEntity.swift in Sources */,
-				E7EAFFAF289F8F5B00C28906 /* Adding.swift in Sources */,
-				E7A0CF9D28D4F2DE00EE60E4 /* advice_menu.swift in Sources */,
+				E7EAFFAF289F8F5B00C28906 /* AddView.swift in Sources */,
+				E7A0CF9D28D4F2DE00EE60E4 /* adviceMenu.swift in Sources */,
 				E7EAFFAE289F8F5B00C28906 /* Base.swift in Sources */,
 				E77DBC4328B619DF0076C393 /* CatchTasks.swift in Sources */,
-				E77814DA28A4E62A0073FFEF /* ContentViewForMAC.swift in Sources */,
 				E7A0CF9F28D4F2DE00EE60E4 /* Shortcuts_advice.swift in Sources */,
 				E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */,
-				E77814D628A4DBE60073FFEF /* StackNavigationView.swift in Sources */,
 				E7EAFFB3289F8F5B00C28906 /* ReadMe.swift in Sources */,
 				E720AC3D28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */,
 				E7A650B1291454FA0055A24F /* NSApplicationDelegate.swift in Sources */,
@@ -961,7 +1015,6 @@
 				E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */,
 				E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */,
 				E7A0CFAB28D4F5D800EE60E4 /* AllIntents.swift in Sources */,
-				E77814DC28A4E7D60073FFEF /* SettingsForMac.swift in Sources */,
 				E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */,
 				E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */,
 				E7EAFFB6289F8F5B00C28906 /* Task core data.swift in Sources */,
@@ -982,6 +1035,11 @@
 			isa = PBXTargetDependency;
 			target = E7436E1928DE330E00E96EF5 /* WidjetsForWatchExtension */;
 			targetProxy = E7436E2328DE331000E96EF5 /* PBXContainerItemProxy */;
+		};
+		E780977B29179F2000B397C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E735FDFC28A2538E00FCE2E6 /* RopesForWatch Watch App */;
+			targetProxy = E780977A29179F2000B397C6 /* PBXContainerItemProxy */;
 		};
 		E79465BA29170FD700ACD034 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1112,7 +1170,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1147,7 +1205,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1214,6 +1272,45 @@
 			};
 			name = Release;
 		};
+		E780977C29179F2000B397C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.WatchUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "RopesForWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		E780977D29179F2000B397C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.WatchUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "RopesForWatch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		E79465BB29170FD700ACD034 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1221,7 +1318,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.MacUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1239,7 +1336,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.MacUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1258,8 +1355,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesCoreDataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1282,8 +1379,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesCoreDataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1315,7 +1412,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1336,7 +1433,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1347,7 +1444,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesUITests;
@@ -1370,7 +1467,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesUITests;
@@ -1596,10 +1693,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.2;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes;
@@ -1644,10 +1741,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.2;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes;
@@ -1679,6 +1776,15 @@
 			buildConfigurations = (
 				E7436E2728DE331000E96EF5 /* Debug */,
 				E7436E2828DE331000E96EF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E780977E29179F2000B397C6 /* Build configuration list for PBXNativeTarget "WatchUITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E780977C29179F2000B397C6 /* Debug */,
+				E780977D29179F2000B397C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

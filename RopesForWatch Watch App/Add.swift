@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import WatchKit
 
-struct Adding: View {
+struct Add: View {
     @Environment(\.managedObjectContext) private var viewContext
     var Ropes : FetchedResults<ToDo>
     var fastAnswers : FetchedResults<FastAnswers>

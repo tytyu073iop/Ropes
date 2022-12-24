@@ -1,6 +1,8 @@
 import SwiftUI
 import UserNotifications
+#if canImport(watchConnectivity)
 import WatchConnectivity
+#endif
 import WidgetKit
 import CloudKit
 #if os(watchOS)
@@ -9,6 +11,9 @@ import WatchKit
 
 struct ContentView: View {
     let buttonName : LocalizedStringKey = "ADD"
+    #if !os(watchOS)
+    @Environment(\.openWindow) private var openWindow
+    #endif
     //db
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
@@ -27,10 +32,10 @@ struct ContentView: View {
     @State private var settings = false
     @State private var advice = false
     var body: some View {
-        NavigationView{
+        NavigationStack{
             List{
                 #if os(watchOS)
-                    NavigationLink(destination: Adding(Ropes: Ropes, fastAnswers: FA/*[FastAnswers(context: PersistenceController.shared.container.viewContext, name: "Test")]*/), label: { Image(systemName: "plus") })
+                NavigationLink(destination: AddView(), label: { Image(systemName: "plus") })
                 #endif
                 ForEach(Ropes) {rope in
                     HStack{
@@ -68,42 +73,72 @@ struct ContentView: View {
                             await LocalNotficationManager.shared.PrintRequests()
                         }
                     }
+                    Button("DELETE ALL DATA") {
+                        for fa in FastAnswers.fetch() {
+                            fa.remove()
+                        }
+                        for todo in ToDo.fetch() {
+                            todo.remove()
+                        }
+                        defaults.set(5, forKey: "time")
+                        defaults.set(false, forKey: "popup")
+                    }
                 }
             }
 #if !os(watchOS)
             .navigationTitle("Ropes")
 #endif
             .toolbar(content: {
-#if os(iOS)
+                #if !os(watchOS)
                 ToolbarItem(placement: .automatic){
                     Button(action: {
+                        #if os(macOS)
+                        openWindow(id: "Advice")
+                        #else
                         advice.toggle()
+                        #endif
                     }, label: {
                         Image(systemName: "lightbulb")
                     })
                     .sheet(isPresented: $advice) {
-                        advice_menu()
+                        adviceMenu()
                     }
                 }
+                #if os(iOS)
                 ToolbarItem(placement: .bottomBar){
                     Button(buttonName){
+                        #if os(macOS)
+                        openWindow(id: "Adding")
+                        #else
                         showingSheet.toggle()
+                        #endif
                     }
                     .keyboardShortcut("a")
-                    .sheet(isPresented: $showingSheet) {Adding()}
-                    
+                    .sheet(isPresented: $showingSheet) { AddView() }
                 }
+                #else
+                ToolbarItem(placement: .automatic){
+                    Button(buttonName){
+                        #if os(macOS)
+                        openWindow(id: "Adding")
+                        #else
+                        showingSheet.toggle()
+                        #endif
+                    }
+                    .keyboardShortcut("a")
+                    .sheet(isPresented: $showingSheet) { AddView() }
+                }
+                #endif
+                #endif
+                #if os(iOS)
                 ToolbarItem(placement: .navigationBarLeading){
                     Button(action: { settings.toggle() },
                            label: {Image(systemName: "gear")})
                     .sheet(isPresented: $settings){ settin() }
                 }
-#endif
+                #endif
             })
         }
-#if os(iOS)
-        .navigationViewStyle(.stack)
-#endif
         .onAppear(){
             Task {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.carPlay,.sound]) { yes, error in
@@ -153,7 +188,6 @@ struct ContentView: View {
             }
         })
     }
-    
     private func RemoveRope(index : IndexSet) {
         let RopeToRemove = Ropes[index.first!]
         RopeToRemove.remove(context: viewContext)

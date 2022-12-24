@@ -27,13 +27,16 @@ struct RopesApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         #if os(macOS)
-        WindowGroup("Adding") {
-            Adding()
+        WindowGroup("Adding", id: "Adding") {
+            AddView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }.handlesExternalEvents(matching:Set (arrayLiteral: "*"))
         Settings{
             settin()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
+        WindowGroup(id: "Advice"){
+            adviceMenu()
         }
         #endif
     }
