@@ -11,7 +11,7 @@ import AppIntents
 #endif
 
 struct Shortcuts_advice: View {
-    private var padding = 5
+    private var padding = 0
     fileprivate func iOS16Text() -> Text {
         return Text("Oh. You have to update to iOS 16 or newer", comment: "error")
             .foregroundColor(Color(.gray))
@@ -23,10 +23,8 @@ struct Shortcuts_advice: View {
             Text("You can use shortcuts app and siri to rope. Look at shortcuts app", comment: "ropes is an app")
             #else
             Text("You can use shortcuts app to rope", comment: "ropes is an app")
-                .multilineTextAlignment(.center)
                 .padding(EdgeInsets(top: CGFloat(padding), leading: CGFloat(padding), bottom: CGFloat(padding), trailing: CGFloat(padding)))
-                SiriTipView(intent: AddTask())
-                    .frame(width: 100)
+                .multilineTextAlignment(.center)
             Text("or")
                 SiriTipView(intent: AddCustomTask())
                     .frame(width: 100)
@@ -49,7 +47,6 @@ struct Shortcuts_advice_Previews: PreviewProvider {
     static var previews: some View {
         VStack {}.sheet(isPresented: $tru) {
             Shortcuts_advice().environment(\.locale, .init(identifier: "ru"))
-        }.previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
-            .previewDisplayName("iPhone 14 pro max")
+        }
     }
 }

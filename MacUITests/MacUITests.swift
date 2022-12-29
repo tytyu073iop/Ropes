@@ -40,7 +40,7 @@ final class MacUITests: XCTestCase {
         
         let cell = comAppleSwiftuiSettingsWindowWindow/*@START_MENU_TOKEN@*/.tables/*[[".groups",".scrollViews.tables",".tables"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.children(matching: .tableRow).element(boundBy: 0).children(matching: .cell).element
         cell.typeText("Delete\r")
-        comAppleSwiftuiSettingsWindowWindow/*@START_MENU_TOKEN@*/.tables.buttons["Bin"]/*[[".groups",".scrollViews.tables",".tableRows",".cells.buttons[\"Bin\"]",".buttons[\"Bin\"]",".tables"],[[[-1,5,2],[-1,1,2],[-1,0,1]],[[-1,5,2],[-1,1,2]],[[-1,4],[-1,3],[-1,2,3]],[[-1,4],[-1,3]]],[0,0]]@END_MENU_TOKEN@*/.click()
+        comAppleSwiftuiSettingsWindowWindow.tables.buttons["Trash"].click()
         enterSomethingTextField.click()
         cell.typeText("Test\r")
         comAppleSwiftuiSettingsWindowWindow.buttons[XCUIIdentifierCloseWindow].click()
@@ -48,13 +48,13 @@ final class MacUITests: XCTestCase {
         let swiftuiModifiedcontentRopesContentviewSwiftuiEnvironmentkeywritingmodifierCNsmanagedobjectcontext1Appwindow1Window = app/*@START_MENU_TOKEN@*/.windows["SwiftUI.ModifiedContent<Ropes.ContentView, SwiftUI._EnvironmentKeyWritingModifier<__C.NSManagedObjectContext>>-1-AppWindow-1"]/*[[".windows[\"Ropes\"]",".windows[\"SwiftUI.ModifiedContent<Ropes.ContentView, SwiftUI._EnvironmentKeyWritingModifier<__C.NSManagedObjectContext>>-1-AppWindow-1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         XCUIApplication()/*@START_MENU_TOKEN@*/.windows["SwiftUI.ModifiedContent<Ropes.ContentView, SwiftUI._EnvironmentKeyWritingModifier<__C.NSManagedObjectContext>>-1-AppWindow-1"]/*[[".windows[\"Ropes\"]",".windows[\"SwiftUI.ModifiedContent<Ropes.ContentView, SwiftUI._EnvironmentKeyWritingModifier<__C.NSManagedObjectContext>>-1-AppWindow-1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.toolbars.buttons["ADD"].click()
         XCUIApplication()/*@START_MENU_TOKEN@*/.windows["Adding-AppWindow-1"].tables.buttons["Test"]/*[[".windows[\"Adding\"]",".groups",".scrollViews.tables",".tableRows",".cells.buttons[\"Test\"]",".buttons[\"Test\"]",".tables",".windows[\"Adding-AppWindow-1\"]"],[[[-1,7,1],[-1,0,1]],[[-1,6,3],[-1,2,3],[-1,1,2]],[[-1,6,3],[-1,2,3]],[[-1,5],[-1,4],[-1,3,4]],[[-1,5],[-1,4]]],[0,0,0]]@END_MENU_TOKEN@*/.click()
-        swiftuiModifiedcontentRopesContentviewSwiftuiEnvironmentkeywritingmodifierCNsmanagedobjectcontext1Appwindow1Window/*@START_MENU_TOKEN@*/.tables.buttons["Bin"]/*[[".groups",".scrollViews.tables",".tableRows",".cells.buttons[\"Bin\"]",".buttons[\"Bin\"]",".tables"],[[[-1,5,2],[-1,1,2],[-1,0,1]],[[-1,5,2],[-1,1,2]],[[-1,4],[-1,3],[-1,2,3]],[[-1,4],[-1,3]]],[0,0]]@END_MENU_TOKEN@*/.click()
+        swiftuiModifiedcontentRopesContentviewSwiftuiEnvironmentkeywritingmodifierCNsmanagedobjectcontext1Appwindow1Window.tables.buttons["Trash"].click()
         
 
         let menuBarsQuery2 = app.menuBars
         menuBarsQuery2.menuBarItems["Ropes"].click()
         menuBarsQuery2/*@START_MENU_TOKEN@*/.menuItems["showSettingsWindow:"]/*[[".menuBarItems[\"Ropes\"]",".menus",".menuItems[\"Settings…\"]",".menuItems[\"showSettingsWindow:\"]"],[[[-1,3],[-1,2],[-1,1,2],[-1,0,1]],[[-1,3],[-1,2],[-1,1,2]],[[-1,3],[-1,2]]],[0]]@END_MENU_TOKEN@*/.click()
-        app.windows["com_apple_SwiftUI_Settings_window"].tables.buttons["Bin"].firstMatch.click()
+        app.windows["com_apple_SwiftUI_Settings_window"].tables.buttons["Trash"].firstMatch.click()
         
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.

@@ -12,8 +12,8 @@ import CoreData
 
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct ShowTasks : AppIntent {
     //FIXME: no translation
-    static var title: LocalizedStringResource = LocalizedStringResource("Show Ropes", table: "Localizable.strings.")
-    static var description = IntentDescription(LocalizedStringResource("Show all tasks from the ropes app", table: "Localizable.strings."))
+    static var title: LocalizedStringResource = LocalizedStringResource("Show Ropes")
+    static var description = IntentDescription(LocalizedStringResource("Show all tasks from the ropes app"))
     func perform() async throws -> some IntentResult {
         let objects = ToDo.fetch()
         var names = [String]()

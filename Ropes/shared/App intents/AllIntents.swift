@@ -11,11 +11,8 @@ import AppIntents
 
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct RopesShortCuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
-        AppShortcut(
-            intent: AddTask(),
-            phrases: ["Create a \(.applicationName)"]
-        ) ; AppShortcut(intent: ShowTasks(), phrases: ["Show \(.applicationName)"]) ;
-        AppShortcut(intent: AddCustomTask(), phrases: ["Create a custom \(.applicationName)"]) ;
+        AppShortcut(intent: ShowTasks(), phrases: ["Show \(.applicationName)"]) ;
+        AppShortcut(intent: AddCustomTask(), phrases: ["Create a \(.applicationName)"]) ;
         AppShortcut(intent: RemoveRope(), phrases: ["Remove \(.applicationName)"])
     }
     static var shortcutTileColor: ShortcutTileColor = .purple
