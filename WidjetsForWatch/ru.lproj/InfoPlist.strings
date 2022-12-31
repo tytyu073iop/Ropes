@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Виджет";
+
+/* Bundle name */
+"CFBundleName" = "виджет для часов";
+

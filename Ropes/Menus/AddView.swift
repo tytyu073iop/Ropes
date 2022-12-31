@@ -132,7 +132,7 @@ struct AddView: View {
         #if canImport(AppIntents)
         if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
             Task {
-                try await IntentDonationManager.shared.donate(intent: AddCustomTask(), result: .result(value: name, dialog: "Task name was created"))
+                try await IntentDonationManager.shared.donate(intent: AddRopeShortcut(), result: .result(value: name, dialog: "Task name was created"))
             }
         }
         #endif

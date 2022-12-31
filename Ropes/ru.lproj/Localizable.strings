@@ -1,0 +1,108 @@
+/* No comment provided by engineer. */
+"Add rope" = "Добавить узелок";
+
+/* No comment provided by engineer. */
+"Add task to the ropes app" = "Добавить узелок";
+
+/* No comment provided by engineer. */
+"add to fast Answers" = "Добавить в быстрые ответы";
+
+/* No comment provided by engineer. */
+"Add your own" = "Добавить свое";
+
+/* No comment provided by engineer. */
+"admin settings" = "Настройки администратора";
+
+/* No comment provided by engineer. */
+"chose the time" = "Выберите время";
+
+/* No comment provided by engineer. */
+"Create a rope ${Task}" = "Создать узелок ${Task}";
+
+/* No comment provided by engineer. */
+"DELETE ALL DATA" = "Удалить все данные";
+
+/* No comment provided by engineer. */
+"Disable all notifications" = "Удалить все уведомления";
+
+/* No comment provided by engineer. */
+"Done" = "Сделано";
+
+/* No comment provided by engineer. */
+"Enter something" = "Видите что-нибудь";
+
+/* No comment provided by engineer. */
+"Fast Answer" = "Быстрый ответ";
+
+/* No comment provided by engineer. */
+"Fast answers" = "Быстрые ответы";
+
+/* No comment provided by engineer. */
+"Notfications aren't allowed" = "Уведомления не разрешены";
+
+/* No comment provided by engineer. */
+"Notify" = "Уведомить";
+
+/* No comment provided by engineer. */
+"ok" = "Ок";
+
+/* No comment provided by engineer. */
+"OOPS" = "Упс";
+
+/* No comment provided by engineer. */
+"Other" = "Другое";
+
+/* No comment provided by engineer. */
+"ready" = "Готово";
+
+/* No comment provided by engineer. */
+"Remove a rope ${rope}" = "Удалить узелок ${rope}";
+
+/* No comment provided by engineer. */
+"requests" = "Запросы";
+
+/* No comment provided by engineer. */
+"rope %@ was removed" = "Узелок %@ Был удалён";
+
+/* No comment provided by engineer. */
+"Select rope" = "Выберите узелок";
+
+/* No comment provided by engineer. */
+"Set a remind time" = "Поставить время напоминания";
+
+/* No comment provided by engineer. */
+"settings" = "Настройки";
+
+/* No comment provided by engineer. */
+"Show all tasks from the ropes app" = "Покажи все узелки";
+
+/* No comment provided by engineer. */
+"Show Ropes" = "Покажи узелки";
+
+/* No comment provided by engineer. */
+"Task" = "Узелок";
+
+/* No comment provided by engineer. */
+"Task %@ was created" = "Узелок %@ Был создан";
+
+/* No comment provided by engineer. */
+"Time" = "Время";
+
+/* No comment provided by engineer. */
+"Try another name or complete other rope with that name" = "Попробуйте другое имя или свяжите другой узелок";
+
+/* No comment provided by engineer. */
+"You aren't allowed nofications" = "Вы не разрешили уведомления";
+
+/* ropes is an app */
+"You can use shortcuts app and siri to rope. Look at shortcuts app" = "Вы можете использовать приложение команды или Siri чтобы завязать узелок. Посмотрите в приложении команды";
+
+/* No comment provided by engineer. */
+"You cannot set reminder at the past" = "Вы не можете поставить напоминание в прошлом";
+
+/* No comment provided by engineer. */
+"Your rope" = "Ваш узелок";
+
+/* No comment provided by engineer. */
+"Your Ropes:" = "Вашу узелки";
+

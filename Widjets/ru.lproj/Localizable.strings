@@ -1,8 +1,50 @@
 /* No comment provided by engineer. */
-"All your tasks" = "Все узелки";
+"Add rope" = "Добавить узелок";
+
+/* No comment provided by engineer. */
+"Add task to the ropes app" = "Добавить узелок";
+
+/* No comment provided by engineer. */
+"All your tasks" = "Все ваши узелки";
+
+/* No comment provided by engineer. */
+"Create a rope ${Task}" = "Добавить узелок ${Task}";
 
 /* No comment provided by engineer. */
 "Done" = "Готово";
+
+/* No comment provided by engineer. */
+"Fast Answer" = "Быстрый ответ";
+
+/* No comment provided by engineer. */
+"Remove a rope ${rope}" = "Удалить узелок ${rope}";
+
+/* No comment provided by engineer. */
+"Remove rope" = "Удалить узелок";
+
+/* No comment provided by engineer. */
+"Removes rope" = "Удаляет узелок";
+
+/* No comment provided by engineer. */
+"Rope" = "Узелок";
+
+/* No comment provided by engineer. */
+"rope %@ was removed" = "Узелок %@ был удалён";
+
+/* No comment provided by engineer. */
+"Select rope" = "Выберите узелок";
+
+/* No comment provided by engineer. */
+"Show all tasks from the ropes app" = "Покажи все узелки";
+
+/* No comment provided by engineer. */
+"Show Ropes" = "Показать узелки";
+
+/* No comment provided by engineer. */
+"Task" = "Узелок";
+
+/* No comment provided by engineer. */
+"Task %@ was created" = "Узелок %@ был создан";
 
 /* No comment provided by engineer. */
 "Tasks" = "Узелки";
@@ -10,6 +52,12 @@
 /* No comment provided by engineer. */
 "There's no ropes" = "Узелков больше нет";
 
-"Tasks" = "Узелки";
+/* No comment provided by engineer. */
+"You have no ropes" = "У вас нет Узелков";
 
-"All your tasks" = "Все ваши узелки";
+/* No comment provided by engineer. */
+"Your ropes:" = "Ваши узелки:";
+
+/* No comment provided by engineer. */
+"Your Ropes:" = "Ваши узелки:";
+

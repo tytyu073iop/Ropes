@@ -5,25 +5,28 @@
 "ADD" = "Добавить";
 
 /* No comment provided by engineer. */
+"Add rope" = "Добавить узелок";
+
+/* No comment provided by engineer. */
+"Add task to the ropes app" = "Добавить узелок в приложение узелки";
+
+/* No comment provided by engineer. */
 "add to fast Answers" = "Добавить в Быстрые напоминания";
 
 /* No comment provided by engineer. */
 "Add your own" = "Добавить своё";
 
 /* No comment provided by engineer. */
-"Adding" = "Добавление";
-
-/* No comment provided by engineer. */
 "admin settings" = "Настройки для администраторов";
-
-/* No comment provided by engineer. */
-"back" = "Назад";
 
 /* No comment provided by engineer. */
 "chose the time" = "Выберите время";
 
 /* No comment provided by engineer. */
 "Create a rope ${Task}" = "Завязать ${Task}";
+
+/* No comment provided by engineer. */
+"DELETE ALL DATA" = "УДАЛИТЬ ВСЕ ДАННЫЕ";
 
 /* No comment provided by engineer. */
 "Disable all notifications" = "Отменить все уведомления";
@@ -35,10 +38,16 @@
 "Enter something" = "Введите что-нибудь ";
 
 /* No comment provided by engineer. */
+"Fast Answer" = "Быстрый ответ";
+
+/* No comment provided by engineer. */
 "Fast answers" = "Быстрые Напоминания";
 
 /* No comment provided by engineer. */
 "Missing time" = "Не правильное время";
+
+/* No comment provided by engineer. */
+"Notfications aren't allowed" = "Уведомления не разрешены";
 
 /* No comment provided by engineer. */
 "Notify" = "Уведомить";
@@ -74,6 +83,9 @@
 "rope %@ was removed" = "Узелок %@ удалён";
 
 /* No comment provided by engineer. */
+"Select rope" = "Выберите узелок";
+
+/* No comment provided by engineer. */
 "Set a remind time" = "Поставить время напоминания";
 
 /* No comment provided by engineer. */
@@ -83,10 +95,13 @@
 "Settings" = "Настройки";
 
 /* No comment provided by engineer. */
-"Showup an adding view on start" = "Показывать меню добавления сразу";
+"Show all tasks from the ropes app" = "Показать все узелки из приложения узелки";
 
 /* No comment provided by engineer. */
-"Sync with watch" = "Синхронизировать с Apple Watch";
+"Show Ropes" = "Показать узелки";
+
+/* No comment provided by engineer. */
+"Showup an adding view on start" = "Показывать меню добавления сразу";
 
 /* No comment provided by engineer. */
 "Task" = "Узелок";
@@ -102,6 +117,9 @@
 
 /* No comment provided by engineer. */
 "Try another name or complete other rope with that name" = "Попробуйте другое имя или удалите предыдущий узелок";
+
+/* No comment provided by engineer. */
+"You aren't allowed nofications" = "Вы не разрешили уведомления";
 
 /* No comment provided by engineer. */
 "You cannot set reminder at the past" = "Вы не можете поставить напоминание в прошлом";

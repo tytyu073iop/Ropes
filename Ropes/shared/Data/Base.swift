@@ -89,7 +89,14 @@ enum NotificationErrors: Error {
     case noPermition
 }
 
-enum AddingErrors : Error {
+enum AddingErrors : Error , CustomLocalizedStringResourceConvertible{
+    var localizedStringResource: LocalizedStringResource {
+        switch self{
+        case .EmptyName: return "Empty name"
+        case .ThisNameIsExciting: return "This name is already exists. Rename in order to continue"
+        }
+    }
+    
     case ThisNameIsExciting, EmptyName
 }
 

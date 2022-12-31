@@ -26,7 +26,7 @@ struct Shortcuts_advice: View {
                 .padding(EdgeInsets(top: CGFloat(padding), leading: CGFloat(padding), bottom: CGFloat(padding), trailing: CGFloat(padding)))
                 .multilineTextAlignment(.center)
             Text("or")
-                SiriTipView(intent: AddCustomTask())
+                SiriTipView(intent: AddRopeShortcut())
                     .frame(width: 100)
             Text("or to show ropes.", comment: "ropes is an app")
                 .padding(EdgeInsets(top: CGFloat(padding), leading: CGFloat(padding), bottom: CGFloat(padding), trailing: CGFloat(padding)))
