@@ -14,8 +14,8 @@
             filePath = "Ropes/shared/App intents/AppEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "suggestedEntities()"
             landmarkType = "7">
             <Locations>
@@ -228,8 +228,8 @@
             filePath = "Ropes/shared/App intents/AppEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "entities(for:)"
             landmarkType = "7">
             <Actions>
@@ -272,7 +272,7 @@
             uuid = "536937DF-0306-45FC-B1E9-985B38A164E0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
-            continueAfterRunningActions = "No"
+            continueAfterRunningActions = "Yes"
             filePath = "Ropes/shared/App intents/AddCustomIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -302,7 +302,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
                   endingLineNumber = "27"
-                  offsetFromSymbolStart = "356">
+                  offsetFromSymbolStart = "284">
                </Location>
                <Location
                   uuid = "536937DF-0306-45FC-B1E9-985B38A164E0 - 4fcd69c64d108649"
@@ -317,7 +317,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
                   endingLineNumber = "27"
-                  offsetFromSymbolStart = "1416">
+                  offsetFromSymbolStart = "1412">
                </Location>
                <Location
                   uuid = "536937DF-0306-45FC-B1E9-985B38A164E0 - 34c6e0bc7c4b324b"
@@ -332,9 +332,63 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
                   endingLineNumber = "27"
-                  offsetFromSymbolStart = "272">
+                  offsetFromSymbolStart = "208">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FEE2A3B-8459-4406-9EC0-E41100016BE4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "Widjets/RopesWidjet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getTimeline(in:completion:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po defaults.bool(forKey: &quot;swap&quot;)">
+                  </ActionContent>
+               </BreakpointActionProxy>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Sound">
+                  <ActionContent
+                     soundName = "Ping">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "062732E9-18A3-4E8B-BC54-E3456D7B26C4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "Ropes/Menus/Settings.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po defaults.bool(forKey: &quot;swap&quot;)">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
