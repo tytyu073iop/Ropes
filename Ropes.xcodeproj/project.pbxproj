@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E701DA7D28A6799B0043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
-		E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; platformFilter = ios; };
 		E701ECD6295DB7F700B90033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025828B8AE38005FB11A /* Localizable.strings */; };
 		E71A024628B663DE000176CA /* CatchTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DBC4228B619DF0076C393 /* CatchTasks.swift */; };
 		E71EF4E5295D84440051EE65 /* Localizable.strings..strings in Resources */ = {isa = PBXBuildFile; fileRef = E71EF4E3295D84440051EE65 /* Localizable.strings..strings */; };
@@ -37,7 +35,6 @@
 		E7436E2E28DE336B00E96EF5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 		E7436E2F28DE336F00E96EF5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7436E3028DE336F00E96EF5 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
-		E7436E3228DE339200E96EF5 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
 		E745025F28B8AE59005FB11A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025D28B8AE59005FB11A /* InfoPlist.strings */; };
 		E745026528B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026328B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings */; };
 		E745026828B8AE59005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026628B8AE59005FB11A /* Localizable.strings */; };
@@ -61,7 +58,6 @@
 		E7764A4028B360210022E8C3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 		E7764A4228B360250022E8C3 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
 		E7764A4328B360250022E8C3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
-		E7764A4428B360FB0022E8C3 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */; };
 		E77DBC4328B619DF0076C393 /* CatchTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DBC4228B619DF0076C393 /* CatchTasks.swift */; };
 		E780977729179F2000B397C6 /* WatchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E780977629179F2000B397C6 /* WatchUITest.swift */; };
 		E780977929179F2000B397C6 /* WatchUITestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E780977829179F2000B397C6 /* WatchUITestLaunchTests.swift */; };
@@ -222,7 +218,6 @@
 
 /* Begin PBXFileReference section */
 		E700950128D7A5990024496C /* RopesForWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "RopesForWatch Watch App.entitlements"; sourceTree = "<group>"; };
-		E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivity.swift; sourceTree = "<group>"; };
 		E71EF4E4295D84440051EE65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings..strings; sourceTree = "<group>"; };
 		E71EF4E7295D84440051EE65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E71EF4EA295D84440051EE65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings..strings; sourceTree = "<group>"; };
@@ -391,7 +386,6 @@
 				E71EF4E3295D84440051EE65 /* Localizable.strings..strings */,
 				E700950128D7A5990024496C /* RopesForWatch Watch App.entitlements */,
 				E748235528A2619C008E5087 /* Add.swift */,
-				E701DA7C28A6799B0043BA2A /* WatchConnectivity.swift */,
 				E7A650AE291452350055A24F /* WatchKitDelegate.swift */,
 			);
 			path = "RopesForWatch Watch App";
@@ -966,7 +960,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E776272828D5EEFB004D5262 /* DeleteIntent.swift in Sources */,
-				E701DA7D28A6799B0043BA2A /* WatchConnectivity.swift in Sources */,
 				E735FE1628A2589200FCE2E6 /* Persistence.swift in Sources */,
 				E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */,
 				E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */,
@@ -994,7 +987,6 @@
 			files = (
 				E7436E2A28DE333600E96EF5 /* RopesWidjet.swift in Sources */,
 				E7436E2F28DE336F00E96EF5 /* Data.swift in Sources */,
-				E7436E3228DE339200E96EF5 /* WatchConnectivity.swift in Sources */,
 				E7436E2D28DE336B00E96EF5 /* Task core data.swift in Sources */,
 				E7436E2C28DE336800E96EF5 /* Persistence extension.swift in Sources */,
 				E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */,
@@ -1067,7 +1059,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7764A4428B360FB0022E8C3 /* WatchConnectivity.swift in Sources */,
 				E7764A4328B360250022E8C3 /* Data.swift in Sources */,
 				E7DDC1D428DCD64000D902AA /* CatchTasks.swift in Sources */,
 				E7764A4228B360250022E8C3 /* Base.swift in Sources */,
@@ -1100,7 +1091,6 @@
 				E7A650B1291454FA0055A24F /* NSApplicationDelegate.swift in Sources */,
 				E7EAFF8A289F8DE900C28906 /* RopesApp.swift in Sources */,
 				E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */,
-				E701DA7E28A680F90043BA2A /* WatchConnectivity.swift in Sources */,
 				E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */,
 				E7A0CFAB28D4F5D800EE60E4 /* AllIntents.swift in Sources */,
 				E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */,

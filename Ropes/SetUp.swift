@@ -11,9 +11,6 @@ import CloudKit
 
 
 func SetUP() {
-    #if !os(macOS)
-WC.shared
-    #endif
 UserSetUp()
 if #available(watchOS 9.0, *) {
     WidgetCenter.shared.reloadAllTimelines()
