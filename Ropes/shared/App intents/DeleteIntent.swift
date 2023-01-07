@@ -19,6 +19,6 @@ import SwiftUI
     func perform() async throws -> some IntentResult {
         print("deleting")
         try await ToDo.findByID(id: rope.id.uuidString).remove()
-        return .result(dialog: "rope \(rope.name) was removed", content: {VStack{}})
+        return .result()
     }
 }

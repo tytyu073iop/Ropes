@@ -55,124 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8F51E478-A2DF-4E82-AAF3-A2514B7B143C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ropes/shared/App intents/AddCustomIntent.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "perform()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8B1B3FBE-B1E3-478C-9A58-D9A53B6AA93F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ropes/shared/App intents/AddCustomIntent.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "perform()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "368AF318-23BE-4EFD-83D9-C5B26E174D25"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ropes/shared/App intents/AddCustomIntent.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "perform()"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po $Task.requestValue()">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-            <Locations>
-               <Location
-                  uuid = "368AF318-23BE-4EFD-83D9-C5B26E174D25 - 7793a7420b2c3b48"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Ropes.AddCustomTask.perform() async throws -&gt; some"
-                  moduleName = "Ropes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ilyabiruk/Documents/Ropes/Ropes/shared/App%20intents/AddCustomIntent.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "712">
-               </Location>
-               <Location
-                  uuid = "368AF318-23BE-4EFD-83D9-C5B26E174D25 - 7a7724f01efe58b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Ropes.AddCustomTask.perform() async throws -&gt; some"
-                  moduleName = "Ropes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ilyabiruk/Documents/Ropes/Ropes/shared/App%20intents/AddCustomIntent.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "368AF318-23BE-4EFD-83D9-C5B26E174D25 - 5b79cf7591054b4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Ropes.AddCustomTask.perform() async throws -&gt; some"
-                  moduleName = "Ropes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ilyabiruk/Documents/Ropes/Ropes/shared/App%20intents/AddCustomIntent.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "172">
-               </Location>
-               <Location
-                  uuid = "368AF318-23BE-4EFD-83D9-C5B26E174D25 - 50aa039fdc093345"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Ropes.AddCustomTask.perform() async throws -&gt; some"
-                  moduleName = "Ropes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ilyabiruk/Documents/Ropes/Ropes/shared/App%20intents/AddCustomIntent.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C484AD03-4810-43D3-9C04-4EAA888E2015"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -180,8 +62,8 @@
             filePath = "Ropes/shared/App intents/AddCustomIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "perform()"
             landmarkType = "7">
             <Locations>
@@ -245,39 +127,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F87C230A-0AAA-4622-8E83-B9B585A10FD4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "Ropes/shared/App intents/AddCustomIntent.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "perform()"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Sound">
-                  <ActionContent
-                     soundName = "Funk">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "536937DF-0306-45FC-B1E9-985B38A164E0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "Ropes/shared/App intents/AddCustomIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "perform()"
             landmarkType = "7">
             <Actions>
@@ -317,7 +175,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
                   endingLineNumber = "27"
-                  offsetFromSymbolStart = "1412">
+                  offsetFromSymbolStart = "1352">
                </Location>
                <Location
                   uuid = "536937DF-0306-45FC-B1E9-985B38A164E0 - 34c6e0bc7c4b324b"
