@@ -90,18 +90,20 @@ struct ContentView: View {
 #endif
             .toolbar(content: {
                 #if !os(watchOS)
-                ToolbarItem(placement: .automatic){
-                    Button(action: {
+                if admin {
+                    ToolbarItem(placement: .automatic){
+                        Button(action: {
                         #if os(macOS)
-                        openWindow(id: "Advice")
+                            openWindow(id: "Advice")
                         #else
-                        advice.toggle()
+                            advice.toggle()
                         #endif
-                    }, label: {
-                        Image(systemName: "lightbulb")
-                    })
-                    .sheet(isPresented: $advice) {
-                        adviceMenu()
+                        }, label: {
+                            Image(systemName: "lightbulb")
+                        })
+                        .sheet(isPresented: $advice) {
+                            adviceMenu()
+                        }
                     }
                 }
                 #if os(iOS)
@@ -144,7 +146,7 @@ struct ContentView: View {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.carPlay,.sound]) { yes, error in
                     if error == nil, yes {
                         print("OFB \(defaults.bool(forKey: "OFB"))")
-                        if !defaults.bool(forKey: "OFB") {
+                        if defaults.bool(forKey: "OFB") {
                             let privateDB = CKContainer.default().privateCloudDatabase
                             let predicate = NSPredicate(value: true)
                             let query = CKQuery(recordType: "CD_ToDo", predicate: predicate)

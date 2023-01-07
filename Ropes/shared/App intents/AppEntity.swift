@@ -56,6 +56,8 @@ import AppIntents
     }
 }
 
+let CustomsName : LocalizedStringResource = "Custom"
+
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct FastAnswerQuiery : EntityQuery {
     func entities(for identifiers: [UUID]) async throws -> [FastAnswersEntity] {
         let fas = FastAnswers.fetch()
@@ -77,7 +79,7 @@ import AppIntents
         var faes = fas.map { fa in
             FastAnswersEntity(id: fa.id ?? UUID() ,name: fa.name ?? "error")
         }
-        faes.append(FastAnswersEntity(id: UUID(uuidString: "49C8D21E-ADAF-4CDD-81DD-07B82C2A99C2")!, name: "Custom"))
+        faes.append(FastAnswersEntity(id: UUID(uuidString: "49C8D21E-ADAF-4CDD-81DD-07B82C2A99C2")!, name: String(localized: CustomsName)))
         return faes
     }
     

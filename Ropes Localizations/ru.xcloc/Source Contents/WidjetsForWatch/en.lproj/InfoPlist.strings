@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "WidjetsForWatch";
+/* Bundle name */
+"CFBundleName" = "WidjetsForWatchExtension";
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "";

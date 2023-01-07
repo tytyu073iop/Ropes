@@ -35,6 +35,9 @@
 "Done" = "Готово";
 
 /* No comment provided by engineer. */
+"Empty name" = "Пустое имя";
+
+/* No comment provided by engineer. */
 "Enter something" = "Введите что-нибудь ";
 
 /* No comment provided by engineer. */
@@ -101,6 +104,9 @@
 "Show Ropes" = "Показать узелки";
 
 /* No comment provided by engineer. */
+"Show ropes in widjets like in the app order" = "Показывать узелки в виджетах как в приложениях";
+
+/* No comment provided by engineer. */
 "Showup an adding view on start" = "Показывать меню добавления сразу";
 
 /* No comment provided by engineer. */
@@ -152,3 +158,7 @@
 "You can even delete them" = "Вы даже можете их удалить";
 
 "Ropes" = "Узелки";
+
+"This name is already exists. Rename in order to continue" = "Это имя уже существует. Переименуйте чтобы продолжить";
+
+"Custom" = "Другое";

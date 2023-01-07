@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Widjets";
+/* Bundle name */
+"CFBundleName" = "WidjetsExtension";
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "";

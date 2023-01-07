@@ -13,6 +13,7 @@ struct settin: View {
     @State var alert = false
     @ObservedObject var time = Time()
     @ObservedObject var popup = PopUp()
+    @ObservedObject var swap = Swap()
     @State var a : String = ""
     var body: some View {
         NavigationStack{
@@ -62,8 +63,13 @@ struct settin: View {
                 .pickerStyle(.automatic)
             #endif
             Section("Other") {
+                #if os(iOS)
                 Toggle(isOn: $popup.PopUp) {
                     Text("Showup an adding view on start")
+                }
+                #endif
+                Toggle(isOn: $swap.Swap) {
+                    Text("Show ropes in widjets like in the app order")
                 }
             }
         }

@@ -135,8 +135,9 @@ final class RopesUITests: XCTestCase {
         
     }
     
-    func testShortcuts() throws {
+    func testAddShortcut() throws {
         let app = XCUIApplication(bundleIdentifier: "com.apple.shortcuts")
         app.launch()
+        
     }
 }

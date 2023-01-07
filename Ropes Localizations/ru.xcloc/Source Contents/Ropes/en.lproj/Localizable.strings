@@ -1,0 +1,150 @@
+/* No comment provided by engineer. */
+"%@" = "%@";
+
+/* No comment provided by engineer. */
+"%lld minutes" = "%lld minutes";
+
+/* No comment provided by engineer. */
+"ADD" = "ADD";
+
+/* No comment provided by engineer. */
+"Add task to the ropes app" = "Add task to the ropes app";
+
+/* No comment provided by engineer. */
+"add to fast Answers" = "add to fast Answers";
+
+/* No comment provided by engineer. */
+"Add your own" = "Add your own";
+
+/* No comment provided by engineer. */
+"Adding" = "Adding";
+
+/* No comment provided by engineer. */
+"admin settings" = "admin settings";
+
+/* No comment provided by engineer. */
+"chose the time" = "chose the time";
+
+/* No comment provided by engineer. */
+"Create a rope ${Task}" = "Create a rope ${Task}";
+
+/* No comment provided by engineer. */
+"DELETE ALL DATA" = "DELETE ALL DATA";
+
+/* No comment provided by engineer. */
+"Disable all notifications" = "Disable all notifications";
+
+/* No comment provided by engineer. */
+"Done" = "Done";
+
+/* No comment provided by engineer. */
+"Enter something" = "Enter something";
+
+/* No comment provided by engineer. */
+"Fast Answer" = "Fast Answer";
+
+/* No comment provided by engineer. */
+"Fast answers" = "Fast answers";
+
+/* No comment provided by engineer. */
+"Hello, World!" = "Hello, World!";
+
+/* No comment provided by engineer. */
+"Missing time" = "Missing time";
+
+/* No comment provided by engineer. */
+"Notfications aren't allowed" = "Notfications aren't allowed";
+
+/* No comment provided by engineer. */
+"Notify" = "Notify";
+
+/* error */
+"Oh. You have to update to iOS 16 or newer" = "Oh. You have to update to iOS 16 or newer";
+
+/* No comment provided by engineer. */
+"ok" = "ok";
+
+/* No comment provided by engineer. */
+"OOPS" = "OOPS";
+
+/* No comment provided by engineer. */
+"Other" = "Other";
+
+/* No comment provided by engineer. */
+"ready" = "ready";
+
+/* No comment provided by engineer. */
+"Remove a rope ${rope}" = "Remove a rope ${rope}";
+
+/* No comment provided by engineer. */
+"Remove rope" = "Remove rope";
+
+/* No comment provided by engineer. */
+"Removes rope" = "Removes rope";
+
+/* No comment provided by engineer. */
+"requests" = "requests";
+
+/* No comment provided by engineer. */
+"Rope" = "Rope";
+
+/* No comment provided by engineer. */
+"rope %@ was removed" = "rope %@ was removed";
+
+/* No comment provided by engineer. */
+"Ropes" = "Ropes";
+
+/* No comment provided by engineer. */
+"Select rope" = "Select rope";
+
+/* No comment provided by engineer. */
+"Set a remind time" = "Set a remind time";
+
+/* No comment provided by engineer. */
+"settings" = "settings";
+
+/* No comment provided by engineer. */
+"Settings" = "Settings";
+
+/* No comment provided by engineer. */
+"Show all tasks from the ropes app" = "Show all tasks from the ropes app";
+
+/* No comment provided by engineer. */
+"Show Ropes" = "Show Ropes";
+
+/* No comment provided by engineer. */
+"Showup an adding view on start" = "Showup an adding view on start";
+
+/* No comment provided by engineer. */
+"Task" = "Task";
+
+/* No comment provided by engineer. */
+"Task %@ was created" = "Task %@ was created";
+
+/* No comment provided by engineer. */
+"Task name was created" = "Task name was created";
+
+/* No comment provided by engineer. */
+"Time" = "Time";
+
+/* No comment provided by engineer. */
+"Try another name or complete other rope with that name" = "Try another name or complete other rope with that name";
+
+/* No comment provided by engineer. */
+"You aren't allowed nofications" = "You aren't allowed nofications";
+
+/* ropes is an app */
+"You can use shortcuts app and siri to rope. Look at shortcuts app" = "You can use shortcuts app and siri to rope. Look at shortcuts app";
+
+/* No comment provided by engineer. */
+"You cannot set reminder at the past" = "You cannot set reminder at the past";
+
+/* No comment provided by engineer. */
+"You have no ropes" = "You have no ropes";
+
+/* No comment provided by engineer. */
+"Your rope" = "Your rope";
+
+/* No comment provided by engineer. */
+"Your Ropes:" = "Your Ropes:";
+

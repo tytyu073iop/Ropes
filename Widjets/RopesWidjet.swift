@@ -15,7 +15,17 @@ struct Provider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        completion(ExampleEntry)
+        let context = PersistenceController.shared.container.viewContext
+        // Create a fetch request for a specific Entity type
+        var toDos = ToDo.fetch()
+        if defaults.bool(forKey: "swap") {
+            toDos.reverse()
+        }
+        print(toDos)
+        let names : [String] = toDos.compactMap { toDo in
+            return toDo.name
+        }
+        completion(SimpleEntry(names: names))
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
@@ -24,7 +34,10 @@ struct Provider: TimelineProvider {
         
         let context = PersistenceController.shared.container.viewContext
         // Create a fetch request for a specific Entity type
-        let toDos = ToDo.fetch()
+        var toDos = ToDo.fetch()
+        if defaults.bool(forKey: "swap") {
+            toDos.reverse()
+        }
         print(toDos)
         let names : [String] = toDos.compactMap { toDo in
             return toDo.name
@@ -86,11 +99,13 @@ struct RecLockWid : View {
                 .widgetAccentable()
         } else {
             VStack {
-                HStack {
-                    Text("Your ropes:").bold()
-                    Spacer()
+                if entry.names.count < 3 {
+                    HStack {
+                        Text("Your ropes:").bold()
+                        Spacer()
+                    }
                 }
-                ForEach(entry.names.prefix(2), id: \.self) { name in
+                ForEach(entry.names.prefix(3), id: \.self) { name in
                     HStack{
                         Text(name)
                         Spacer()
@@ -138,18 +153,21 @@ struct InLineWidjetView : View {
 
 @main struct RopesWidjets: WidgetBundle{
     @WidgetBundleBuilder var body: some Widget {
-        #if os(iOS)
+        #if !os(watchOS)
         RopesWidjet()
         #endif
+        #if !os(macOS)
             LockRectangleWidjet()
             LockCircleWidjet()
             LockInLineWidjet()
+        #endif
             #if os(watchOS)
             CornerWidjet()
             #endif
     }
 }
 
+#if !os(macOS)
 @available(iOS 16.0,watchOS 9.0, *) struct LockInLineWidjet: Widget {
     let kind: String = "InLineRopesWidjet"
     
@@ -189,8 +207,9 @@ struct InLineWidjetView : View {
         .supportedFamilies([.accessoryCircular])
     }
 }
+#endif
 
-#if os(iOS)
+#if !os(watchOS)
 struct RopesWidjet: Widget {
     let kind: String = "CommonRopesWidjet"
 
@@ -226,7 +245,6 @@ struct Widjets_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
             RecLockWid(entry: SimpleEntry(date: Date(), names: ["vasya","petya","fif","kik"]))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
         }
     }
 }

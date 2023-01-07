@@ -1,4 +1,7 @@
 /* No comment provided by engineer. */
+"ADD" = "Добавить";
+
+/* No comment provided by engineer. */
 "Add rope" = "Добавить узелок";
 
 /* No comment provided by engineer. */
@@ -9,6 +12,9 @@
 
 /* No comment provided by engineer. */
 "Add your own" = "Добавить свое";
+
+/* No comment provided by engineer. */
+"Adding" = "Добавление";
 
 /* No comment provided by engineer. */
 "admin settings" = "Настройки администратора";
@@ -29,6 +35,9 @@
 "Done" = "Сделано";
 
 /* No comment provided by engineer. */
+"Empty name" = "Пустое имя";
+
+/* No comment provided by engineer. */
 "Enter something" = "Видите что-нибудь";
 
 /* No comment provided by engineer. */
@@ -36,6 +45,9 @@
 
 /* No comment provided by engineer. */
 "Fast answers" = "Быстрые ответы";
+
+/* No comment provided by engineer. */
+"Missing time" = "Отсутствует время";
 
 /* No comment provided by engineer. */
 "Notfications aren't allowed" = "Уведомления не разрешены";
@@ -59,10 +71,19 @@
 "Remove a rope ${rope}" = "Удалить узелок ${rope}";
 
 /* No comment provided by engineer. */
+"Remove rope" = "Удалить узелок";
+
+/* No comment provided by engineer. */
+"Removes rope" = "Удаляет узелок";
+
+/* No comment provided by engineer. */
 "requests" = "Запросы";
 
 /* No comment provided by engineer. */
 "rope %@ was removed" = "Узелок %@ Был удалён";
+
+/* No comment provided by engineer. */
+"Ropes" = "Узелки";
 
 /* No comment provided by engineer. */
 "Select rope" = "Выберите узелок";
@@ -80,10 +101,16 @@
 "Show Ropes" = "Покажи узелки";
 
 /* No comment provided by engineer. */
+"Showup an adding view on start" = "Показывать меню добавления сразу";
+
+/* No comment provided by engineer. */
 "Task" = "Узелок";
 
 /* No comment provided by engineer. */
 "Task %@ was created" = "Узелок %@ Был создан";
+
+/* No comment provided by engineer. */
+"This name is already exists. Rename in order to continue" = "Это имя уже существует. Переименуйте чтобы продолжить";
 
 /* No comment provided by engineer. */
 "Time" = "Время";
@@ -101,8 +128,12 @@
 "You cannot set reminder at the past" = "Вы не можете поставить напоминание в прошлом";
 
 /* No comment provided by engineer. */
+"You have no ropes" = "У вас нет узелков";
+
+/* No comment provided by engineer. */
 "Your rope" = "Ваш узелок";
 
 /* No comment provided by engineer. */
 "Your Ropes:" = "Вашу узелки";
 
+"Custom" = "Другое";

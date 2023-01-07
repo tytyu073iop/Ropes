@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="en.lproj/Localizable.strings" source-language="en" target-language="ru" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld minutes" xml:space="preserve">
+        <source>%lld minutes</source>
+        <target>%lld Минут</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="ADD" xml:space="preserve">
+        <source>ADD</source>
+        <target>Добавить</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add task to the ropes app" xml:space="preserve">
+        <source>Add task to the ropes app</source>
+        <target>Добавить узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add your own" xml:space="preserve">
+        <source>Add your own</source>
+        <target>Добавить своё</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Create a rope ${Task}" xml:space="preserve">
+        <source>Create a rope ${Task}</source>
+        <target>Завязать ${Task}</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="DELETE ALL DATA" xml:space="preserve">
+        <source>DELETE ALL DATA</source>
+        <target>удалить все данные</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Disable all notifications" xml:space="preserve">
+        <source>Disable all notifications</source>
+        <target>Отменить все уведомления</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done" xml:space="preserve">
+        <source>Done</source>
+        <target>Готово</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter something" xml:space="preserve">
+        <source>Enter something</source>
+        <target>Введите что-нибудь </target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Fast Answer" xml:space="preserve">
+        <source>Fast Answer</source>
+        <target>Быстрый ответ</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Fast answers" xml:space="preserve">
+        <source>Fast answers</source>
+        <target>Быстрые Напоминания</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hello, World!" xml:space="preserve">
+        <source>Hello, World!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Missing time" xml:space="preserve">
+        <source>Missing time</source>
+        <target>Не правильное время</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Notfications aren't allowed" xml:space="preserve">
+        <source>Notfications aren't allowed</source>
+        <target>Уведомления не разрешены</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Notify" xml:space="preserve">
+        <source>Notify</source>
+        <target>Уведомить</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="OOPS" xml:space="preserve">
+        <source>OOPS</source>
+        <target>ОЙ</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Other" xml:space="preserve">
+        <source>Other</source>
+        <target>Другое</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Remove a rope ${rope}" xml:space="preserve">
+        <source>Remove a rope ${rope}</source>
+        <target>Удалить узелок ${rope}</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Remove rope" xml:space="preserve">
+        <source>Remove rope</source>
+        <target>Удалить узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Removes rope" xml:space="preserve">
+        <source>Removes rope</source>
+        <target>Удаляет узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Rope" xml:space="preserve">
+        <source>Rope</source>
+        <target>Узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select rope" xml:space="preserve">
+        <source>Select rope</source>
+        <target>Выберите узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Set a remind time" xml:space="preserve">
+        <source>Set a remind time</source>
+        <target>Поставить время напоминания</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Settings" xml:space="preserve">
+        <source>Settings</source>
+        <target>Настройки</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show Ropes" xml:space="preserve">
+        <source>Show Ropes</source>
+        <target>Показать узелки</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show all tasks from the ropes app" xml:space="preserve">
+        <source>Show all tasks from the ropes app</source>
+        <target>Показать все узелки</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Showup an adding view on start" xml:space="preserve">
+        <source>Showup an adding view on start</source>
+        <target>Показывать меню добавления сразу</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task" xml:space="preserve">
+        <source>Task</source>
+        <target>Узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task %@ was created" xml:space="preserve">
+        <source>Task %@ was created</source>
+        <target>Узелок %@ завязан</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task name was created" xml:space="preserve">
+        <source>Task name was created</source>
+        <target>Узелок был завязан</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Time" xml:space="preserve">
+        <source>Time</source>
+        <target>Время</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Try another name or complete other rope with that name" xml:space="preserve">
+        <source>Try another name or complete other rope with that name</source>
+        <target>Попробуйте другое имя или удалите предыдущий узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You aren't allowed nofications" xml:space="preserve">
+        <source>You aren't allowed nofications</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You cannot set reminder at the past" xml:space="preserve">
+        <source>You cannot set reminder at the past</source>
+        <target>Вы не можете поставить напоминание в прошлом</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You have no ropes" xml:space="preserve">
+        <source>You have no ropes</source>
+        <target>У вас нет узелков</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your Ropes:" xml:space="preserve">
+        <source>Your Ropes:</source>
+        <target>Ваши узелки:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your rope" xml:space="preserve">
+        <source>Your rope</source>
+        <target>Ваш узелок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="add to fast Answers" xml:space="preserve">
+        <source>add to fast Answers</source>
+        <target>Добавить в Быстрые напоминания</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="admin settings" xml:space="preserve">
+        <source>admin settings</source>
+        <target>Настройки для администраторов</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="chose the time" xml:space="preserve">
+        <source>chose the time</source>
+        <target>Выберите время</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="ok" xml:space="preserve">
+        <source>ok</source>
+        <target>ок</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="ready" xml:space="preserve">
+        <source>ready</source>
+        <target>Готово</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="requests" xml:space="preserve">
+        <source>requests</source>
+        <target>Запросы</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="rope %@ was removed" xml:space="preserve">
+        <source>rope %@ was removed</source>
+        <target>Узелок %@ удалён</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="settings" xml:space="preserve">
+        <source>settings</source>
+        <target>настройки</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/Localizable.strings..strings" datatype="plaintext" source-language="en" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="Add rope" xml:space="preserve">
+        <source>Add rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/RopesForWatch-Watch-App-InfoPlist.strings" source-language="en" target-language="ru" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Ropes</source>
+        <target>Узелки</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Ropes/en.lproj/AppShortcuts.strings" datatype="plaintext" source-language="en" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="Create a ${applicationName}" xml:space="preserve">
+        <source>Create a ${applicationName}</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Remove ${applicationName}" xml:space="preserve">
+        <source>Remove ${applicationName}</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show ${applicationName}" xml:space="preserve">
+        <source>Show ${applicationName}</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Ropes/en.lproj/InfoPlist.strings" source-language="en" target-language="ru" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Ropes</source>
+        <target>Узелки</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Ropes/en.lproj/Localizable.strings" datatype="plaintext" source-language="en" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld minutes" xml:space="preserve">
+        <source>%lld minutes</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="ADD" xml:space="preserve">
+        <source>ADD</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add task to the ropes app" xml:space="preserve">
+        <source>Add task to the ropes app</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add your own" xml:space="preserve">
+        <source>Add your own</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Adding" xml:space="preserve">
+        <source>Adding</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Create a rope ${Task}" xml:space="preserve">
+        <source>Create a rope ${Task}</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="DELETE ALL DATA" xml:space="preserve">
+        <source>DELETE ALL DATA</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Disable all notifications" xml:space="preserve">
+        <source>Disable all notifications</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done" xml:space="preserve">
+        <source>Done</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter something" xml:space="preserve">
+        <source>Enter something</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Fast Answer" xml:space="preserve">
+        <source>Fast Answer</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Fast answers" xml:space="preserve">
+        <source>Fast answers</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hello, World!" xml:space="preserve">
+        <source>Hello, World!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Missing time" xml:space="preserve">
+        <source>Missing time</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Notfications aren't allowed" xml:space="preserve">
+        <source>Notfications aren't allowed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Notify" xml:space="preserve">
+        <source>Notify</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="OOPS" xml:space="preserve">
+        <source>OOPS</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Oh. You have to update to iOS 16 or newer" xml:space="preserve">
+        <source>Oh. You have to update to iOS 16 or newer</source>
+        <note>error</note>
+      </trans-unit>
+      <trans-unit id="Other" xml:space="preserve">
+        <source>Other</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Remove a rope ${rope}" xml:space="preserve">
+        <source>Remove a rope ${rope}</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Remove rope" xml:space="preserve">
+        <source>Remove rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Removes rope" xml:space="preserve">
+        <source>Removes rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Rope" xml:space="preserve">
+        <source>Rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Ropes" xml:space="preserve">
+        <source>Ropes</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select rope" xml:space="preserve">
+        <source>Select rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Set a remind time" xml:space="preserve">
+        <source>Set a remind time</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Settings" xml:space="preserve">
+        <source>Settings</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show Ropes" xml:space="preserve">
+        <source>Show Ropes</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show all tasks from the ropes app" xml:space="preserve">
+        <source>Show all tasks from the ropes app</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Showup an adding view on start" xml:space="preserve">
+        <source>Showup an adding view on start</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task" xml:space="preserve">
+        <source>Task</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task %@ was created" xml:space="preserve">
+        <source>Task %@ was created</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task name was created" xml:space="preserve">
+        <source>Task name was created</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Time" xml:space="preserve">
+        <source>Time</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Try another name or complete other rope with that name" xml:space="preserve">
+        <source>Try another name or complete other rope with that name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You aren't allowed nofications" xml:space="preserve">
+        <source>You aren't allowed nofications</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You can use shortcuts app and siri to rope. Look at shortcuts app" xml:space="preserve">
+        <source>You can use shortcuts app and siri to rope. Look at shortcuts app</source>
+        <note>ropes is an app</note>
+      </trans-unit>
+      <trans-unit id="You cannot set reminder at the past" xml:space="preserve">
+        <source>You cannot set reminder at the past</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You have no ropes" xml:space="preserve">
+        <source>You have no ropes</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your Ropes:" xml:space="preserve">
+        <source>Your Ropes:</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your rope" xml:space="preserve">
+        <source>Your rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="add to fast Answers" xml:space="preserve">
+        <source>add to fast Answers</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="admin settings" xml:space="preserve">
+        <source>admin settings</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="chose the time" xml:space="preserve">
+        <source>chose the time</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="ok" xml:space="preserve">
+        <source>ok</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="ready" xml:space="preserve">
+        <source>ready</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="requests" xml:space="preserve">
+        <source>requests</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="rope %@ was removed" xml:space="preserve">
+        <source>rope %@ was removed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="settings" xml:space="preserve">
+        <source>settings</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Ropes/en.lproj/Localizable.strings..strings" datatype="plaintext" source-language="en" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="Add rope" xml:space="preserve">
+        <source>Add rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Widjets/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Widjets</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>WidjetsExtension</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
+        <source/>
+        <note>Copyright (human-readable)</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Widjets/en.lproj/Localizable.strings" source-language="en" target-language="ru" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld" xml:space="preserve">
+        <source>%lld</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add task to the ropes app" xml:space="preserve">
+        <source>Add task to the ropes app</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="All your tasks" xml:space="preserve">
+        <source>All your tasks</source>
+        <target>Все ваши узелки</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Create a rope ${Task}" xml:space="preserve">
+        <source>Create a rope ${Task}</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done" xml:space="preserve">
+        <source>Done</source>
+        <target>Готово</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Fast Answer" xml:space="preserve">
+        <source>Fast Answer</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hello, World!" xml:space="preserve">
+        <source>Hello, World!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Remove a rope ${rope}" xml:space="preserve">
+        <source>Remove a rope ${rope}</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Remove rope" xml:space="preserve">
+        <source>Remove rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Removes rope" xml:space="preserve">
+        <source>Removes rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Rope" xml:space="preserve">
+        <source>Rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select rope" xml:space="preserve">
+        <source>Select rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show Ropes" xml:space="preserve">
+        <source>Show Ropes</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show all tasks from the ropes app" xml:space="preserve">
+        <source>Show all tasks from the ropes app</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task" xml:space="preserve">
+        <source>Task</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Task %@ was created" xml:space="preserve">
+        <source>Task %@ was created</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tasks" xml:space="preserve">
+        <source>Tasks</source>
+        <target>Узелки</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="There's no ropes" xml:space="preserve">
+        <source>There's no ropes</source>
+        <target>Узелков больше нет</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You have no ropes" xml:space="preserve">
+        <source>You have no ropes</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your Ropes:" xml:space="preserve">
+        <source>Your Ropes:</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your ropes:" xml:space="preserve">
+        <source>Your ropes:</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="rope %@ was removed" xml:space="preserve">
+        <source>rope %@ was removed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Widjets/en.lproj/Localizable.strings..strings" source-language="en" target-language="ru" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="Add rope" xml:space="preserve">
+        <source>Add rope</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="WidjetsForWatch/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>WidjetsForWatch</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>WidjetsForWatchExtension</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
+        <source/>
+        <note>Copyright (human-readable)</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="WidjetsForWatch/en.lproj/Localizable.strings" source-language="en" target-language="ru" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="%lld" xml:space="preserve">
+        <source>%lld</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="All your tasks" xml:space="preserve">
+        <source>All your tasks</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done" xml:space="preserve">
+        <source>Done</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tasks" xml:space="preserve">
+        <source>Tasks</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="There's no ropes" xml:space="preserve">
+        <source>There's no ropes</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your ropes:" xml:space="preserve">
+        <source>Your ropes:</source>
+        <target>Ваш узелки</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

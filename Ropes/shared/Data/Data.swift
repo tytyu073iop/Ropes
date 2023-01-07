@@ -3,7 +3,7 @@ import CloudKit
 
 let times : [Double] = [5, 10, 15, 20, 30]
 
-let defaults = UserDefaults.standard
+let defaults = UserDefaults(suiteName: "group.ilyaBiryuk.ropes")!
 
 let admin : Bool = {
     #if DEBUG

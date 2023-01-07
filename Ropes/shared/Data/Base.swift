@@ -1,5 +1,6 @@
 import SwiftUI
 import Foundation
+import WidgetKit
 
 class Time : ObservableObject {
     @AppStorage("time", store : defaults) private var SetTime : Double = 5
@@ -12,9 +13,6 @@ class Time : ObservableObject {
                     NSUbiquitousKeyValueStore.default.set(time, forKey: "time")
                 }
                 await LocalNotficationManager.shared.moveAll()
-                #if os(iOS)
-                await WC.shared.send(["DefautTime" : time])
-                #endif
             }
         }
     }
@@ -23,7 +21,7 @@ class Time : ObservableObject {
     }
 }
 
-@available(iOS 15.0, watchOS 9.0, macOS 12.0, *) class IcloudKeyValue {
+class IcloudKeyValue {
     static func PrepareICloudKeyValue() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(KeyValueStoreDidChange(_:)),
@@ -52,8 +50,9 @@ class Time : ObservableObject {
         print("Sync begin")
         if reasonForChange == NSUbiquitousKeyValueStoreAccountChange {
             // User changed account, so fall back to use UserDefaults (last color saved).
-            Time().time = UserDefaults.standard.double(forKey: "time")
+            Time().time = defaults.double(forKey: "time")
             PopUp().PopUp = defaults.bool(forKey: "popup")
+            Swap().Swap = defaults.bool(forKey: "swap")
             return
         }
         let pop = NSUbiquitousKeyValueStore.default.bool(forKey: "popup")
@@ -61,6 +60,7 @@ class Time : ObservableObject {
         print(t)
         print(pop)
         PopUp().PopUp = pop
+        Swap().Swap = NSUbiquitousKeyValueStore.default.bool(forKey: "swap")
         
         if times.contains(t) {
             Time().time = t
@@ -69,18 +69,29 @@ class Time : ObservableObject {
     }
 }
 class PopUp : ObservableObject {
-    @AppStorage("popup") private var UDPopUp = false
+    @AppStorage("popup", store: defaults) private var UDPopUp = false
     @Published var PopUp = false {
         didSet {
             UDPopUp = PopUp
-            if #available(watchOS 9.0, *) {
-                print("sending popup")
-                NSUbiquitousKeyValueStore.default.set(PopUp, forKey: "popup")
-            }
+            NSUbiquitousKeyValueStore.default.set(PopUp, forKey: "popup")
         }
     }
     init () {
         PopUp = UDPopUp
+    }
+}
+
+class Swap : ObservableObject {
+    @AppStorage("swap", store: defaults) private var APSwap = true
+    @Published var Swap = true {
+        didSet {
+            APSwap = Swap
+            NSUbiquitousKeyValueStore.default.set(Swap, forKey: "swap")
+            WidgetCenter.shared.reloadAllTimelines()
+        }
+    }
+    init() {
+        Swap = APSwap
     }
 }
 
