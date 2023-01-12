@@ -21,7 +21,7 @@ import CoreData
             print("catched")
             names.append(object.name ?? "error")
         }
-        var phrase : String = LocalizedStringKey("Your Ropes:").stringValue()
+        var phrase : String = String(localized: LocalizedStringResource("Your Ropes:"))
         if !names.isEmpty {
             phrase += " \(names.first!)"
             for name in names {
@@ -30,9 +30,9 @@ import CoreData
                 }
                 phrase += ", \(name)"
             }
-            return .result(value: names, dialog: IntentDialog(stringLiteral: phrase), content: {VStack{}})
+            return .result(value: names, dialog: IntentDialog(stringLiteral: phrase))
         } else {
-            return .result(value: names, dialog: "You have no ropes", content: {VStack{}})
+            return .result(value: names, dialog: "You have no ropes")
         }
     }
     
