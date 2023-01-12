@@ -32,7 +32,6 @@
 		E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E7436E2C28DE336800E96EF5 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E7436E2D28DE336B00E96EF5 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
-		E7436E2E28DE336B00E96EF5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 		E7436E2F28DE336F00E96EF5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7436E3028DE336F00E96EF5 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
 		E745025F28B8AE59005FB11A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025D28B8AE59005FB11A /* InfoPlist.strings */; };
@@ -111,6 +110,7 @@
 		E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E7EAFFB6289F8F5B00C28906 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
 		E7EB482228D4F877000FB1B2 /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
+		E7FEEBBC2970929D007BF365 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -986,13 +986,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7436E2A28DE333600E96EF5 /* RopesWidjet.swift in Sources */,
+				E7FEEBBC2970929D007BF365 /* Persistence.swift in Sources */,
 				E7436E2F28DE336F00E96EF5 /* Data.swift in Sources */,
 				E7436E2D28DE336B00E96EF5 /* Task core data.swift in Sources */,
 				E7436E2C28DE336800E96EF5 /* Persistence extension.swift in Sources */,
 				E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */,
 				E7436E3028DE336F00E96EF5 /* Base.swift in Sources */,
 				E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */,
-				E7436E2E28DE336B00E96EF5 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
