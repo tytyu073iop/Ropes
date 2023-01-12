@@ -28,7 +28,7 @@ struct Add: View {
             ForEach(fastAnswers){ answer in
                 Button(action: {
                     do {
-                        try AddRope(name: answer.name ?? "error", date : remindDate)
+                        try AddRope(name: answer.name ?? "error")
                         WKInterfaceDevice.current().play(.success)
                         self.presentationMode.wrappedValue.dismiss()
                     } catch NotificationErrors.missingTime {
@@ -57,7 +57,7 @@ struct Add: View {
             Section("Add your own"){
                 TextField("Your rope", text: $CustomRope).onSubmit {
                     do {
-                        try AddRope(name: CustomRope, date : remindDate)
+                        try AddRope(name: CustomRope)
                         WKInterfaceDevice.current().play(.success)
                         self.presentationMode.wrappedValue.dismiss()
                     } catch NotificationErrors.missingTime {
@@ -74,14 +74,10 @@ struct Add: View {
             try? await LocalNotficationManager.shared.requestAuthorization(Options: [.sound,.alert,.badge,.carPlay])
         }
     }
-    @MainActor private func AddRope(name : String, time : Double = defaults.double(forKey: "time"), date : Date? = nil) throws {
+    @MainActor private func AddRope(name : String, time : Double = defaults.double(forKey: "time")) throws {
         if Ropes.contains(where: {$0.name == name}) {throw AddingErrors.ThisNameIsExciting}
         else {
-            if (date == nil) {
-                try ToDo(context: viewContext, name: name)
-            } else {
-                try ToDo(context: viewContext, name: name, time: date!)
-            }
+            try ToDo(context: viewContext, name: name)
         }
     }
 }

@@ -1,7 +1,5 @@
 import SwiftUI
-#if canImport(AppIntents)
 import AppIntents
-#endif
 
 struct AddView: View {
     //db
@@ -28,14 +26,13 @@ struct AddView: View {
     @State var remindDate : Date? = nil
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        VStack {
-            
+        NavigationStack {
             //MARK: normal design
             List{
                 ForEach(fastAnswers){ answer in
                     Button(action: {
                         do {
-                            try AddRope(name: answer.name ?? "error", date : remindDate)
+                            try AddRope(name: answer.name ?? "error")
                         } catch NotificationErrors.missingTime {
                             past.toggle()
                         } catch AddingErrors.ThisNameIsExciting {
@@ -70,7 +67,7 @@ struct AddView: View {
                 Section("Add your own"){
                     TextField("Your rope", text: $CustomRope).onSubmit {
                         do {
-                            try AddRope(name: CustomRope, date : remindDate)
+                            try AddRope(name: CustomRope)
                             if (addToFA) {
                                 print("ya")
                                 try FastAnswers(context : viewContext, name : CustomRope)
@@ -104,10 +101,20 @@ struct AddView: View {
                         }
                     }
                 }
+            }.navigationTitle("Adding")
+#if os(iOS)
+    .navigationBarTitleDisplayMode(.inline)
+    .toolbar {
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button("Cancel") {
+                dismiss
             }
         }
+    }
+#endif
+        }
+        
         .onAppear() {
-        print(scenePhase)
     }
     .task {
         try? await LocalNotficationManager.shared.requestAuthorization(Options: [.sound,.alert,.badge,.carPlay])
@@ -128,19 +135,8 @@ struct AddView: View {
         }
     }
     }
-    private func AddRope(name : String, time : Double = defaults.double(forKey: "time"), date : Date? = nil) throws {
-        #if canImport(AppIntents)
-        if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
-            Task {
-                try await IntentDonationManager.shared.donate(intent: AddRopeShortcut(), result: .result(value: name, dialog: "Task name was created"))
-            }
-        }
-        #endif
-        if (date == nil) {
-            try ToDo(context: viewContext, name: name)
-        } else {
-            try ToDo(context: viewContext, name: name, time: date!)
-        }
+    private func AddRope(name : String, time : Double = defaults.double(forKey: "time")) throws {
+        try ToDo(context: viewContext, name: name)
         dismiss()
     }
 #if os(iOS)

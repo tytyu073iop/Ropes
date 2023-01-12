@@ -69,37 +69,8 @@ extension ToDo : Identifiable {
         self.name = name
         self.date = date_of_creation
         self.id = id
-        print("ready")
         PersistenceController.save()
-        print("saved")
-        print(from_message)
-        if !from_message {
-        #if os(iOS) || os(watchOS)
-            //WC.shared.send("Tasks", [self])
-            //WC.shared.send("String", self.name ?? "error")
-            Task {
-                
-                //await WC.shared.send(["Name" : self.name, "Date" : self.date, "ID" : self.id?.uuidString])
-            }
-        #endif
-        }
-        #if os(iOS)
         WidgetCenter.shared.reloadAllTimelines()
-        #endif
-    }
-    @MainActor convenience init(context : NSManagedObjectContext, name : String, id : UUID = UUID(), time : Date) throws {
-        self.init(context : context)
-        self.name = name
-        self.date = time
-        self.id = id
-        PersistenceController.save()
-        do {
-            try PushNotfication(time: time)
-        } catch {
-            self.remove()
-            throw error
-        }
-        print("aboba")
     }
     static func findByID (id : String, context : NSManagedObjectContext = PersistenceController.shared.container.viewContext) throws -> ToDo {
         let request = ToDo.fetchRequest()
