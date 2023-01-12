@@ -7,3 +7,6 @@
 /* No comment provided by engineer. */
 "Show ${applicationName}" = "Покажи ${applicationName}";
 
+"Show my ${applicationName}" = "Покажи мои ${applicationName}";
+
+"make a ${applicationName}" = "Сделай ${applicationName}";
