@@ -25,6 +25,25 @@ struct AddView: View {
     @State var CustomRope : String = ""
     @State var remindDate : Date? = nil
     @Environment(\.dismiss) var dismiss
+    private func CustomRopeAdd(_ CustomRope: String) {
+        do {
+            try AddRope(name: CustomRope)
+            if (addToFA) {
+                print("ya")
+                try FastAnswers(context : viewContext, name : CustomRope)
+            }
+        } catch NotificationErrors.missingTime {
+            past.toggle()
+        } catch AddingErrors.ThisNameIsExciting {
+            alert.toggle()
+        } catch NotificationErrors.noPermition {
+            noNotfication.toggle()
+            print("no notfication")
+        } catch {
+            print("what the heck \(error)")
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             //MARK: normal design
@@ -66,22 +85,7 @@ struct AddView: View {
                 }
                 Section("Add your own"){
                     TextField("Your rope", text: $CustomRope).onSubmit {
-                        do {
-                            try AddRope(name: CustomRope)
-                            if (addToFA) {
-                                print("ya")
-                                try FastAnswers(context : viewContext, name : CustomRope)
-                            }
-                        } catch NotificationErrors.missingTime {
-                            past.toggle()
-                        } catch AddingErrors.ThisNameIsExciting {
-                            alert.toggle()
-                        } catch NotificationErrors.noPermition {
-                            noNotfication.toggle()
-                            print("no notfication")
-                        } catch {
-                            print("what the heck \(error)")
-                        }
+                        CustomRopeAdd(CustomRope)
                     }
                     if (CustomRope != "") {
                         withAnimation {
@@ -107,7 +111,7 @@ struct AddView: View {
     .toolbar {
         ToolbarItem(placement: .navigationBarLeading) {
             Button("Cancel") {
-                dismiss
+                dismiss()
             }
         }
     }
