@@ -107,7 +107,7 @@
 "Task" = "Узелок";
 
 /* No comment provided by engineer. */
-"Task %@ was created" = "Узелок %@ Был создан";
+"Rope %@ was created" = "Узелок %@ Был создан";
 
 /* No comment provided by engineer. */
 "This name is already exists. Rename in order to continue" = "Это имя уже существует. Переименуйте чтобы продолжить";

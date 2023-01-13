@@ -113,7 +113,7 @@
 "Task" = "Узелок";
 
 /* No comment provided by engineer. */
-"Task %@ was created" = "Узелок %@ завязан";
+"Rope %@ was created" = "Узелок %@ завязан";
 
 /* No comment provided by engineer. */
 "Task name was created" = "Узелок был завязан";

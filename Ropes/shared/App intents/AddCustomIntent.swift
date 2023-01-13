@@ -6,18 +6,30 @@
 //
 
 import Foundation
-#if canImport(AppIntents)
 import AppIntents
 import SwiftUI
 
-@available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct AddRopeShortcut : AppIntent {
+struct AddRopeShortcut : AppIntent {
     static var title: LocalizedStringResource = LocalizedStringResource("Add rope")
     static var description = IntentDescription(LocalizedStringResource("Add task to the ropes app"))
     @Parameter(title: "Task") var Task: String
-    func perform() async throws -> some IntentResult {
+    func perform() async throws -> some ProvidesDialog & ShowsSnippetView {
         let context = PersistenceController.shared.container.viewContext
-        try ToDo(context: context, name: Task)
-        return .result()
+        let rope = await try ToDo(context: context, name: Task)
+        return .result(dialog: IntentDialog("Rope \(Task) was created")) {
+            VStack {
+                HStack {
+                    Spacer()
+                    Text(Task)
+                    Spacer()
+                }.padding(.top, 5)
+                HStack {
+                    Spacer()
+                    Text(dateFormater.string(from: rope.date ?? Date()))
+                    Spacer()
+                }.padding(.bottom, 5)
+            }
+        }
     }
     static var parameterSummary: some ParameterSummary {
             Summary("Create a rope \(\.$Task)")
@@ -29,4 +41,3 @@ import SwiftUI
             self.Task = Task
         }
 }
-#endif
