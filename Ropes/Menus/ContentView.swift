@@ -178,12 +178,12 @@ struct ContentView: View {
                         print("OFB \(error?.localizedDescription)")
                     }
                 }
-                print("haha")
             }
             #if os(watchOS)
             SetUP()
             #endif
         }.onChange(of: scenePhase, perform: {
+            WidgetCenter.shared.reloadAllTimelines()
             print("MAIN scene changed")
             if $0 == .active {
                 showingSheet = PopUp().PopUp
