@@ -7,3 +7,5 @@
 "Show my ${applicationName}" = "Покажи мои ${applicationName}";
 
 "make a ${applicationName}" = "Сделай ${applicationName}";
+
+"Create the ${applicationName}" = "Создай ${applicationName}";
