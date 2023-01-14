@@ -33,10 +33,18 @@ import CoreData
             }
             return .result(value: names, dialog: IntentDialog(stringLiteral: phrase), view: CatchTasks(objects: objects))
         } else {
-            return .result(value: names, dialog: "You have no ropes", view: EmptyView())
+            return .result(value: names, dialog: "You have no ropes", view: LikeEmptyView())
         }
     }
     
+}
+
+struct LikeEmptyView : View {
+    var body: some View {
+        VStack {
+            
+        }
+    }
 }
 
 struct CatchTasks: View {
