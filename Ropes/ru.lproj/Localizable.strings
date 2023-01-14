@@ -136,3 +136,12 @@
 /* No comment provided by engineer. */
 "Your Ropes:" = "Ваши узелки:";
 
+"delete" = "удалить";
+
+"clean" = "очистить";
+
+"erase" = "стереть";
+
+"clear" = "убрать";
+
+"append" = "добавить";
