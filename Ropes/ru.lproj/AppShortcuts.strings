@@ -2,10 +2,14 @@
 "Create a ${applicationName}" = "Завяжи ${applicationName}";
 
 /* No comment provided by engineer. */
-"Show ${applicationName}" = "Покажи ${applicationName}";
+"Create the ${applicationName}" = "Создай ${applicationName}";
 
-"Show my ${applicationName}" = "Покажи мои ${applicationName}";
-
+/* No comment provided by engineer. */
 "make a ${applicationName}" = "Сделай ${applicationName}";
 
-"Create the ${applicationName}" = "Создай ${applicationName}";
+/* No comment provided by engineer. */
+"Show ${applicationName}" = "Покажи ${applicationName}";
+
+/* No comment provided by engineer. */
+"Show my ${applicationName}" = "Покажи мои ${applicationName}";
+

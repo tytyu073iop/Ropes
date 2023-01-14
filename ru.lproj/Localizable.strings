@@ -20,10 +20,25 @@
 "admin settings" = "Настройки для администраторов";
 
 /* No comment provided by engineer. */
+"append" = "добавить";
+
+/* No comment provided by engineer. */
 "chose the time" = "Выберите время";
 
 /* No comment provided by engineer. */
+"clean" = "убрать";
+
+/* No comment provided by engineer. */
+"clear" = "очистить";
+
+/* No comment provided by engineer. */
 "Create a rope ${Task}" = "Завязать ${Task}";
+
+/* No comment provided by engineer. */
+"Custom" = "Другое";
+
+/* No comment provided by engineer. */
+"delete" = "удалить";
 
 /* No comment provided by engineer. */
 "DELETE ALL DATA" = "УДАЛИТЬ ВСЕ ДАННЫЕ";
@@ -39,6 +54,9 @@
 
 /* No comment provided by engineer. */
 "Enter something" = "Введите что-нибудь ";
+
+/* No comment provided by engineer. */
+"erase" = "стереть";
 
 /* No comment provided by engineer. */
 "Fast Answer" = "Быстрый ответ";

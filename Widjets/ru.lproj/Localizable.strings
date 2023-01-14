@@ -29,12 +29,6 @@
 "Rope" = "Узелок";
 
 /* No comment provided by engineer. */
-"rope %@ was removed" = "Узелок %@ был удалён";
-
-/* No comment provided by engineer. */
-"Select rope" = "Выберите узелок";
-
-/* No comment provided by engineer. */
 "Show all tasks from the ropes app" = "Покажи все узелки";
 
 /* No comment provided by engineer. */
@@ -42,9 +36,6 @@
 
 /* No comment provided by engineer. */
 "Task" = "Узелок";
-
-/* No comment provided by engineer. */
-"Task %@ was created" = "Узелок %@ был создан";
 
 /* No comment provided by engineer. */
 "Tasks" = "Узелки";

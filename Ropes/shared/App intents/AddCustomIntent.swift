@@ -11,7 +11,7 @@ import SwiftUI
 
 struct AddRopeShortcut : AppIntent {
     static var title: LocalizedStringResource = LocalizedStringResource("Add rope")
-    static var description = IntentDescription(LocalizedStringResource("Add task to the ropes app"))
+    static var description = IntentDescription(LocalizedStringResource("Add task to the ropes app"), searchKeywords: ["append"])
     @Parameter(title: "Task") var Task: String
     func perform() async throws -> some ProvidesDialog & ShowsSnippetView {
         let context = PersistenceController.shared.container.viewContext

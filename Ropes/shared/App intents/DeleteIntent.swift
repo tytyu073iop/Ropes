@@ -11,7 +11,7 @@ import SwiftUI
 
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct RemoveRope : AppIntent {
     static var title: LocalizedStringResource = LocalizedStringResource("Remove rope")
-    static var description: IntentDescription? = IntentDescription(LocalizedStringResource("Removes rope"))
+    static var description: IntentDescription = IntentDescription(LocalizedStringResource("Removes rope"), searchKeywords: ["delete","clean","erase","clear"])
     static var parameterSummary: some ParameterSummary {
             Summary("Remove a rope \(\.$rope)")
         }

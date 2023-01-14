@@ -26,6 +26,9 @@
 "Create a rope ${Task}" = "Создать узелок ${Task}";
 
 /* No comment provided by engineer. */
+"Custom" = "Другое";
+
+/* No comment provided by engineer. */
 "DELETE ALL DATA" = "Удалить все данные";
 
 /* No comment provided by engineer. */
@@ -80,7 +83,7 @@
 "requests" = "Запросы";
 
 /* No comment provided by engineer. */
-"rope %@ was removed" = "Узелок %@ Был удалён";
+"Rope %@ was created" = "Узелок %@ Был создан";
 
 /* No comment provided by engineer. */
 "Ropes" = "Узелки";
@@ -107,9 +110,6 @@
 "Task" = "Узелок";
 
 /* No comment provided by engineer. */
-"Rope %@ was created" = "Узелок %@ Был создан";
-
-/* No comment provided by engineer. */
 "This name is already exists. Rename in order to continue" = "Это имя уже существует. Переименуйте чтобы продолжить";
 
 /* No comment provided by engineer. */
@@ -134,6 +134,5 @@
 "Your rope" = "Ваш узелок";
 
 /* No comment provided by engineer. */
-"Your Ropes:" = "Вашу узелки";
+"Your Ropes:" = "Ваши узелки:";
 
-"Custom" = "Другое";
