@@ -134,7 +134,7 @@
 "Your rope" = "Ваш узелок";
 
 /* No comment provided by engineer. */
-"Your Ropes:" = "Ваши узелки:";
+"Your Ropes:%@" = "Ваши узелки:%@";
 
 "delete" = "удалить";
 

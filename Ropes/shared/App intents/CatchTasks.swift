@@ -19,10 +19,9 @@ import CoreData
         objects = objects.reversed()
         var names = [String]()
         for object in objects {
-            print("catched")
             names.append(object.name ?? "error")
         }
-        var phrase : String = String(localized: LocalizedStringResource("Your Ropes:"))
+        var phrase : String = ""
         if !names.isEmpty {
             phrase += " \(names.first!)"
             for name in names {
@@ -31,7 +30,7 @@ import CoreData
                 }
                 phrase += ", \(name)"
             }
-            return .result(value: names, dialog: IntentDialog(stringLiteral: phrase), view: CatchTasks(objects: objects))
+            return .result(value: names, dialog: IntentDialog("Your Ropes:\(phrase)"), view: CatchTasks(objects: objects))
         } else {
             return .result(value: names, dialog: "You have no ropes", view: LikeEmptyView())
         }

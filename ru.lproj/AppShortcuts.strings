@@ -1,15 +1,9 @@
 /* No comment provided by engineer. */
-"Create a ${applicationName}" = "Создать ${applicationName}";
+"Create a ${applicationName}" = "Завяжи ${applicationName}";
 
 /* No comment provided by engineer. */
-"Create a custom ${applicationName}" = "Создать именные ${applicationName}";
+"Show ${applicationName}" = "Покажи ${applicationName}";
 
 /* No comment provided by engineer. */
-"Remove ${applicationName}" = "Удалить ${applicationName}";
-
-/* No comment provided by engineer. */
-"Show ${applicationName}" = "Показать ${applicationName}";
-
-"Say \"Create a ${applicationName}\"" = "Скажите \"Создать ${applicationName}\"";
-
+"Show my ${applicationName}" = "Покажи мои ${applicationName}";
 

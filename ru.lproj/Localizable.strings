@@ -155,7 +155,7 @@
 "Your rope" = "Ваш узелок";
 
 /* No comment provided by engineer. */
-"Your Ropes:" = "Ваши узелки:";
+"Your Ropes:%@" = "Ваши узелки:%@";
 
 "Oh. You have to update to iOS 16 or newer" = "Ой. Вам надо обновиться до iOS 16 или новее";
 

@@ -21,7 +21,6 @@ struct Provider: TimelineProvider {
         if defaults.bool(forKey: "swap") {
             toDos.reverse()
         }
-        print(toDos)
         let names : [String] = toDos.compactMap { toDo in
             return toDo.name
         }
@@ -42,13 +41,12 @@ struct Provider: TimelineProvider {
         let names : [String] = toDos.compactMap { toDo in
             return toDo.name
         }
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         let entryDate = currentDate
         let entry = SimpleEntry(date: entryDate, names: names)
         entries.append(entry)
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .never)
         completion(timeline)
     }
 }
