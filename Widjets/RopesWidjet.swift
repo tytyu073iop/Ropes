@@ -54,6 +54,7 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     var names: [String]
+    var relevance: TimelineEntryRelevance? = TimelineEntryRelevance(score: Float(ToDo.fetch().count))
     init(date: Date = Date(), names: [String]) {
         self.date = date
         self.names = names
