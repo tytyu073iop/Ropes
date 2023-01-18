@@ -1,9 +1,17 @@
 /* No comment provided by engineer. */
-"Create a ${applicationName}" = "Создать ${applicationName}";
+"Create a ${applicationName}" = "Завяжи ${applicationName}";
+
+"Create the ${applicationName}" = "Завязать ${applicationName}";
+
+"make a ${applicationName}" = "Создать ${applicationName}";
+
+"make the ${applicationName}" = "Создай ${applicationName}";
+
+"add a ${applicationName}" = "Добавить ${applicationName}";
+
+"add the ${applicationName}" = "Добавь ${applicationName}";
 
 /* No comment provided by engineer. */
-"Show ${applicationName}" = "Показать ${applicationName}";
+"Show ${applicationName}" = "Покажи ${applicationName}";
 
-"Say \"Create a ${applicationName}\"" = "Скажите \"Создать ${applicationName}\"";
-
-
+"Show my ${applicationName}" = "Покажи мои ${applicationName}";
