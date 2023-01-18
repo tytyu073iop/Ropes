@@ -1,6 +1,7 @@
 import SwiftUI
 import CoreData
 import WidgetKit
+import UserNotifications
 
 @objc(ToDo)
 public class ToDo: NSManagedObject {
@@ -12,30 +13,20 @@ public class ToDo: NSManagedObject {
 extension ToDo : Identifiable {
     
     func remove(context : NSManagedObjectContext = PersistenceController.shared.container.viewContext, auto : Bool = true, fromConnectivity : Bool = false) {
-        print("start removing")
         NSLog("Start removing")
         let viewcontext = context
         if auto {
             LocalNotficationManager.remove(id : name ?? "error")
+            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [name ?? "error"])
             NSLog("Removed notfication")
         }
         do {
-            print(self.id)
             Task {
-                print(self.id)
-                if !fromConnectivity {
-#if os(iOS) || os(watchOS)
-                    //await WC.shared.send(["IDForDelete" : self.id!.uuidString])
-                    #endif
-                }
-                print("deleting")
                 viewcontext.delete(self)
                 try viewcontext.save()
             }
             NSLog("Removing rope")
             NSLog("Rope deleted")
-            print(context)
-            print(viewcontext)
         }
         catch {
             print(error.localizedDescription)
