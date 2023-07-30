@@ -1,14 +1,13 @@
 //
-//  RopesWatchOSTests.swift
-//  RopesWatchOSTests
+//  RopesTests.swift
+//  RopesTests
 //
-//  Created by Илья Бирюк on 4.11.22.
+//  Created by Илья Бирюк on 13.07.23.
 //
 
 import XCTest
-@testable import Ropes
 
-final class RopesWatchOSTests: XCTestCase {
+final class RopesTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,15 +18,11 @@ final class RopesWatchOSTests: XCTestCase {
     }
 
     func testExample() throws {
-        let testSubjects = ["1111", "aaaaa", "😀"]
-        let viewContext = PersistenceController.shared.container.viewContext
-        for subject in testSubjects {
-            _ = try ToDo(context: viewContext,name: subject)
-            _ = try FastAnswers(name: subject)
-        }
-        print(PopUp().PopUp)
-        PopUp().PopUp = false
-        XCTFail("test")
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Any test you write for XCTest can be annotated as throws and async.
+        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
+        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
 
     func testPerformanceExample() throws {
