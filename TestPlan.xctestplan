@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "B919B7BE-4609-4612-8C4D-11ED16696923",
+      "id" : "39FEECE3-1854-4A3C-ADC1-C581ACCC9872",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,10 +9,30 @@
     }
   ],
   "defaultOptions" : {
-    "testTimeoutsEnabled" : true
+    "areLocalizationScreenshotsEnabled" : true,
+    "defaultTestExecutionTimeAllowance" : 120,
+    "language" : "en",
+    "repeatInNewRunnerProcess" : true,
+    "testRepetitionMode" : "retryOnFailure",
+    "testTimeoutsEnabled" : true,
+    "uiTestingScreenshotsLifetime" : "keepAlways",
+    "userAttachmentLifetime" : "keepAlways"
   },
   "testTargets" : [
-
+    {
+      "target" : {
+        "containerPath" : "container:Ropes.xcodeproj",
+        "identifier" : "E7ACC6222915700A000E53CE",
+        "name" : "RopesCoreDataTest"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Ropes.xcodeproj",
+        "identifier" : "E7ACC66129158458000E53CE",
+        "name" : "RopesUITests"
+      }
+    }
   ],
   "version" : 1
 }
