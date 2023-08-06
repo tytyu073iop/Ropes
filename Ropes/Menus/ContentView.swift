@@ -8,8 +8,10 @@ import CloudKit
 #if os(watchOS)
 import WatchKit
 #endif
+import CoreData
 
 struct ContentView: View {
+    @Environment(\.horizontalSizeClass) private var horSize
     let buttonName : LocalizedStringKey = "ADD"
     #if !os(watchOS)
     @Environment(\.openWindow) private var openWindow
@@ -31,107 +33,77 @@ struct ContentView: View {
     @State private var showingSheet = defaults.bool(forKey: "popup")
     @State private var settings = false
     @State private var advice = false
+    @State private var rope = ""
     var body: some View {
         NavigationStack{
             List{
-                #if os(watchOS)
-                NavigationLink(destination: AddView(), label: { Image(systemName: "plus") })
-                #endif
-                ForEach(Ropes) {rope in
-                    HStack{
-                        VStack{
-                            HStack{
-                                Spacer()
-                                Text(rope.name ?? "error")
-                                Spacer()
-                            }
-#if !os(watchOS)
-                            HStack {
-                                Spacer()
-                                Text(dateFormater.string(from: rope.date ?? Date()))
-                                Spacer()
-                            }
-#endif
+                Section {
+                    ForEach(FA) { fa in
+                        Button(action:{
+                            let _ = try! ToDo(name: fa.name!)}) {
+                            Text(fa.name!)
                         }
-                        Button(action: {
-                            rope.remove()
-                        }, label: {Image(systemName: "trash")})
-                        .buttonStyle(PlainButtonStyle())
                     }
+                    TextField("Enter rope", text: $rope).onSubmit({
+                        try! ToDo(name: rope)
+                        rope = ""
+                    })
                 }
-                if admin{
-                    Button("Notify"){
-                        do {
-                            try LocalNotficationManager.shared.request(text : "Test", time : 10)
-                        } catch {
-                            print(error.localizedDescription)
+                Section {
+                    ForEach(Ropes) {rope in
+                        HStack{
+                            VStack{
+                                HStack{
+                                    Spacer()
+                                    Text(rope.name ?? "error")
+                                    Spacer()
+                                }
+#if !os(watchOS)
+                                HStack {
+                                    Spacer()
+                                    Text(dateFormater.string(from: rope.date ?? Date()))
+                                    Spacer()
+                                }
+#endif
+                            }
+                            Button(action: {
+                                viewContext.deleteWithSave(rope)
+                            }, label: {Image(systemName: "trash")})
+                            .buttonStyle(PlainButtonStyle())
                         }
-                        let _ = print("requested by test")
                     }
-                    Button("requests") {
-                        Task {
-                            await LocalNotficationManager.shared.PrintRequests()
+                    if admin{
+                        Button("Notify"){
+                            do {
+                                try LocalNotficationManager.shared.request(text : "Test", time : 10, id: "0")
+                            } catch {
+                                print(error.localizedDescription)
+                            }
+                            let _ = print("requested by test")
                         }
-                    }
-                    Button("DELETE ALL DATA") {
-                        for fa in FastAnswers.fetch() {
-                            fa.remove()
+                        Button("requests") {
+                            Task {
+                                await LocalNotficationManager.shared.PrintRequests()
+                            }
                         }
-                        for todo in ToDo.fetch() {
-                            todo.remove()
+                        Button("DELETE ALL DATA") {
+                            var request = FastAnswers.fetchRequest()
+                            var result = try! viewContext.fetch(request)
+                            for fa in result  {
+                                viewContext.delete(fa as! NSManagedObject)
+                            }
+                            request = ToDo.fetchRequest()
+                            result = try! viewContext.fetch(request)
+                            for todo in result {
+                                viewContext.delete(todo as! NSManagedObject)
+                            }
+                            defaults.set(5, forKey: "time")
+                            defaults.set(false, forKey: "popup")
                         }
-                        defaults.set(5, forKey: "time")
-                        defaults.set(false, forKey: "popup")
                     }
                 }
             }
-#if !os(watchOS)
-            .navigationTitle("Ropes")
-#endif
             .toolbar(content: {
-                #if !os(watchOS)
-                if admin {
-                    ToolbarItem(placement: .automatic){
-                        Button(action: {
-                        #if os(macOS)
-                            openWindow(id: "Advice")
-                        #else
-                            advice.toggle()
-                        #endif
-                        }, label: {
-                            Image(systemName: "lightbulb")
-                        })
-                        .sheet(isPresented: $advice) {
-                            adviceMenu()
-                        }
-                    }
-                }
-                #if os(iOS)
-                ToolbarItem(placement: .bottomBar){
-                    Button(buttonName){
-                        #if os(macOS)
-                        openWindow(id: "Adding")
-                        #else
-                        showingSheet.toggle()
-                        #endif
-                    }
-                    .keyboardShortcut("a")
-                    .sheet(isPresented: $showingSheet) { AddView() }
-                }
-                #else
-                ToolbarItem(placement: .automatic){
-                    Button(buttonName){
-                        #if os(macOS)
-                        openWindow(id: "Adding")
-                        #else
-                        showingSheet.toggle()
-                        #endif
-                    }
-                    .keyboardShortcut("a")
-                    .sheet(isPresented: $showingSheet) { AddView() }
-                }
-                #endif
-                #endif
                 #if os(iOS)
                 ToolbarItem(placement: .navigationBarLeading){
                     Button(action: { settings.toggle() },
@@ -160,7 +132,7 @@ struct ContentView: View {
                                             let ID = UUID(uuidString: record.value(forKey: "CD_id") as! String)
                                             let name = record.value(forKey: "CD_name") as! String
                                             do {
-                                                try LocalNotficationManager.shared.request(text: name)
+                                                try LocalNotficationManager.shared.request(text: name, id: ID!.uuidString)
                                             } catch {
                                                 print("MatchResults failed \(error.localizedDescription)")
                                             }
@@ -190,16 +162,11 @@ struct ContentView: View {
             }
         })
     }
-    private func RemoveRope(index : IndexSet) {
-        let RopeToRemove = Ropes[index.first!]
-        RopeToRemove.remove(context: viewContext)
-    }
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview() {
+    ContentView()
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
 
