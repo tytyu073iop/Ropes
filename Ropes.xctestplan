@@ -1,0 +1,47 @@
+{
+  "configurations" : [
+    {
+      "id" : "0610D0FD-FDCA-4BFB-898F-33247B4C63E6",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Ropes.xcodeproj",
+      "identifier" : "E7EAFF85289F8DE900C28906",
+      "name" : "Ropes"
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Ropes.xcodeproj",
+        "identifier" : "E7ACC6222915700A000E53CE",
+        "name" : "RopesCoreDataTest"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Ropes.xcodeproj",
+        "identifier" : "E7ACC66129158458000E53CE",
+        "name" : "RopesUITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Ropes.xcodeproj",
+        "identifier" : "E79465B229170FD700ACD034",
+        "name" : "MacUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
