@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E701ECD6295DB7F700B90033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745025828B8AE38005FB11A /* Localizable.strings */; };
+		E71641662A7FA60300F4E5FC /* icloudTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71641652A7FA60300F4E5FC /* icloudTest.swift */; };
 		E71EF4E5295D84440051EE65 /* Localizable.strings..strings in Resources */ = {isa = PBXBuildFile; fileRef = E71EF4E3295D84440051EE65 /* Localizable.strings..strings */; };
 		E71EF4EB295D84440051EE65 /* Localizable.strings..strings in Resources */ = {isa = PBXBuildFile; fileRef = E71EF4E9295D84440051EE65 /* Localizable.strings..strings */; };
 		E720AC3D28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */; };
@@ -16,7 +17,6 @@
 		E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E72770F82A60285F004143BC /* RopesCoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACC6252915700A000E53CE /* RopesCoreDataTest.swift */; };
 		E7290BBF2956E9CD00118224 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
-		E7290BC02956E9E600118224 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA2289F8F5B00C28906 /* AddView.swift */; };
 		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
 		E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E735FE1628A2589200FCE2E6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
@@ -38,16 +38,6 @@
 		E745026528B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026328B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings */; };
 		E745026828B8AE59005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026628B8AE59005FB11A /* Localizable.strings */; };
 		E748235628A2619C008E5087 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = E748235528A2619C008E5087 /* Add.swift */; };
-		E75E4C2E29698FD0004E3DF5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
-		E75E4C2F29698FD0004E3DF5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
-		E75E4C3929698FD1004E3DF5 /* MacOSWIdjetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E75E4C2D29698FCF004E3DF5 /* MacOSWIdjetsExtension.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E75E4C3D29698FED004E3DF5 /* RopesWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */; };
-		E75E4C3E2969904B004E3DF5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
-		E75E4C3F2969904B004E3DF5 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
-		E75E4C402969904B004E3DF5 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
-		E75E4C412969904E004E3DF5 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
-		E75E4C422969904E004E3DF5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
-		E75E4C432969904E004E3DF5 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E776272428D5E80B004D5262 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
 		E776272528D5E80B004D5262 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
 		E776272728D5EEFB004D5262 /* DeleteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272628D5EEFB004D5262 /* DeleteIntent.swift */; };
@@ -82,7 +72,6 @@
 		E7A650B629146B540055A24F /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A650B429146B540055A24F /* Icons.xcassets */; };
 		E7ACC62F29157377000E53CE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7ACC638291576CC000E53CE /* SilentNotfications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */; };
-		E7ACC65D291583E1000E53CE /* RopesWatchOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACC65329158367000E53CE /* RopesWatchOSTests.swift */; };
 		E7ACC66529158458000E53CE /* RopesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACC66429158458000E53CE /* RopesUITests.swift */; };
 		E7ACC66729158458000E53CE /* RopesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACC66629158458000E53CE /* RopesUITestsLaunchTests.swift */; };
 		E7B740DB28A6AEE9008048CF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
@@ -100,7 +89,6 @@
 		E7EAFFAC289F8F5B00C28906 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9E289F8F5B00C28906 /* Data.swift */; };
 		E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E7EAFFAE289F8F5B00C28906 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA0289F8F5B00C28906 /* Base.swift */; };
-		E7EAFFAF289F8F5B00C28906 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA2289F8F5B00C28906 /* AddView.swift */; };
 		E7EAFFB0289F8F5B00C28906 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
 		E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA4289F8F5B00C28906 /* ContentView.swift */; };
 		E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
@@ -112,19 +100,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E73C02452A7FA571007E939E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7EAFF7E289F8DE900C28906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7EAFF85289F8DE900C28906;
+			remoteInfo = Ropes;
+		};
 		E7436E2328DE331000E96EF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E7EAFF7E289F8DE900C28906 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E7436E1928DE330E00E96EF5;
 			remoteInfo = WidjetsForWatchExtension;
-		};
-		E75E4C3729698FD1004E3DF5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E7EAFF7E289F8DE900C28906 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E75E4C2C29698FCF004E3DF5;
-			remoteInfo = MacOSWIdjetsExtension;
 		};
 		E780977A29179F2000B397C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -153,13 +141,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E7EAFF85289F8DE900C28906;
 			remoteInfo = Ropes;
-		};
-		E7ACC65529158367000E53CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E7EAFF7E289F8DE900C28906 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E735FDFC28A2538E00FCE2E6;
-			remoteInfo = "RopesForWatch Watch App";
 		};
 		E7ACC66829158458000E53CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -207,7 +188,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				E7B740E628A6AEEA008048CF /* WidjetsExtension.appex in Embed Foundation Extensions */,
-				E75E4C3929698FD1004E3DF5 /* MacOSWIdjetsExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +196,7 @@
 
 /* Begin PBXFileReference section */
 		E700950128D7A5990024496C /* RopesForWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "RopesForWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		E71641652A7FA60300F4E5FC /* icloudTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icloudTest.swift; sourceTree = "<group>"; };
 		E71EF4E4295D84440051EE65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings..strings; sourceTree = "<group>"; };
 		E71EF4E7295D84440051EE65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E71EF4EA295D84440051EE65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings..strings; sourceTree = "<group>"; };
@@ -223,6 +204,8 @@
 		E72770F02A60130C004143BC /* RopesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopesTests.swift; sourceTree = "<group>"; };
 		E72CCCAD28DCC2860062231E /* RopesForWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RopesForWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E735FDFD28A2538E00FCE2E6 /* Ropes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ropes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73C023C2A7FA54F007E939E /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		E73C02412A7FA571007E939E /* Ropes ICloud.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ropes ICloud.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7436E1A28DE330E00E96EF5 /* WidjetsForWatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidjetsForWatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7436E2228DE331000E96EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E745025928B8AE3C005FB11A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -230,7 +213,6 @@
 		E745026428B8AE59005FB11A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/RopesForWatch Watch App-InfoPlist.strings"; sourceTree = "<group>"; };
 		E745026728B8AE59005FB11A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E748235528A2619C008E5087 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
-		E75E4C2D29698FCF004E3DF5 /* MacOSWIdjetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MacOSWIdjetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75E4C3629698FD1004E3DF5 /* MacOSWIdjets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSWIdjets.entitlements; sourceTree = "<group>"; };
 		E75E4C4429699546004E3DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E776272328D5E80B004D5262 /* AppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppEntity.swift; path = "Ropes/shared/App intents/AppEntity.swift"; sourceTree = SOURCE_ROOT; };
@@ -260,7 +242,6 @@
 		E7A650B429146B540055A24F /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		E7ACC6232915700A000E53CE /* RopesCoreDataTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RopesCoreDataTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACC6252915700A000E53CE /* RopesCoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopesCoreDataTest.swift; sourceTree = "<group>"; };
-		E7ACC65129158367000E53CE /* RopesWatchOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RopesWatchOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACC65329158367000E53CE /* RopesWatchOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopesWatchOSTests.swift; sourceTree = "<group>"; };
 		E7ACC66229158458000E53CE /* RopesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RopesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACC66429158458000E53CE /* RopesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopesUITests.swift; sourceTree = "<group>"; };
@@ -280,7 +261,6 @@
 		E7EAFF9E289F8F5B00C28906 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotfication.swift; sourceTree = "<group>"; };
 		E7EAFFA0289F8F5B00C28906 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		E7EAFFA2289F8F5B00C28906 /* AddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		E7EAFFA3289F8F5B00C28906 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E7EAFFA4289F8F5B00C28906 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Persistence extension.swift"; sourceTree = "<group>"; };
@@ -296,21 +276,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E73C023E2A7FA571007E939E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7436E1728DE330E00E96EF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E7436E1C28DE330E00E96EF5 /* SwiftUI.framework in Frameworks */,
 				E7436E1B28DE330E00E96EF5 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E75E4C2A29698FCF004E3DF5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E75E4C2F29698FD0004E3DF5 /* SwiftUI.framework in Frameworks */,
-				E75E4C2E29698FD0004E3DF5 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,13 +307,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E7ACC6202915700A000E53CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7ACC64E29158367000E53CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				E7ACC6252915700A000E53CE /* RopesCoreDataTest.swift */,
+				E71641652A7FA60300F4E5FC /* icloudTest.swift */,
 			);
 			path = RopesCoreDataTest;
 			sourceTree = "<group>";
@@ -504,6 +476,7 @@
 		E7EAFF7D289F8DE900C28906 = {
 			isa = PBXGroup;
 			children = (
+				E73C023C2A7FA54F007E939E /* TestPlan.xctestplan */,
 				E78DBEFC28DEFBAD00EFE7EF /* WidjetsForWatchExtension.entitlements */,
 				E7DDC1CD28DCCC9100D902AA /* WidjetsExtension.entitlements */,
 				E745026328B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings */,
@@ -532,11 +505,10 @@
 				E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */,
 				E7436E1A28DE330E00E96EF5 /* WidjetsForWatchExtension.appex */,
 				E7ACC6232915700A000E53CE /* RopesCoreDataTest.xctest */,
-				E7ACC65129158367000E53CE /* RopesWatchOSTests.xctest */,
 				E7ACC66229158458000E53CE /* RopesUITests.xctest */,
 				E79465B329170FD700ACD034 /* MacUITests.xctest */,
 				E780977429179F2000B397C6 /* WatchUITest.xctest */,
-				E75E4C2D29698FCF004E3DF5 /* MacOSWIdjetsExtension.appex */,
+				E73C02412A7FA571007E939E /* Ropes ICloud.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -583,7 +555,6 @@
 		E7EAFFA1289F8F5B00C28906 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				E7EAFFA2289F8F5B00C28906 /* AddView.swift */,
 				E7EAFFA3289F8F5B00C28906 /* Settings.swift */,
 				E7EAFFA4289F8F5B00C28906 /* ContentView.swift */,
 				E7EB482328D4F95E000FB1B2 /* Advices */,
@@ -635,6 +606,24 @@
 			productReference = E735FDFD28A2538E00FCE2E6 /* Ropes.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E73C02402A7FA571007E939E /* Ropes ICloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E73C02472A7FA571007E939E /* Build configuration list for PBXNativeTarget "Ropes ICloud" */;
+			buildPhases = (
+				E73C023D2A7FA571007E939E /* Sources */,
+				E73C023E2A7FA571007E939E /* Frameworks */,
+				E73C023F2A7FA571007E939E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E73C02462A7FA571007E939E /* PBXTargetDependency */,
+			);
+			name = "Ropes ICloud";
+			productName = "Ropes ICloud";
+			productReference = E73C02412A7FA571007E939E /* Ropes ICloud.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E7436E1928DE330E00E96EF5 /* WidjetsForWatchExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7436E2928DE331000E96EF5 /* Build configuration list for PBXNativeTarget "WidjetsForWatchExtension" */;
@@ -650,23 +639,6 @@
 			name = WidjetsForWatchExtension;
 			productName = WidjetsForWatchExtension;
 			productReference = E7436E1A28DE330E00E96EF5 /* WidjetsForWatchExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		E75E4C2C29698FCF004E3DF5 /* MacOSWIdjetsExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E75E4C3A29698FD1004E3DF5 /* Build configuration list for PBXNativeTarget "MacOSWIdjetsExtension" */;
-			buildPhases = (
-				E75E4C2929698FCF004E3DF5 /* Sources */,
-				E75E4C2A29698FCF004E3DF5 /* Frameworks */,
-				E75E4C2B29698FCF004E3DF5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MacOSWIdjetsExtension;
-			productName = MacOSWIdjetsExtension;
-			productReference = E75E4C2D29698FCF004E3DF5 /* MacOSWIdjetsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		E780977329179F2000B397C6 /* WatchUITest */ = {
@@ -723,24 +695,6 @@
 			productReference = E7ACC6232915700A000E53CE /* RopesCoreDataTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E7ACC65029158367000E53CE /* RopesWatchOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7ACC65729158367000E53CE /* Build configuration list for PBXNativeTarget "RopesWatchOSTests" */;
-			buildPhases = (
-				E7ACC64D29158367000E53CE /* Sources */,
-				E7ACC64E29158367000E53CE /* Frameworks */,
-				E7ACC64F29158367000E53CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E7ACC65629158367000E53CE /* PBXTargetDependency */,
-			);
-			name = RopesWatchOSTests;
-			productName = RopesWatchOSTests;
-			productReference = E7ACC65129158367000E53CE /* RopesWatchOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		E7ACC66129158458000E53CE /* RopesUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7ACC66A29158458000E53CE /* Build configuration list for PBXNativeTarget "RopesUITests" */;
@@ -791,7 +745,6 @@
 			dependencies = (
 				E7B740E528A6AEEA008048CF /* PBXTargetDependency */,
 				E7A0CFA228D4F3C000EE60E4 /* PBXTargetDependency */,
-				E75E4C3829698FD1004E3DF5 /* PBXTargetDependency */,
 			);
 			name = Ropes;
 			productName = Ropes;
@@ -805,17 +758,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					E735FDFC28A2538E00FCE2E6 = {
 						CreatedOnToolsVersion = 14.0;
 					};
+					E73C02402A7FA571007E939E = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+						TestTargetID = E7EAFF85289F8DE900C28906;
+					};
 					E7436E1928DE330E00E96EF5 = {
 						CreatedOnToolsVersion = 14.1;
-					};
-					E75E4C2C29698FCF004E3DF5 = {
-						CreatedOnToolsVersion = 14.2;
 					};
 					E780977329179F2000B397C6 = {
 						CreatedOnToolsVersion = 14.1;
@@ -828,10 +783,6 @@
 					E7ACC6222915700A000E53CE = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = E7EAFF85289F8DE900C28906;
-					};
-					E7ACC65029158367000E53CE = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = E735FDFC28A2538E00FCE2E6;
 					};
 					E7ACC66129158458000E53CE = {
 						CreatedOnToolsVersion = 14.1;
@@ -864,11 +815,10 @@
 				E7B740D728A6AEE9008048CF /* WidjetsExtension */,
 				E7436E1928DE330E00E96EF5 /* WidjetsForWatchExtension */,
 				E7ACC6222915700A000E53CE /* RopesCoreDataTest */,
-				E7ACC65029158367000E53CE /* RopesWatchOSTests */,
 				E7ACC66129158458000E53CE /* RopesUITests */,
 				E79465B229170FD700ACD034 /* MacUITests */,
 				E780977329179F2000B397C6 /* WatchUITest */,
-				E75E4C2C29698FCF004E3DF5 /* MacOSWIdjetsExtension */,
+				E73C02402A7FA571007E939E /* Ropes ICloud */,
 			);
 		};
 /* End PBXProject section */
@@ -885,19 +835,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E73C023F2A7FA571007E939E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7436E1828DE330E00E96EF5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E7A1D2F9295DB51000AD801D /* InfoPlist.strings in Resources */,
 				E7A1D2FC295DB51000AD801D /* Localizable.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E75E4C2B29698FCF004E3DF5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,13 +866,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E7ACC6212915700A000E53CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7ACC64F29158367000E53CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -970,7 +913,6 @@
 				E735FE1528A2589200FCE2E6 /* Persistence extension.swift in Sources */,
 				E735FE1C28A259EC00FCE2E6 /* ContentView.swift in Sources */,
 				E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */,
-				E7290BC02956E9E600118224 /* AddView.swift in Sources */,
 				E7EB482228D4F877000FB1B2 /* AddCustomIntent.swift in Sources */,
 				E7A650AF291452350055A24F /* WatchKitDelegate.swift in Sources */,
 				E720AC3E28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */,
@@ -987,6 +929,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E73C023D2A7FA571007E939E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71641662A7FA60300F4E5FC /* icloudTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7436E1628DE330E00E96EF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -999,20 +949,6 @@
 				E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */,
 				E7436E3028DE336F00E96EF5 /* Base.swift in Sources */,
 				E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E75E4C2929698FCF004E3DF5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E75E4C3F2969904B004E3DF5 /* Base.swift in Sources */,
-				E75E4C432969904E004E3DF5 /* Persistence extension.swift in Sources */,
-				E75E4C3D29698FED004E3DF5 /* RopesWidjet.swift in Sources */,
-				E75E4C402969904B004E3DF5 /* LocalNotfication.swift in Sources */,
-				E75E4C422969904E004E3DF5 /* Persistence.swift in Sources */,
-				E75E4C3E2969904B004E3DF5 /* Data.swift in Sources */,
-				E75E4C412969904E004E3DF5 /* Task core data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,14 +977,6 @@
 				E72770F82A60285F004143BC /* RopesCoreDataTest.swift in Sources */,
 				E7ACC62F29157377000E53CE /* Data.swift in Sources */,
 				E7ACC638291576CC000E53CE /* SilentNotfications.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7ACC64D29158367000E53CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7ACC65D291583E1000E53CE /* RopesWatchOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,7 +1013,6 @@
 			files = (
 				E776272728D5EEFB004D5262 /* DeleteIntent.swift in Sources */,
 				E776272428D5E80B004D5262 /* AppEntity.swift in Sources */,
-				E7EAFFAF289F8F5B00C28906 /* AddView.swift in Sources */,
 				E7FBEE1A2A600826005AD0D5 /* CatchTasksSnippet.swift in Sources */,
 				E7A0CF9D28D4F2DE00EE60E4 /* adviceMenu.swift in Sources */,
 				E7EAFFAE289F8F5B00C28906 /* Base.swift in Sources */,
@@ -1112,18 +1039,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E73C02462A7FA571007E939E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7EAFF85289F8DE900C28906 /* Ropes */;
+			targetProxy = E73C02452A7FA571007E939E /* PBXContainerItemProxy */;
+		};
 		E7436E2428DE331000E96EF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E7436E1928DE330E00E96EF5 /* WidjetsForWatchExtension */;
 			targetProxy = E7436E2328DE331000E96EF5 /* PBXContainerItemProxy */;
-		};
-		E75E4C3829698FD1004E3DF5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilters = (
-				macos,
-			);
-			target = E75E4C2C29698FCF004E3DF5 /* MacOSWIdjetsExtension */;
-			targetProxy = E75E4C3729698FD1004E3DF5 /* PBXContainerItemProxy */;
 		};
 		E780977B29179F2000B397C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1145,11 +1069,6 @@
 			isa = PBXTargetDependency;
 			target = E7EAFF85289F8DE900C28906 /* Ropes */;
 			targetProxy = E7ACC6272915700A000E53CE /* PBXContainerItemProxy */;
-		};
-		E7ACC65629158367000E53CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E735FDFC28A2538E00FCE2E6 /* RopesForWatch Watch App */;
-			targetProxy = E7ACC65529158367000E53CE /* PBXContainerItemProxy */;
 		};
 		E7ACC66929158458000E53CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1337,6 +1256,64 @@
 			};
 			name = Release;
 		};
+		E73C02482A7FA571007E939E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IlyaBiryuk.Ropes-ICloud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
+			};
+			name = Debug;
+		};
+		E73C02492A7FA571007E939E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IlyaBiryuk.Ropes-ICloud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
+			};
+			name = Release;
+		};
 		E7436E2728DE331000E96EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1400,68 +1377,6 @@
 			};
 			name = Release;
 		};
-		E75E4C3B29698FD1004E3DF5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = MacOSWIdjets/MacOSWIdjets.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MacOSWIdjets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MacOSWIdjets;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes.MacOSWIdjets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		E75E4C3C29698FD1004E3DF5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = MacOSWIdjets/MacOSWIdjets.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MacOSWIdjets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MacOSWIdjets;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes.MacOSWIdjets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		E780977C29179F2000B397C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1477,7 +1392,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "RopesForWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1497,7 +1412,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "RopesForWatch Watch App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -1551,12 +1466,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesCoreDataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,4";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
 			};
 			name = Debug;
@@ -1575,55 +1490,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesCoreDataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,4";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E7ACC65829158367000E53CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesWatchOSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		E7ACC65929158367000E53CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.RopesWatchOSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ropes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ropes";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1698,6 +1572,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1731,6 +1608,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1961,20 +1841,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E73C02472A7FA571007E939E /* Build configuration list for PBXNativeTarget "Ropes ICloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73C02482A7FA571007E939E /* Debug */,
+				E73C02492A7FA571007E939E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7436E2928DE331000E96EF5 /* Build configuration list for PBXNativeTarget "WidjetsForWatchExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E7436E2728DE331000E96EF5 /* Debug */,
 				E7436E2828DE331000E96EF5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E75E4C3A29698FD1004E3DF5 /* Build configuration list for PBXNativeTarget "MacOSWIdjetsExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E75E4C3B29698FD1004E3DF5 /* Debug */,
-				E75E4C3C29698FD1004E3DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2002,15 +1882,6 @@
 			buildConfigurations = (
 				E7ACC6292915700A000E53CE /* Debug */,
 				E7ACC62A2915700A000E53CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7ACC65729158367000E53CE /* Build configuration list for PBXNativeTarget "RopesWatchOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7ACC65829158367000E53CE /* Debug */,
-				E7ACC65929158367000E53CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
