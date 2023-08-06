@@ -76,6 +76,17 @@
                ReferencedContainer = "container:Ropes.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E73C02402A7FA571007E939E"
+               BuildableName = "Ropes ICloud.xctest"
+               BlueprintName = "Ropes ICloud"
+               ReferencedContainer = "container:Ropes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

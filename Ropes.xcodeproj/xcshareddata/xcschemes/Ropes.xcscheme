@@ -27,6 +27,12 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:TestPlan.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -58,6 +64,17 @@
                BlueprintIdentifier = "E79465B229170FD700ACD034"
                BuildableName = "MacUITests.xctest"
                BlueprintName = "MacUITests"
+               ReferencedContainer = "container:Ropes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E73C02402A7FA571007E939E"
+               BuildableName = "Ropes ICloud.xctest"
+               BlueprintName = "Ropes ICloud"
                ReferencedContainer = "container:Ropes.xcodeproj">
             </BuildableReference>
          </TestableReference>
