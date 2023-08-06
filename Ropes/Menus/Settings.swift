@@ -7,8 +7,8 @@ struct settin: View {
     @Environment(\.dismiss) var dismiss
     @FetchRequest(
         entity: FastAnswers.entity(), 
-        sortDescriptors: [NSSortDescriptor(keyPath: \FastAnswers.name, ascending: false)],
-        animation: .default) 
+        sortDescriptors: [],
+        animation: .default)
     private var FA : FetchedResults<FastAnswers>
     @State var alert = false
     @ObservedObject var time = Time()
@@ -24,7 +24,7 @@ struct settin: View {
                             Text(answer.name ?? "error")
                             #if os(macOS)
                             Button(action: {
-                                answer.remove()
+                                viewContext.deleteWithSave(answer)
                             }, label: {Image(systemName: "trash")})
                             .buttonStyle(PlainButtonStyle())
                             #endif
@@ -34,12 +34,12 @@ struct settin: View {
                 })
                     TextField("Enter something", text: $a).onSubmit {
                         withAnimation { 
-                                AddFA(name: a)
+                                try! FastAnswers(name: a)
                                 a = ""
                             }
                     }.alert("OOPS", isPresented: $alert, actions: {
                         Button("ok", role : .cancel){}
-                    }, message : {Text("Try another name or complete other rope with that name")})
+                    }, message : {Text("You have the same fast answer")})
             }
             if admin{
             Section("admin settings"){
@@ -82,13 +82,13 @@ struct settin: View {
             ToolbarItem(placement: .navigationBarLeading){
             EditButton()
             }
-            #endif
             ToolbarItem(placement: .confirmationAction){
                 Button("ready"){
                     dismiss()
                     print(scenePhase)
                 }
             }
+            #endif
         }
         }
     }
@@ -100,7 +100,7 @@ struct settin: View {
     }
     private func RemoveFA(index : IndexSet) {
         let FAToRemove = FA[index.first!]
-        FAToRemove.remove()
+        viewContext.deleteWithSave(FAToRemove)
     }
 }
 
