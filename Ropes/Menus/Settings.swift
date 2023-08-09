@@ -63,11 +63,6 @@ struct settin: View {
                 .pickerStyle(.automatic)
             #endif
             Section("Other") {
-                #if os(iOS)
-                Toggle(isOn: $popup.PopUp) {
-                    Text("Showup an adding view on start")
-                }
-                #endif
                 Toggle(isOn: $swap.Swap) {
                     Text("Show ropes in widjets like in the app order")
                 }
