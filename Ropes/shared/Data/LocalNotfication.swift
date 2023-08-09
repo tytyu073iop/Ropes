@@ -2,6 +2,7 @@ import SwiftUI
 import UserNotifications
 import Foundation
 import CloudKit
+import CoreData
 
 class LocalNotficationManager:NSObject, ObservableObject {
     let done : String = String(localized: LocalizedStringResource("Done"))
@@ -9,7 +10,7 @@ class LocalNotficationManager:NSObject, ObservableObject {
     private let notficationCenter = UNUserNotificationCenter.current()
     override init() {
         super.init()
-        notficationCenter.delegate = self
+        //notficationCenter.delegate = 
     }
     //TODO: Change to numerical
     func request(text : String, time : Double = defaults.double(forKey: "time"), userInfo : [AnyHashable : Any]? = nil, id: String) {
@@ -154,133 +155,6 @@ extension LocalNotficationManager {
 
 
 extension LocalNotficationManager : UNUserNotificationCenterDelegate{
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        return [.sound,.banner]
-    }
-    @MainActor func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
-        //FIXME: actions doesn't working when app closed
-        if response.actionIdentifier == "done" {
-            if let id = response.notification.request.content.userInfo["id"] as? String {
-                // Create a new background managed object context
-                let context = PersistenceController.shared.container.viewContext
-                
-                // If needed, ensure the background context stays
-                // up to date with changes from the parent
-                context.automaticallyMergesChangesFromParent = true
-                // Perform operations on the background context
-                // asynchronously
-                do {
-                    let todo = try ToDo.findByID(id: id, context: context)
-                    await todo.remove(context: context, auto: true)
-                    try ToDo.findByID(id: "0", context: context)
-                } catch {
-                }
-            }
-        }
-    }
-}
-
-func RemoteNotficationHandler(userInfo : [AnyHashable : Any]) {
-    print("recived! \(userInfo)")
-    let notfication = CKQueryNotification(fromRemoteNotificationDictionary: userInfo)
-    print("notificationType : \(String(describing: notfication?.notificationType))")
-    guard notfication?.notificationType == .query else {
-    switch notfication?.notificationType {
-    case .query:
-        print("notificationType: query")
-    case .recordZone:
-        print("notificationType: recordzone")
-    case .database:
-        print("notificationType: database")
-    case .readNotification:
-        print("notificationType: notification")
-    case .none:
-        print("notificationType: none")
-    case .some(_):
-        print("notificationType: some")
-    }
-        print("failed")
-        return
-    }
-    print("recive 2 \(String(describing: notfication))")
-    print("recordZone: \(recordZone)")
-    switch notfication?.queryNotificationReason {
-    case .recordDeleted:
-        print("removing")
-        CKContainer.default().privateCloudDatabase.fetch(withRecordID: (notfication?.recordID)!) { record, error in
-            if let record = record {
-                // Handle creating local notif for record
-                if record.value(forKey: "CD_entityName") as! String == "ToDo" {
-                    let notficationName = record.value(forKey: "CD_name") as! String
-                    print("CD_NAme = \(notficationName)")
-                    LocalNotficationManager.remove(id: notficationName)
-                    print("removed!! \(notficationName)")
-                }
-            } else if let error = error {
-                print("requests: Unable to retrieve record: \(error)")
-                Task {
-                    await LocalNotficationManager.shared.NotficationCheck()
-                }
-            }
-        }
-    default:
-        print("queryNotificationReason : \(String(describing: notfication?.queryNotificationReason))")
-    }
-    var configurations = [CKRecordZone.ID: CKFetchRecordZoneChangesOperation.ZoneConfiguration]()
-    let config = CKFetchRecordZoneChangesOperation.ZoneConfiguration()
-    config.previousServerChangeToken = token//defaults.object(forKey: recordZone.zoneName) as? CKServerChangeToken
-    configurations[recordZone] = config
-    let operation = CKFetchRecordZoneChangesOperation( recordZoneIDs: [recordZone], configurationsByRecordZoneID: configurations)
-    operation.recordWasChangedBlock = { recordID, result in
-        print("record: \(recordID)")
-        print("record: \(recordID.recordName)")
-        switch result {
-        case .failure(let error):
-            print("recordWasChangedBlock error :\(error.localizedDescription)")
-        case .success(let record):
-            for key in record.allKeys() {
-                print("recordkey: \(key)")
-            }
-            if record.value(forKey: "CD_entityName") as! String == "ToDo" {
-                let notficationName = record.value(forKey: "CD_name") as! String
-                print("CD_NAme = \(notficationName)")
-                switch notfication?.queryNotificationReason {
-                case .recordCreated:
-                    Task {
-                        if await !LocalNotficationManager.shared.Contains(id: notficationName) {
-                            try! await LocalNotficationManager.shared.request(text: notficationName)
-                            print("created!! \(notficationName)")
-                        }
-                    }
-                case .recordDeleted:
-                    print("removing")
-                    LocalNotficationManager.remove(id: notficationName)
-                    print("removed!! \(notficationName)")
-                default:
-                    print("queryNotificationReason : \(String(describing: notfication?.queryNotificationReason))")
-                }
-            }
-        }
-    }
-    operation.recordZoneChangeTokensUpdatedBlock = { recordZoneID, tokenToPick, _ in
-        print("token : \(String(describing: token))")
-        print("recordzoneID.zonename = \(recordZoneID.zoneName)")
-        //defaults.set(token, forKey: recordZoneID.zoneName)
-        token = tokenToPick
-    }
-    operation.recordZoneFetchCompletionBlock = { recordZoneID, tokenToPick, _, _, error in
-        if let error = error {
-            print("blyat: \(error.localizedDescription)")
-        } else {
-            token = tokenToPick
-            print("finished")
-            //if let encoded = JSONEncoder().encode(token) {
-                //defaults.set(token, forKey: recordZoneID.zoneName)
-            //}
-        }
-    }
-    operation.qualityOfService = .userInitiated
-    CKContainer.default().privateCloudDatabase.add(operation)
-    print("request ended")
+   
 
 }
