@@ -26,14 +26,12 @@ final class WatchInterfaceUITest: XCTestCase {
     func testAddRopeFA() throws {
         app.launchArguments = [launchArgs.requiresFA.rawValue,launchArgs.clear.rawValue]
         app.launch()
-        app.buttons["Add"].tap()
         app.buttons["Test"].tap()
         XCTAssert(app.staticTexts["Test"].waitForExistence(timeout: 1),"action haven't created a rope")
     }
     func testAddRopeKeyboard() throws {
         app.launchArguments = [launchArgs.clear.rawValue]
         app.launch()
-        app.buttons["Add"].tap()
         app.textFields.firstMatch.tap()
         print(app.debugDescription)
         app.buttons["SPACE"].tap()
@@ -83,9 +81,6 @@ final class WatchNotifyUITest: XCTestCase {
         app.launch()
         app.terminate()
         springboard.otherElements["Test, Ropes"].waitForExistence(timeout: 10)
-        if springboard.otherElements["Test, Ropes"].exists {
-            springboard.otherElements["Test, Ropes"].tap()
-        }
         springboard.staticTexts["Done"].tap()
         app.launchArguments = []
         app.launch()
