@@ -42,6 +42,9 @@
 		E745026528B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026328B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings */; };
 		E745026828B8AE59005FB11A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E745026628B8AE59005FB11A /* Localizable.strings */; };
 		E748235628A2619C008E5087 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = E748235528A2619C008E5087 /* Add.swift */; };
+		E773CCC52A8392AD00D7459B /* Predict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773CCC42A8392AD00D7459B /* Predict.swift */; };
+		E773CCC62A8392AD00D7459B /* Predict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773CCC42A8392AD00D7459B /* Predict.swift */; };
+		E773CCC72A8392AD00D7459B /* Predict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E773CCC42A8392AD00D7459B /* Predict.swift */; };
 		E776272428D5E80B004D5262 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
 		E776272528D5E80B004D5262 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
 		E776272728D5EEFB004D5262 /* DeleteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272628D5EEFB004D5262 /* DeleteIntent.swift */; };
@@ -85,7 +88,7 @@
 		E7B740DB28A6AEE9008048CF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
 		E7B740DD28A6AEE9008048CF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
 		E7B740E028A6AEE9008048CF /* RopesWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */; };
-		E7B740E628A6AEEA008048CF /* WidjetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7B740E628A6AEEA008048CF /* WidjetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7DDC1CE28DCD58600D902AA /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E7DDC1CF28DCD64000D902AA /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
 		E7DDC1D228DCD64000D902AA /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
@@ -224,6 +227,7 @@
 		E748235528A2619C008E5087 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		E75E4C3629698FD1004E3DF5 /* MacOSWIdjets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSWIdjets.entitlements; sourceTree = "<group>"; };
 		E75E4C4429699546004E3DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E773CCC42A8392AD00D7459B /* Predict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predict.swift; sourceTree = "<group>"; };
 		E776272328D5E80B004D5262 /* AppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppEntity.swift; path = "Ropes/shared/App intents/AppEntity.swift"; sourceTree = SOURCE_ROOT; };
 		E776272628D5EEFB004D5262 /* DeleteIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeleteIntent.swift; path = "Ropes/shared/App intents/DeleteIntent.swift"; sourceTree = SOURCE_ROOT; };
 		E77814DD28A4F4040073FFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -485,6 +489,7 @@
 				E7B740E328A6AEEA008048CF /* Info.plist */,
 				E7A1D2F4295DB51000AD801D /* InfoPlist.strings */,
 				E745026628B8AE59005FB11A /* Localizable.strings */,
+				E773CCC42A8392AD00D7459B /* Predict.swift */,
 			);
 			path = Widjets;
 			sourceTree = "<group>";
@@ -966,6 +971,7 @@
 				E721DDC22A80FBBB00C03F00 /* AllIntents.swift in Sources */,
 				E7436E2C28DE336800E96EF5 /* Persistence extension.swift in Sources */,
 				E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */,
+				E773CCC72A8392AD00D7459B /* Predict.swift in Sources */,
 				E799D7832A82BE1A00068E6F /* RopesWidjet.swift in Sources */,
 				E7436E3028DE336F00E96EF5 /* Base.swift in Sources */,
 				E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */,
@@ -1026,6 +1032,7 @@
 				E7DDC1D328DCD64000D902AA /* DeleteIntent.swift in Sources */,
 				E7764A3E28B360210022E8C3 /* Persistence extension.swift in Sources */,
 				E7DDC1CF28DCD64000D902AA /* AddCustomIntent.swift in Sources */,
+				E773CCC62A8392AD00D7459B /* Predict.swift in Sources */,
 				E7B740E028A6AEE9008048CF /* RopesWidjet.swift in Sources */,
 				E7FD61D52A812E1900B4D989 /* addWidjet.swift in Sources */,
 				E799BD6A2A8291C8007DD4BD /* animation.swift in Sources */,
@@ -1050,6 +1057,7 @@
 				E7EAFF8C289F8DE900C28906 /* Persistence.swift in Sources */,
 				E7EAFFB4289F8F5B00C28906 /* Persistence extension.swift in Sources */,
 				E7A0CFAB28D4F5D800EE60E4 /* AllIntents.swift in Sources */,
+				E773CCC52A8392AD00D7459B /* Predict.swift in Sources */,
 				E7EAFFB1289F8F5B00C28906 /* ContentView.swift in Sources */,
 				E7EAFFAD289F8F5B00C28906 /* LocalNotfication.swift in Sources */,
 				E7EAFFB6289F8F5B00C28906 /* Task core data.swift in Sources */,
@@ -1103,6 +1111,7 @@
 		};
 		E7B740E528A6AEEA008048CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = E7B740D728A6AEE9008048CF /* WidjetsExtension */;
 			targetProxy = E7B740E428A6AEEA008048CF /* PBXContainerItemProxy */;
 		};
@@ -1242,7 +1251,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1277,7 +1286,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -1599,7 +1608,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1637,7 +1646,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1792,10 +1801,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.2;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes;
@@ -1840,10 +1849,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.2;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes;
