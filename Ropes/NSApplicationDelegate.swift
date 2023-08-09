@@ -13,6 +13,5 @@ class NSApplicationDelegateFunctions: NSObject, NSApplicationDelegate {
         SetUP()
     }
     func application(_ application: NSApplication, didReceiveRemoteNotification userInfo: [String : Any]) {
-        RemoteNotficationHandler(userInfo: userInfo)
     }
 }
