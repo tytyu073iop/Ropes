@@ -20,7 +20,7 @@ struct AddRopeShortcut : PredictableIntent {
     func perform() async throws -> some IntentResult & ReturnsValue<RopeEntity> & ProvidesDialog & ShowsSnippetView {
         let context = PersistenceController.shared.container.viewContext
         let rope = try await ToDo(context: context, name: Task)
-        return .result(value: RopeEntity(id: rope.id ?? UUID(), name: rope.name), dialog: IntentDialog("Rope \(Task) was created")) {
+        return .result(value: RopeEntity(id: rope.id ?? UUID(), name: rope.name ?? "error"), dialog: IntentDialog("Rope \(Task) was created")) {
             VStack {
                 HStack {
                     Spacer()

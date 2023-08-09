@@ -40,7 +40,7 @@ struct RopeQuiery : EntityQuery {
                 id == todo.id
             }
         }.map { todo in
-            RopeEntity(id: todo.id ?? UUID(), name: todo.name)
+            RopeEntity(id: todo.id ?? UUID(), name: todo.name ?? "error")
         }
     }
     ///- returns:All ToDos
@@ -50,7 +50,7 @@ struct RopeQuiery : EntityQuery {
         var result = try! PersistenceController.shared.container.newBackgroundContext().fetch(request) as [ToDo]
         result.reverse()
         return result.map { todo in
-            return RopeEntity(id: todo.id ?? UUID() , name: todo.name )
+            return RopeEntity(id: todo.id ?? UUID() , name: todo.name ?? "error")
         }
     }
 }
