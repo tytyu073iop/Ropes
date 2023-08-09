@@ -9,7 +9,7 @@
     }
   ],
   "defaultOptions" : {
-    "defaultTestExecutionTimeAllowance" : 120,
+    "defaultTestExecutionTimeAllowance" : 60,
     "language" : "en",
     "repeatInNewRunnerProcess" : true,
     "testRepetitionMode" : "retryOnFailure",
