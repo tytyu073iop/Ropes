@@ -9,6 +9,21 @@ import WidgetKit
 import SwiftUI
 import CoreData
 
+func TodoNames (context: NSManagedObjectContext) -> [String] {
+    var request = ToDo.fetchRequest()
+    request.fetchLimit = 4
+    request.propertiesToFetch = ["name"]
+    request.resultType = .dictionaryResultType
+    var dictionaries = try! context.fetch(request) as [NSDictionary]
+    var names : [String] = dictionaries.map { dictionar in
+        return dictionar["name"] as! String
+    }
+    if defaults.bool(forKey: "swap") {
+        names.reverse()
+    }
+    return names
+}
+
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         ExampleEntry
@@ -17,116 +32,110 @@ struct Provider: TimelineProvider {
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let context = PersistenceController.shared.container.viewContext
         // Create a fetch request for a specific Entity type
-        var toDos = ToDo.fetch()
-        if defaults.bool(forKey: "swap") {
-            toDos.reverse()
-        }
-        let names : [String] = toDos.compactMap { toDo in
-            return toDo.name
-        }
-        completion(SimpleEntry(names: names))
+        
+        completion(SimpleEntry(ropes: []))
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         print("widjetbegin")
-        var entries: [SimpleEntry] = []
-        
-        let context = PersistenceController.shared.container.viewContext
-        // Create a fetch request for a specific Entity type
-        var toDos = ToDo.fetch()
-        if defaults.bool(forKey: "swap") {
-            toDos.reverse()
+        Task {
+            var entries: [SimpleEntry] = []
+            
+            // Create a fetch request for a specific Entity type
+            let context = PersistenceController.shared.container.newBackgroundContext()
+            let currentDate = Date()
+            let entryDate = currentDate
+            let entry = SimpleEntry(date: entryDate, ropes: try! await RopeQuiery().suggestedEntities())
+            entries.append(entry)
+            
+            let timeline = Timeline(entries: entries, policy: .never)
+            completion(timeline)
         }
-        print(toDos)
-        let names : [String] = toDos.compactMap { toDo in
-            return toDo.name
-        }
-        let currentDate = Date()
-        let entryDate = currentDate
-        let entry = SimpleEntry(date: entryDate, names: names)
-        entries.append(entry)
-
-        let timeline = Timeline(entries: entries, policy: .never)
-        completion(timeline)
     }
 }
-
+let bcontext = PersistenceController.shared.container.newBackgroundContext()
+var Trequest = ToDo.fetchRequest()
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    var names: [String]
-    var relevance: TimelineEntryRelevance? = TimelineEntryRelevance(score: Float(ToDo.fetch().count))
-    init(date: Date = Date(), names: [String]) {
+    var ropes: [RopeEntity]
+    var relevance: TimelineEntryRelevance? = TimelineEntryRelevance(score: Float(try! bcontext.fetch(Trequest).count))
+    init(date: Date = Date(), ropes: [RopeEntity]) {
         self.date = date
-        self.names = names
+        self.ropes = ropes
     }
 }
 
-let ExampleEntry = SimpleEntry(date: Date(), names: ["wash","clean","dog"])
+let ExampleEntry = SimpleEntry(date: Date(), ropes: [RopeEntity(id: UUID(), name: "hello"), RopeEntity(id: UUID(), name: "hi")])
 
 struct WidjetsEntryView : View {
     var entry: Provider.Entry
     var example: String = "test"
     @Environment(\.widgetFamily) var widjetFamily
+    @Environment(\.colorScheme) var colorScheme
     @ViewBuilder
     var body: some View {
         switch widjetFamily {
         case .systemSmall:
-            if entry.names.isEmpty {
+            if entry.ropes.isEmpty {
                 Text("There's no ropes")
             }
             VStack {
-                ForEach(entry.names.prefix(4), id: \.self) { name in
-                    HStack{
+                ForEach(entry.ropes.prefix(4)) { rope in
+                    HStack {
                         Spacer()
-                        Text(name)
+                        Text(rope.name)
                         Spacer()
+                        Button(intent: RemoveRope(rope: rope), label: {Image(systemName: "trash")}).buttonStyle(PlainButtonStyle())
                     }
-                    if name != entry.names[entry.names.count > 3 ? 3 : entry.names.count - 1] {
+                    if rope != entry.ropes[entry.ropes.count > 3 ? 3 : entry.ropes.count - 1] {
                         Divider()
                     }
                 }
-            }
+            }.containerBackground(colorScheme == .dark ? .black : .white , for: .widget)
             #if !os(macOS)
         case .accessoryRectangular:
-        if entry.names.isEmpty {
+        if entry.ropes.isEmpty {
             Text("There's no ropes")
                 .widgetAccentable()
         } else {
             VStack {
-                if entry.names.count < 3 {
+                if entry.ropes.count < 3 {
                     HStack {
                         Text("Your ropes:").bold()
                         Spacer()
                     }
                 }
-                ForEach(entry.names.prefix(3), id: \.self) { name in
+                ForEach(entry.ropes.prefix(3), id: \.self) { name in
                     HStack{
-                        Text(name)
+                        Text(name.name)
                         Spacer()
                     }
                 }
             }
+            .containerBackground(colorScheme == .dark ? .black : .white , for: .widget)
             .widgetAccentable()
         }
         case .accessoryCircular:
             ZStack {
                 Circle()
-                    .stroke(Color.gray,lineWidth: 10)
-                Text("\(entry.names.count)").font(.system(size: 30))
+                    .stroke(Color.gray,lineWidth: 5)
+                Text("\(entry.ropes.count)").font(.system(size: 30))
             }
+            .containerBackground(colorScheme == .dark ? .black : .white , for: .widget)
             .widgetAccentable()
-            .widgetLabel(entry.names.first ?? "")
+            .widgetLabel(entry.ropes.first?.name ?? "")
         case .accessoryInline:
-            Text(entry.names.first ?? "You have no ropes")
+            Text(entry.ropes.first?.name ?? "You have no ropes")
                 .widgetAccentable()
             #endif
             #if os(watchOS)
         case .accessoryCorner:
             ZStack {
-                Text("\(entry.names.count)").font(.system(size: 30))
+                Text("\(entry.ropes.count)").font(.system(size: 30))
             }
+            .containerBackground(colorScheme == .dark ? .black : .white , for: .widget)
             .widgetAccentable()
-            .widgetLabel(entry.names.first ?? "")
+            .widgetLabel(entry.ropes.first?.name ?? "")
             #endif
         default: Text("unknown type")
         }
@@ -135,9 +144,12 @@ struct WidjetsEntryView : View {
 
 
 
-@main struct RopesWidjets: WidgetBundle{
+@main struct RopesWidjets: WidgetBundle {
     @WidgetBundleBuilder var body: some Widget {
         RopesWidjet()
+        #if !os(watchOS)
+        AddWidjet()
+        #endif
     }
 }
 
@@ -164,12 +176,9 @@ struct RopesWidjet: Widget {
 
 
 
-struct Widjets_Previews: PreviewProvider {
-    static var previews: some View {
-        if #available(iOS 16.0, *) {
-            #if os(watchOS)
-            WidjetsEntryView(entry: SimpleEntry(date: Date(), names: ["vasya","petya","fif","kik"])).previewContext(WidgetPreviewContext(family: .accessoryCorner))
-            #endif
-        }
-    }
-}
+#Preview(as: .accessoryCircular, widget: {
+    RopesWidjet()
+}, timeline: {
+    ExampleEntry
+})
+

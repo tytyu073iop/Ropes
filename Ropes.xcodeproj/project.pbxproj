@@ -15,6 +15,11 @@
 		E720AC3E28DF9B9400BBADB9 /* SilentNotfications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E720AC3C28DF9B9400BBADB9 /* SilentNotfications.swift */; };
 		E720AC3F28DFB43800BBADB9 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
 		E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF9F289F8F5B00C28906 /* LocalNotfication.swift */; };
+		E721DDC02A80FBBB00C03F00 /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
+		E721DDC12A80FBBB00C03F00 /* DeleteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272628D5EEFB004D5262 /* DeleteIntent.swift */; };
+		E721DDC22A80FBBB00C03F00 /* AllIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA728D4F5D800EE60E4 /* AllIntents.swift */; };
+		E721DDC32A80FBBB00C03F00 /* CatchTasksSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FBEE192A600826005AD0D5 /* CatchTasksSnippet.swift */; };
+		E721DDC42A80FBBB00C03F00 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
 		E72770F82A60285F004143BC /* RopesCoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACC6252915700A000E53CE /* RopesCoreDataTest.swift */; };
 		E7290BBF2956E9CD00118224 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA3289F8F5B00C28906 /* Settings.swift */; };
 		E735FE0D28A2577800FCE2E6 /* RopesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF89289F8DE900C28906 /* RopesApp.swift */; };
@@ -28,7 +33,6 @@
 		E7436E1B28DE330E00E96EF5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
 		E7436E1C28DE330E00E96EF5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
 		E7436E2528DE331000E96EF5 /* WidjetsForWatchExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7436E1A28DE330E00E96EF5 /* WidjetsForWatchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E7436E2A28DE333600E96EF5 /* RopesWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */; };
 		E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E7436E2C28DE336800E96EF5 /* Persistence extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */; };
 		E7436E2D28DE336B00E96EF5 /* Task core data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFFAA289F8F5B00C28906 /* Task core data.swift */; };
@@ -52,6 +56,10 @@
 		E780B69428A25B4E001DA39A /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E79465B629170FD700ACD034 /* MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79465B529170FD700ACD034 /* MacUITests.swift */; };
 		E79465B829170FD700ACD034 /* MacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79465B729170FD700ACD034 /* MacUITestsLaunchTests.swift */; };
+		E799BD6A2A8291C8007DD4BD /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799BD692A8291C8007DD4BD /* animation.swift */; };
+		E799BD6C2A829EC5007DD4BD /* AddButtonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799BD6B2A829EC5007DD4BD /* AddButtonConfig.swift */; };
+		E799D7822A82B92E00068E6F /* TestPlanForWatch.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = E799D7812A82B92E00068E6F /* TestPlanForWatch.xctestplan */; };
+		E799D7832A82BE1A00068E6F /* RopesWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */; };
 		E7A0CF9D28D4F2DE00EE60E4 /* adviceMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9A28D4F2DE00EE60E4 /* adviceMenu.swift */; };
 		E7A0CF9E28D4F2DE00EE60E4 /* advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9B28D4F2DE00EE60E4 /* advices.swift */; };
 		E7A0CF9F28D4F2DE00EE60E4 /* Shortcuts_advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */; };
@@ -77,7 +85,7 @@
 		E7B740DB28A6AEE9008048CF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DA28A6AEE9008048CF /* WidgetKit.framework */; };
 		E7B740DD28A6AEE9008048CF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B740DC28A6AEE9008048CF /* SwiftUI.framework */; };
 		E7B740E028A6AEE9008048CF /* RopesWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */; };
-		E7B740E628A6AEEA008048CF /* WidjetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7B740E628A6AEEA008048CF /* WidjetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7B740D828A6AEE9008048CF /* WidjetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7DDC1CE28DCD58600D902AA /* Ropes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8D289F8DE900C28906 /* Ropes.xcdatamodeld */; };
 		E7DDC1CF28DCD64000D902AA /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
 		E7DDC1D228DCD64000D902AA /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776272328D5E80B004D5262 /* AppEntity.swift */; };
@@ -96,6 +104,7 @@
 		E7EB482228D4F877000FB1B2 /* AddCustomIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0CFA928D4F5D800EE60E4 /* AddCustomIntent.swift */; };
 		E7FBEE1A2A600826005AD0D5 /* CatchTasksSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FBEE192A600826005AD0D5 /* CatchTasksSnippet.swift */; };
 		E7FBEE1B2A600826005AD0D5 /* CatchTasksSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FBEE192A600826005AD0D5 /* CatchTasksSnippet.swift */; };
+		E7FD61D52A812E1900B4D989 /* addWidjet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD61D42A812E1900B4D989 /* addWidjet.swift */; };
 		E7FEEBBC2970929D007BF365 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFF8B289F8DE900C28906 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
@@ -225,6 +234,9 @@
 		E79465B329170FD700ACD034 /* MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79465B529170FD700ACD034 /* MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacUITests.swift; sourceTree = "<group>"; };
 		E79465B729170FD700ACD034 /* MacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E799BD692A8291C8007DD4BD /* animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
+		E799BD6B2A829EC5007DD4BD /* AddButtonConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButtonConfig.swift; sourceTree = "<group>"; };
+		E799D7812A82B92E00068E6F /* TestPlanForWatch.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TestPlanForWatch.xctestplan; path = Ropes/Menus/TestPlanForWatch.xctestplan; sourceTree = "<group>"; };
 		E7A0CF9A28D4F2DE00EE60E4 /* adviceMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adviceMenu.swift; sourceTree = "<group>"; };
 		E7A0CF9B28D4F2DE00EE60E4 /* advices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advices.swift; sourceTree = "<group>"; };
 		E7A0CF9C28D4F2DE00EE60E4 /* Shortcuts_advice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortcuts_advice.swift; sourceTree = "<group>"; };
@@ -266,6 +278,7 @@
 		E7EAFFA8289F8F5B00C28906 /* Persistence extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Persistence extension.swift"; sourceTree = "<group>"; };
 		E7EAFFAA289F8F5B00C28906 /* Task core data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task core data.swift"; sourceTree = "<group>"; };
 		E7FBEE192A600826005AD0D5 /* CatchTasksSnippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatchTasksSnippet.swift; sourceTree = "<group>"; };
+		E7FD61D42A812E1900B4D989 /* addWidjet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addWidjet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,6 +479,9 @@
 			isa = PBXGroup;
 			children = (
 				E7B740DF28A6AEE9008048CF /* RopesWidjet.swift */,
+				E799BD692A8291C8007DD4BD /* animation.swift */,
+				E7FD61D42A812E1900B4D989 /* addWidjet.swift */,
+				E799BD6B2A829EC5007DD4BD /* AddButtonConfig.swift */,
 				E7B740E328A6AEEA008048CF /* Info.plist */,
 				E7A1D2F4295DB51000AD801D /* InfoPlist.strings */,
 				E745026628B8AE59005FB11A /* Localizable.strings */,
@@ -477,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				E73C023C2A7FA54F007E939E /* TestPlan.xctestplan */,
+				E799D7812A82B92E00068E6F /* TestPlanForWatch.xctestplan */,
 				E78DBEFC28DEFBAD00EFE7EF /* WidjetsForWatchExtension.entitlements */,
 				E7DDC1CD28DCCC9100D902AA /* WidjetsExtension.entitlements */,
 				E745026328B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings */,
@@ -831,6 +848,7 @@
 				E745026528B8AE59005FB11A /* RopesForWatch Watch App-InfoPlist.strings in Resources */,
 				E71EF4E5295D84440051EE65 /* Localizable.strings..strings in Resources */,
 				E7A650B629146B540055A24F /* Icons.xcassets in Resources */,
+				E799D7822A82B92E00068E6F /* TestPlanForWatch.xctestplan in Resources */,
 				E7A1D2F0295DB51000AD801D /* RopesForWatch-Watch-App-InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -941,14 +959,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7436E2A28DE333600E96EF5 /* RopesWidjet.swift in Sources */,
+				E721DDC12A80FBBB00C03F00 /* DeleteIntent.swift in Sources */,
 				E7FEEBBC2970929D007BF365 /* Persistence.swift in Sources */,
 				E7436E2F28DE336F00E96EF5 /* Data.swift in Sources */,
 				E7436E2D28DE336B00E96EF5 /* Task core data.swift in Sources */,
+				E721DDC22A80FBBB00C03F00 /* AllIntents.swift in Sources */,
 				E7436E2C28DE336800E96EF5 /* Persistence extension.swift in Sources */,
 				E7436E2B28DE336500E96EF5 /* Ropes.xcdatamodeld in Sources */,
+				E799D7832A82BE1A00068E6F /* RopesWidjet.swift in Sources */,
 				E7436E3028DE336F00E96EF5 /* Base.swift in Sources */,
 				E720AC4128DFB54800BBADB9 /* LocalNotfication.swift in Sources */,
+				E721DDC32A80FBBB00C03F00 /* CatchTasksSnippet.swift in Sources */,
+				E721DDC02A80FBBB00C03F00 /* AddCustomIntent.swift in Sources */,
+				E721DDC42A80FBBB00C03F00 /* AppEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,6 +1017,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7764A4328B360250022E8C3 /* Data.swift in Sources */,
+				E799BD6C2A829EC5007DD4BD /* AddButtonConfig.swift in Sources */,
 				E7764A4228B360250022E8C3 /* Base.swift in Sources */,
 				E720AC3F28DFB43800BBADB9 /* LocalNotfication.swift in Sources */,
 				E7764A3F28B360210022E8C3 /* Task core data.swift in Sources */,
@@ -1003,6 +1027,8 @@
 				E7764A3E28B360210022E8C3 /* Persistence extension.swift in Sources */,
 				E7DDC1CF28DCD64000D902AA /* AddCustomIntent.swift in Sources */,
 				E7B740E028A6AEE9008048CF /* RopesWidjet.swift in Sources */,
+				E7FD61D52A812E1900B4D989 /* addWidjet.swift in Sources */,
+				E799BD6A2A8291C8007DD4BD /* animation.swift in Sources */,
 				E7DDC1D228DCD64000D902AA /* AppEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1077,7 +1103,6 @@
 		};
 		E7B740E528A6AEEA008048CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = E7B740D728A6AEE9008048CF /* WidjetsExtension */;
 			targetProxy = E7B740E428A6AEEA008048CF /* PBXContainerItemProxy */;
 		};
@@ -1341,7 +1366,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1373,7 +1398,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -1553,6 +1578,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidjetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
@@ -1560,16 +1586,17 @@
 				INFOPLIST_FILE = Widjets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Widjets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes.Widjets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1589,6 +1616,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidjetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 4W8M2TTJRQ;
@@ -1596,16 +1624,17 @@
 				INFOPLIST_FILE = Widjets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Widjets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyabiryuk.bundle.Ropes.Widjets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

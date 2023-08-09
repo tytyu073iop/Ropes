@@ -9,14 +9,18 @@ import Foundation
 import AppIntents
 import SwiftUI
 
-struct AddRopeShortcut : AppIntent {
+///Shortcut intent. Don't use.
+struct AddRopeShortcut : PredictableIntent {
+    static var predictionConfiguration: some IntentPredictionConfiguration = IntentPrediction<AddRopeShortcut, ()>{
+        DisplayRepresentation(title: "test")
+    }
     static var title: LocalizedStringResource = LocalizedStringResource("Add rope")
     static var description = IntentDescription(LocalizedStringResource("Add task to the ropes app"), searchKeywords: ["append"])
     @Parameter(title: "Task") var Task: String
-    func perform() async throws -> some ProvidesDialog & ShowsSnippetView {
+    func perform() async throws -> some IntentResult & ReturnsValue<RopeEntity> & ProvidesDialog & ShowsSnippetView {
         let context = PersistenceController.shared.container.viewContext
-        let rope = await try ToDo(context: context, name: Task)
-        return .result(dialog: IntentDialog("Rope \(Task) was created")) {
+        let rope = try await ToDo(context: context, name: Task)
+        return .result(value: RopeEntity(id: rope.id ?? UUID(), name: rope.name), dialog: IntentDialog("Rope \(Task) was created")) {
             VStack {
                 HStack {
                     Spacer()

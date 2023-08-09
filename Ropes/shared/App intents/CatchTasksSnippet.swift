@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
-#if canImport(AppIntents)
 import AppIntents
 import CoreData
-
-@available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct ShowTasks : AppIntent {
-    //FIXME: no translation
+///Shortcut intent. Don't use.
+struct ShowTasks : AppIntent {
     static var title: LocalizedStringResource = LocalizedStringResource("Show Ropes")
     static var description = IntentDescription(LocalizedStringResource("Show all tasks from the ropes app"))
-    func perform() async throws -> some IntentResult {
-        var objects = ToDo.fetch()
+    func perform() async throws -> some ReturnsValue<[RopeEntity]> & ProvidesDialog & ShowsSnippetView {
+        let query = RopeQuiery()
+        var objects = try! await query.suggestedEntities()
         objects = objects.reversed()
         var names = [String]()
         for object in objects {
@@ -30,14 +29,15 @@ import CoreData
                 }
                 phrase += ", \(name)"
             }
-            return .result(value: names, dialog: IntentDialog("Your Ropes:\(phrase)"), view: CatchTasks(objects: objects))
+            return .result(value: objects, dialog: IntentDialog("Your Ropes:\(phrase)"), view: CatchTasks(objects: objects))
         } else {
-            return .result(value: names, dialog: "You have no ropes", view: LikeEmptyView())
+            return .result(value: objects, dialog: "You have no ropes", view: LikeEmptyView())
         }
     }
     
 }
 
+///Use it to return empty view
 struct LikeEmptyView : View {
     var body: some View {
         VStack {
@@ -46,27 +46,26 @@ struct LikeEmptyView : View {
     }
 }
 
+///View of catch tasks intent
 struct CatchTasks: View {
-    let objects : [ToDo]
+    let objects : [RopeEntity]
     var body: some View {
         ForEach(objects) { rope in
             Divider()
             VStack {
                 HStack {
                     Spacer()
-                    Text(rope.name ?? "error")
+                    Text(rope.name)
                     Spacer()
                 }.padding(.top, 0)
-                if rope == objects.last {
+                if rope.id == objects.last?.id {
                     HStack {
                         Spacer()
-                        Text(dateFormater.string(from: rope.date ?? Date()))
                         Spacer()
                     }.padding(.bottom, 6)
                 } else {
                     HStack {
                         Spacer()
-                        Text(dateFormater.string(from: rope.date ?? Date()))
                         Spacer()
                     }
                 }
@@ -74,5 +73,3 @@ struct CatchTasks: View {
         }
     }
 }
-
-#endif

@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "0D3D1BBE-8449-4A5C-A88B-C8236B560BAF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "defaultTestExecutionTimeAllowance" : 120,
+    "language" : "en",
+    "repeatInNewRunnerProcess" : true,
+    "testRepetitionMode" : "retryOnFailure",
+    "testTimeoutsEnabled" : true,
+    "uiTestingScreenshotsLifetime" : "keepAlways",
+    "userAttachmentLifetime" : "keepAlways"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Ropes.xcodeproj",
+        "identifier" : "E780977329179F2000B397C6",
+        "name" : "WatchUITest"
+      }
+    }
+  ],
+  "version" : 1
+}

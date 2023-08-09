@@ -6,82 +6,55 @@
 //
 
 import Foundation
-#if canImport(AppIntents)
 import AppIntents
 
-@available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct RopeEntity : AppEntity {
+///ToDo entity for AppIntents
+struct RopeEntity : AppEntity, Hashable {
+    ///How name of type displays
     static var typeDisplayRepresentation: TypeDisplayRepresentation = TypeDisplayRepresentation(name: "Rope")
     
-    
+    ///From what items to select
     static var defaultQuery = RopeQuiery()
     var id : UUID
+    //TODO: more complicted shortcut type
+//    var date : Date
+    ///
     static var typeDisplayName : LocalizedStringResource = "Rope"
     var name : String
+    ///How type displays as a result and select
     var displayRepresentation: DisplayRepresentation {
-        DisplayRepresentation(title: "\(name)")
+        DisplayRepresentation(title: "\(name)",subtitle: "")
     }
 }
 
-@available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct RopeQuiery : EntityQuery {
-    func entities(for identifiers: [UUID]) async throws -> [RopeEntity] {
-        NSLog("Quiering")
-        let todos = ToDo.fetch()
-        return todos.filter { todo in
+///Shows from what to chose
+struct RopeQuiery : EntityQuery {
+    ///- returns: entites which suits the chose. Shows interface of chose when more than one option
+    func entities(for identifiers: [UUID]) throws -> [RopeEntity] {
+        let request = ToDo.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        var result = try! PersistenceController.shared.container.newBackgroundContext().fetch(request) as [ToDo]
+        result.reverse()
+        return result.filter { todo in
             identifiers.contains { id in
                 id == todo.id
             }
         }.map { todo in
-            RopeEntity(id: todo.id!, name: todo.name!)
+            RopeEntity(id: todo.id ?? UUID(), name: todo.name)
         }
     }
-    
+    ///- returns:All ToDos
     func suggestedEntities() async throws -> [RopeEntity] {
-        NSLog("Suggest Quiering")
-        let todos = ToDo.fetch()
-        return todos.map { todo in
-            RopeEntity(id: todo.id!, name: todo.name ?? "error")
+        let request = ToDo.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        var result = try! PersistenceController.shared.container.newBackgroundContext().fetch(request) as [ToDo]
+        result.reverse()
+        return result.map { todo in
+            return RopeEntity(id: todo.id ?? UUID() , name: todo.name )
         }
     }
 }
 
-@available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct FastAnswersEntity : AppEntity {
-    static var typeDisplayRepresentation: TypeDisplayRepresentation = TypeDisplayRepresentation(name: "Fast Answer")
-    
-    static var defaultQuery = FastAnswerQuiery()
-    var id : UUID
-    static var typeDisplayName : LocalizedStringResource = "Fast Answer"
-    var name : String
-    var displayRepresentation: DisplayRepresentation {
-        DisplayRepresentation(title: "\(name)")
-    }
-}
-
-let CustomsName : LocalizedStringResource = "Custom"
-
-@available(iOS 16.0, macOS 13.0, watchOS 9.0, *) struct FastAnswerQuiery : EntityQuery {
-    func entities(for identifiers: [UUID]) async throws -> [FastAnswersEntity] {
-        let fas = FastAnswers.fetch()
-        var faes = fas.filter { fa in
-            identifiers.contains { id in
-                id == fa.id
-            }
-        }.map { fa in
-            FastAnswersEntity(id: fa.id!, name: fa.name!)
-        }
-        if faes.isEmpty {
-            faes.append(FastAnswersEntity(id: UUID(uuidString: "49C8D21E-ADAF-4CDD-81DD-07B82C2A99C2")!, name: "Custom"))
-        }
-        return faes
-    }
-    
-    func suggestedEntities() async throws -> [FastAnswersEntity] {
-        let fas = FastAnswers.fetch()
-        var faes = fas.map { fa in
-            FastAnswersEntity(id: fa.id ?? UUID() ,name: fa.name ?? "error")
-        }
-        faes.append(FastAnswersEntity(id: UUID(uuidString: "49C8D21E-ADAF-4CDD-81DD-07B82C2A99C2")!, name: String(localized: CustomsName)))
-        return faes
-    }
+extension RopeEntity : Identifiable {
     
 }
-#endif
