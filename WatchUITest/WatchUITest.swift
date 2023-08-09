@@ -39,6 +39,7 @@ final class WatchInterfaceUITest: XCTestCase {
         app.launch()
         app.textFields.firstMatch.tap()
         print(app.debugDescription)
+        app.buttons["SPACE"].waitForExistence(timeout: 2)
         app.buttons["SPACE"].tap()
         app.buttons["Done"].tap()
         XCTAssert(app.staticTexts[" "].waitForExistence(timeout: 1),"Action haven't created a rope")
@@ -81,11 +82,12 @@ final class WatchNotifyUITest: XCTestCase {
         XCTAssert(!app.staticTexts["Test"].exists,"Action fallen")
     }
     let shortcuts = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
-    func testNotficationTesrminatedClick() {
+    func testNotficationTerminatedClick() {
         app.launchArguments = [launchArgs.reqiresR.rawValue,launchArgs.clear.rawValue]
         app.launch()
         app.terminate()
         springboard.otherElements["Test, Ropes"].waitForExistence(timeout: 10)
+        sleep(1)
         springboard.staticTexts["Done"].tap()
         app.launchArguments = []
         app.launch()
