@@ -9,6 +9,7 @@ import CloudKit
 import WatchKit
 #endif
 import CoreData
+import AppIntents
 
 struct ContentView: View {
     @Environment(\.horizontalSizeClass) private var horSize
@@ -40,7 +41,12 @@ struct ContentView: View {
                 Section {
                     ForEach(FA) { fa in
                         Button(action:{
-                            let _ = try! ToDo(name: fa.name!)}) {
+                            let _ = try! ToDo(name: fa.name!)
+                            Task {
+                                try! await IntentDonationManager.shared.deleteDonations(matching: IntentDonationMatchingPredicate.intentType(ShowTasks.self))
+                                try! await IntentDonationManager.shared.donate(intent: AddRopeShortcut())
+                            }
+                        }) {
                             Text(fa.name!)
                         }
                     }
@@ -68,6 +74,10 @@ struct ContentView: View {
                             }
                             Button(action: {
                                 viewContext.deleteWithSave(rope)
+                                Task {
+                                    try! await IntentDonationManager.shared.deleteDonations(matching: IntentDonationMatchingPredicate.intentType(ShowTasks.self))
+                                    try! await IntentDonationManager.shared.donate(intent: RemoveRope())
+                                }
                             }, label: {Image(systemName: "trash")})
                             .buttonStyle(PlainButtonStyle())
                         }
@@ -106,7 +116,12 @@ struct ContentView: View {
             .toolbar(content: {
                 #if os(iOS)
                 ToolbarItem(placement: .navigationBarLeading){
-                    Button(action: { settings.toggle() },
+                    Button(action: { 
+                        settings.toggle()
+                        Task {
+                            try! await IntentDonationManager.shared.deleteDonations(matching: IntentDonationMatchingPredicate.intentType(ShowTasks.self))
+                        }
+                    },
                            label: {Image(systemName: "gear")})
                     .sheet(isPresented: $settings){ settin() }
                 }
@@ -154,6 +169,7 @@ struct ContentView: View {
             #if os(watchOS)
             SetUP()
             #endif
+            IntentDonationManager.shared.donate(intent: ShowTasks())
         }.onChange(of: scenePhase, perform: {
             WidgetCenter.shared.reloadAllTimelines()
             print("MAIN scene changed")
