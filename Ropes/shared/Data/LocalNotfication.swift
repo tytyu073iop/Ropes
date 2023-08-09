@@ -12,7 +12,7 @@ class LocalNotficationManager:NSObject, ObservableObject {
         notficationCenter.delegate = self
     }
     //TODO: Change to numerical
-    func request(text : String, time : Double = defaults.double(forKey: "time"), userInfo : [AnyHashable : Any]? = nil) throws {
+    func request(text : String, time : Double = defaults.double(forKey: "time"), userInfo : [AnyHashable : Any]? = nil, id: String) {
         //test
         print("requesting")
         //test
@@ -25,7 +25,7 @@ class LocalNotficationManager:NSObject, ObservableObject {
         if userInfo != nil{
             content.userInfo = userInfo!
         }
-        
+        content.userInfo["id"] = id
         // show this notification five seconds from now
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval:  admin ? time : time * 60, repeats: (admin) ? false : true)
         
@@ -33,7 +33,6 @@ class LocalNotficationManager:NSObject, ObservableObject {
         let request = UNNotificationRequest(identifier: text, content: content, trigger: trigger)
         // add our notification request
         notficationCenter.add(request)
-        print("request ended")
     }
     func request(text : String, time : Date, id : UUID = UUID()) throws {
         
