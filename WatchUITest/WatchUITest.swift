@@ -39,8 +39,11 @@ final class WatchInterfaceUITest: XCTestCase {
         app.launch()
         app.textFields.firstMatch.tap()
         print(app.debugDescription)
-        app.buttons["SPACE"].waitForExistence(timeout: 2)
-        app.buttons["SPACE"].tap()
+        if app.buttons["SPACE"].waitForExistence(timeout: 2) {
+            app.buttons["SPACE"].tap()
+        } else {
+            app.keyboards.firstMatch.keys["SPACE"].tap()
+        }
         app.buttons["Done"].tap()
         XCTAssert(app.staticTexts[" "].waitForExistence(timeout: 1),"Action haven't created a rope")
     }
